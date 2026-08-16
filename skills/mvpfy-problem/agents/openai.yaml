@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Problem"
+  short_description: "Define o problema central do MVP"
+  default_prompt: "Use $mvpfy-problem para esclarecer o problema do produto."

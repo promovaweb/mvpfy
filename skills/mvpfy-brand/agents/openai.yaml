@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Brand"
+  short_description: "Orienta nome e posição inicial"
+  default_prompt: "Use $mvpfy-brand para orientar nome e posicionamento do produto."

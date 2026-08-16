@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy"
+  short_description: "Orquestra entrevista e plano do MVP SaaS"
+  default_prompt: "Use $mvpfy para conduzir o planejamento do primeiro MVP SaaS."

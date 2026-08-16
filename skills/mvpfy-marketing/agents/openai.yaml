@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Marketing"
+  short_description: "Planeja aquisição e lançamento inicial"
+  default_prompt: "Use $mvpfy-marketing para planejar aquisição e lançamento."

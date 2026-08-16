@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Technology"
+  short_description: "Recomenda stack e operação enxuta"
+  default_prompt: "Use $mvpfy-technology para recomendar a arquitetura do MVP."

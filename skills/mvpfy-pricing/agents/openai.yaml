@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Pricing"
+  short_description: "Modela preço e viabilidade inicial"
+  default_prompt: "Use $mvpfy-pricing para montar cenários de preço do MVP."

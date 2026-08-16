@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Document"
+  short_description: "Consolida o arquivo Company.md"
+  default_prompt: "Use $mvpfy-document para gerar ou atualizar o Company.md."

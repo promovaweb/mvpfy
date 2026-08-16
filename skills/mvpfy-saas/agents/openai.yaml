@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy SaaS"
+  short_description: "Define contas, acesso e ciclo SaaS"
+  default_prompt: "Use $mvpfy-saas para definir a operação inicial do SaaS."

@@ -1,0 +1,14 @@
+docs/README.md
+docs/user/README.md
+docs/user/instalacao.md
+docs/user/primeiro-mvp.md
+docs/user/entrevista.md
+docs/user/company.md
+docs/user/solucao-de-problemas.md
+docs/develop/README.md
+docs/develop/arquitetura.md
+docs/develop/contratos.md
+docs/develop/artefatos.md
+docs/develop/testes.md
+docs/develop/contribuicao.md
+docs/specification.md

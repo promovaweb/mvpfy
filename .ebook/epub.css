@@ -1,0 +1,7 @@
+body { color: #172033; font-family: sans-serif; line-height: 1.55; }
+h1, h2, h3 { color: #12213e; }
+a { color: #0f766e; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #cbd5e1; padding: .35em; vertical-align: top; }
+th { background: #e6fffb; }
+pre { white-space: pre-wrap; background: #f1f5f9; padding: .7em; }

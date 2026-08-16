@@ -1,0 +1,15 @@
+/* pdf-design-system: 1.0.0 */
+@page { size: A4; margin: 22mm 18mm 20mm; @bottom-right { content: counter(page); color: #6b7280; font-size: 9pt; } }
+body { color: #172033; font-family: Inter, sans-serif; line-height: 1.55; font-size: 10.5pt; }
+h1, h2, h3 { font-family: Manrope, sans-serif; color: #12213e; line-height: 1.15; }
+h1 { font-size: 28pt; page-break-before: always; }
+h1:first-child { page-break-before: avoid; }
+h2 { font-size: 18pt; margin-top: 20pt; }
+h3 { font-size: 13pt; margin-top: 14pt; }
+a { color: #0f766e; }
+code, pre { font-family: "DejaVu Sans Mono", monospace; }
+pre { background: #f1f5f9; padding: 10pt; white-space: pre-wrap; }
+table { border-collapse: collapse; width: 100%; margin: 10pt 0 14pt; }
+th, td { border: 0.5pt solid #cbd5e1; padding: 5pt; vertical-align: top; }
+th { background: #e6fffb; color: #12213e; }
+blockquote { border-left: 3pt solid #f59e0b; padding-left: 10pt; color: #475569; }

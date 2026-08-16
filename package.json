@@ -1,0 +1,13 @@
+{
+  "name": "@promovaweb/mvpfy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "setup:example": "node skills/mvpfy/scripts/setup-project.mjs --project example",
+    "ebook": "bash .ebook/build-ebook.sh",
+    "ebook:verify": "bash .ebook/build-ebook.sh --check"
+  }
+}

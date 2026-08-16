@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Market"
+  short_description: "Pesquisa alternativas e preços atuais"
+  default_prompt: "Use $mvpfy-market para pesquisar alternativas e preços."

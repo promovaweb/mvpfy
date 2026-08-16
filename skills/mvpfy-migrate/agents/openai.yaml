@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Migrate"
+  short_description: "Atualiza Company.md sem perder conteúdo"
+  default_prompt: "Use $mvpfy-migrate para migrar um Company.md antigo."

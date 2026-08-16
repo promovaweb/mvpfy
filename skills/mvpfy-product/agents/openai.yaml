@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Product"
+  short_description: "Limita produto e escopo da versão 1"
+  default_prompt: "Use $mvpfy-product para delimitar o escopo da versão 1."

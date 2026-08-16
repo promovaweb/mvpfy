@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Audience"
+  short_description: "Define público e personas prioritárias"
+  default_prompt: "Use $mvpfy-audience para definir o público do MVP."

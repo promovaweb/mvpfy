@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "edition": "v0.1.0",
+  "generated_at": "2026-08-16T21:26:14.363857Z",
+  "source_sha256": "a53a47c20fc6f22fa625b5afcc57a0ae6f6642fbcedada961cfa780ea2889932",
+  "artifacts": {
+    "pdf": {
+      "file": "MVPFy-Documentacao-Completa-v0.1.0.pdf",
+      "sha256": "c9c2071845522325f3a9d5709075048337f671b88750123fdfd0f9aa21341e7f"
+    },
+    "epub": {
+      "file": "MVPFy-Documentacao-Completa-v0.1.0.epub",
+      "sha256": "3416d2deac595fef390b071bb2846c512202151210c58f32cd39a5c4d3213387"
+    }
+  }
+}
