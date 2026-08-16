@@ -20,6 +20,7 @@ test("setup, registro e migração preservam o Company.md", async () => {
     const depois = await readFile(path.join(projeto, "Company.md"), "utf8");
     assert.equal(depois.includes("project_id:"), true);
     assert.equal((depois.match(/mvpfy:section:/g) || []).length, 35);
+    await executar("node", ["skills/mvpfy-document/scripts/validate-company.mjs", "--project", projeto], { cwd: raiz });
   } finally {
     await rm(projeto, { recursive: true, force: true });
   }

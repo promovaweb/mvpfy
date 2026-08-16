@@ -5,24 +5,27 @@
 import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const argumentos = lerArgumentos(process.argv.slice(2));
-const projeto = path.resolve(argumentos.project || process.cwd());
 const raizSkill = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const templatePath = path.join(raizSkill, "assets", "Company.template.md");
-const companyPath = path.join(projeto, "Company.md");
 
-if (argumentos.check) {
-  const atual = await readFile(companyPath, "utf8");
-  validarEstrutura(atual);
-  console.log("Company.md está alinhado aos IDs do template.");
-} else {
-  const template = await readFile(templatePath, "utf8");
-  const atual = existsSync(companyPath) ? await readFile(companyPath, "utf8") : template;
-  const renderizado = mesclar(template, atual);
-  await writeFile(companyPath, atualizarData(renderizado), "utf8");
-  console.log(`Company.md atualizado em ${companyPath}`);
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const argumentos = lerArgumentos(process.argv.slice(2));
+  const projeto = path.resolve(argumentos.project || process.cwd());
+  const companyPath = path.join(projeto, "Company.md");
+
+  if (argumentos.check) {
+    const atual = await readFile(companyPath, "utf8");
+    validarEstrutura(atual);
+    console.log("Company.md está alinhado aos IDs do template.");
+  } else {
+    const template = await readFile(templatePath, "utf8");
+    const atual = existsSync(companyPath) ? await readFile(companyPath, "utf8") : template;
+    const renderizado = mesclar(template, atual);
+    await writeFile(companyPath, atualizarData(renderizado), "utf8");
+    console.log(`Company.md atualizado em ${companyPath}`);
+  }
 }
 
 export function mesclar(template, atual) {
