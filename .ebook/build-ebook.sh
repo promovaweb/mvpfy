@@ -14,7 +14,7 @@ HTML="$BUILD/$STEM.html"
 COVER="$BUILD/$STEM-cover.png"
 MANIFEST="$EBOOKS/build.json"
 
-for arquivo in "$ROOT/docs/reading-order.txt" "$ROOT/.ebook/pdf.css" "$ROOT/.ebook/epub.css" "$ROOT/.ebook/template.html" "$ROOT/.ebook/metadata.yaml" "$ROOT/.ebook/cover.svg"; do
+for arquivo in "$ROOT/docs/reading-order.txt" "$ROOT/.ebook/pdf.css" "$ROOT/.ebook/epub.css" "$ROOT/.ebook/template.html" "$ROOT/.ebook/metadata.yaml" "$ROOT/.ebook/cover.svg" "$ROOT/.ebook/fonts/inter-latin.woff2" "$ROOT/.ebook/fonts/manrope-latin.woff2" "$ROOT/brand/logo/icon.png"; do
   test -f "$arquivo" || { echo "Fonte ausente: $arquivo" >&2; exit 1; }
 done
 
@@ -23,7 +23,7 @@ test "${#PAGINAS[@]}" -gt 0
 for pagina in "${PAGINAS[@]}"; do test -f "$ROOT/$pagina" || { echo "Página ausente: $pagina" >&2; exit 1; }; done
 
 SOURCE_SHA="$(
-  for arquivo in "$ROOT/.ebook/build-ebook.sh" "$ROOT/.ebook/pdf.css" "$ROOT/.ebook/epub.css" "$ROOT/.ebook/template.html" "$ROOT/.ebook/metadata.yaml" "$ROOT/.ebook/cover.svg" "$ROOT/ebooks/VERSION" "${PAGINAS[@]/#/$ROOT/}"; do
+  for arquivo in "$ROOT/.ebook/build-ebook.sh" "$ROOT/.ebook/pdf.css" "$ROOT/.ebook/epub.css" "$ROOT/.ebook/template.html" "$ROOT/.ebook/metadata.yaml" "$ROOT/.ebook/cover.svg" "$ROOT/.ebook/fonts/inter-latin.woff2" "$ROOT/.ebook/fonts/manrope-latin.woff2" "$ROOT/brand/logo/icon.svg" "$ROOT/brand/logo/icon.png" "$ROOT/ebooks/VERSION" "${PAGINAS[@]/#/$ROOT/}"; do
     printf '%s\0%s\n' "${arquivo#$ROOT/}" "$(sha256sum "$arquivo" | cut -d' ' -f1)"
   done | sha256sum | cut -d' ' -f1
 )"
@@ -45,7 +45,8 @@ for kind, filename in (("pdf", sys.argv[4]), ("epub", sys.argv[5])):
         raise SystemExit(f"Hash inválido para {filename}")
 PY
   pdfinfo "$PDF" | grep -Eq '^Pages:[[:space:]]+[1-9]'
-  pdftotext "$PDF" - | grep -Fq "MVPFy"
+  PDF_TEXT="$(pdftotext "$PDF" -)"
+  grep -Fq "MVPFy" <<<"$PDF_TEXT"
   unzip -tqq "$EPUB"
   echo "OK: ebook MVPFy v$VERSION verificado."
 }
@@ -58,6 +59,7 @@ mkdir -p "$BUILD" "$EBOOKS"
 FONT="$(fc-match -f '%{file}\n' 'DejaVu Sans' | head -1)"
 FONT_BOLD="$(fc-match -f '%{file}\n' 'DejaVu Sans:style=Bold' | head -1)"
 magick -size 1600x2560 xc:'#ffffff' \
+  \( "$ROOT/brand/logo/icon.png" -resize 220x220 \) -geometry +150+170 -composite \
   -font "$FONT_BOLD" -fill '#0f766e' -pointsize 54 -gravity northwest -annotate +150+350 'MVPFy' \
   -fill '#12213e' -pointsize 124 -annotate +150+700 'Primeiro' -annotate +150+850 'MVP SaaS' \
   -font "$FONT" -fill '#334155' -pointsize 48 -annotate +150+1040 'Entrevista, produto, preço e tecnologia' \
@@ -70,17 +72,22 @@ for pagina in "${PAGINAS[@]}"; do INPUTS+=("${pagina#docs/}"); done
   cd "$DOCS"
   pandoc "${INPUTS[@]}" --from=gfm --to=html5 --standalone --toc --toc-depth=2 \
     --template="$ROOT/.ebook/template.html" --css="$ROOT/.ebook/pdf.css" \
-    --metadata-file="$ROOT/.ebook/metadata.yaml" \
-    --metadata title="MVPFy — Documentação completa · v$VERSION" \
-    --metadata version="$VERSION" --output="$HTML"
+    --resource-path="$ROOT/.ebook:$ROOT:$DOCS" --metadata-file="$ROOT/.ebook/metadata.yaml" \
+    --metadata title="MVPFy — Documentação completa · v$VERSION" --metadata version="$VERSION" \
+    --metadata date="$(date +%d/%m/%Y)" --variable brand_name="MVPFy" \
+    --variable document_type="Documentação completa" \
+    --variable tagline="Entrevista e plano do primeiro SaaS" \
+    --variable description="Guia do usuário e referência técnica para transformar uma ideia em um plano de MVP SaaS." \
+    --variable source_label="docs/" --variable footer_label="MVPFy — Documentação" \
+    --variable logo="$ROOT/brand/logo/icon.png" --output="$HTML"
 )
 weasyprint "$HTML" "$PDF"
 (
   cd "$DOCS"
   pandoc "${INPUTS[@]}" --from=gfm --to=epub3 --standalone --toc --toc-depth=2 \
     --epub-cover-image="$COVER" --css="$ROOT/.ebook/epub.css" \
-    --metadata-file="$ROOT/.ebook/metadata.yaml" \
-    --metadata title="MVPFy — Documentação completa · v$VERSION" --output="$EPUB"
+    --resource-path="$ROOT/.ebook:$ROOT:$DOCS" --metadata-file="$ROOT/.ebook/metadata.yaml" \
+    --metadata title="MVPFy — Documentação completa · v$VERSION" --metadata version="$VERSION" --output="$EPUB"
 )
 cp "$PDF" "$EBOOKS/ebook-mvpfy.pdf"
 cp "$EPUB" "$EBOOKS/ebook-mvpfy.epub"
