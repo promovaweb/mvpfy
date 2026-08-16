@@ -26,3 +26,12 @@ test("cada skill possui frontmatter e metadados de interface", async () => {
     assert.match(interfaceYaml, new RegExp(`default_prompt:.*\\$${nome}`), nome);
   }
 });
+
+test("a orquestradora exige uma pergunta por turno e leitura somente de fontes", async () => {
+  const skill = await readFile(path.join(skillsDir, "mvpfy", "SKILL.md"), "utf8");
+  assert.match(skill, /somente uma pergunta principal por turno/);
+  assert.match(skill, /somente para\s+leitura/);
+  assert.match(skill, /Nunca crie, edite, renomeie, remova ou migre/);
+  assert.match(skill, /três opções prontas/);
+  assert.match(skill, /Conversar mais sobre este tema/);
+});

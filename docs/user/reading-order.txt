@@ -1,4 +1,3 @@
-docs/README.md
 docs/user/README.md
 docs/user/proposta.md
 docs/user/instalacao.md
@@ -21,21 +20,3 @@ docs/user/skills/mvpfy-technology.md
 docs/user/skills/mvpfy-marketing.md
 docs/user/skills/mvpfy-document.md
 docs/user/skills/mvpfy-migrate.md
-docs/develop/README.md
-docs/develop/arquitetura.md
-docs/develop/skills.md
-docs/develop/contratos.md
-docs/develop/estado-e-persistencia.md
-docs/develop/company-template.md
-docs/develop/scripts.md
-docs/develop/arquivos.md
-docs/develop/ebook-e-documentacao.md
-docs/develop/testes.md
-docs/develop/contribuicao.md
-docs/develop/context/README.md
-docs/develop/context/produto.md
-docs/develop/context/entrevista.md
-docs/develop/context/documento.md
-docs/develop/context/tecnologia.md
-docs/develop/context/testes.md
-docs/specification.md

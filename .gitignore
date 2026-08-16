@@ -2,3 +2,4 @@ node_modules/
 example/.mvpfy/
 example/Company.md
 .ebook/build/
+.ebook/brand

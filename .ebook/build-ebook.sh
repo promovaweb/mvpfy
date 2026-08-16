@@ -56,6 +56,8 @@ test "$#" -eq 0 || { echo "Uso: ./.ebook/build-ebook.sh [--check]" >&2; exit 1; 
 for bin in pandoc weasyprint python3 magick pdfinfo pdftotext unzip; do command -v "$bin" >/dev/null || { echo "Comando ausente: $bin" >&2; exit 1; }; done
 
 mkdir -p "$BUILD" "$EBOOKS"
+ln -sfn "$ROOT/brand" "$BUILD/brand"
+ln -sfn "../brand" "$ROOT/.ebook/brand"
 FONT="$(fc-match -f '%{file}\n' 'DejaVu Sans' | head -1)"
 FONT_BOLD="$(fc-match -f '%{file}\n' 'DejaVu Sans:style=Bold' | head -1)"
 magick -size 1600x2560 xc:'#ffffff' \

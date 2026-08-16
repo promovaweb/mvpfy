@@ -1,13 +1,19 @@
 # MVPFy
 
 O MVPFy é um conjunto de skills para transformar uma ideia em um plano
-executável do primeiro produto SaaS. A conversa acontece com perguntas simples,
-uma por vez, e cada resposta é salva antes da próxima pergunta.
+executável do primeiro produto SaaS. A conversa acontece com uma única pergunta
+por turno, três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este
+tema`. Cada resposta é salva antes do próximo turno.
 
 O resultado público do processo é um único arquivo `Company.md`. Ele reúne o
 problema, o público, as personas, a jornada, o escopo da versão 1.0, o modelo
 SaaS, o preço, os custos, a tecnologia, o marketing, as métricas e as próximas
 validações.
+
+O MVPFy pode ler specs, backlogs, briefs e documentos já existentes no projeto
+consumidor para evitar perguntas repetidas. Essa leitura é somente de
+referência. O MVPFy não cria, altera ou migra `spec.md`, `specs/` ou qualquer
+arquivo do Specsfy.
 
 ## Instalação
 
@@ -43,7 +49,8 @@ node skills/mvpfy/scripts/setup-project.mjs --project .
 
 - O produto atendido é o primeiro software oferecido como serviço.
 - O plano cobre somente a versão 1.0 e separa o que fica para depois.
-- A orquestradora pergunta uma coisa por vez.
+- A orquestradora exibe uma pergunta por turno com cinco opções fixas.
+- A opção 5 abre conversa livre sobre a pergunta atual sem criar outra pergunta.
 - O estado vive no projeto consumidor, em `.mvpfy/`.
 - O conteúdo final vive em `Company.md`.
 - Laravel em VPS é a base técnica preferencial da Promovaweb.
