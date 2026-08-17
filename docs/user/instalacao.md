@@ -1,94 +1,50 @@
-# Prepare o projeto que receberá o MVP
+# Instalação do MVPFy
 
-O MVPFy fica instalado no projeto que receberá o planejamento. O repositório
-`mvpfy` fornece as skills e os scripts. O projeto consumidor guarda o `MVP.md`
-e o estado da sua própria entrevista.
-
-## Instale as skills
-
-Na raiz do projeto consumidor, execute:
+Para usar o MVPFy, tenha Node.js 22 ou superior instalado. Depois, instale a
+CLI globalmente e execute-a na raiz do projeto que receberá o planejamento:
 
 ```bash
-npx skills add promovaweb/mvpfy
-```
-
-Se quiser uma visão visual do andamento, instale também a CLI:
-
-```bash
-export MVPath="$HOME/.npm-global"
-npm install --global --prefix "$MVPath" @promovaweb/mvpfy
-export PATH="$MVPath/bin:$PATH"
-rehash 2>/dev/null || true
-mvpfy --project .
-```
-
-O painel mostra as áreas do MVP, abre uma aba colorida para leitura do
-`MVP.md` e oferece instalação e atualização usando `skills add` e `skills
-update`.
-
-Depois, prepare os arquivos locais:
-
-```bash
-node skills/mvpfy/scripts/setup-project.mjs --project .
-```
-
-Esse comando cria `.mvpfy/` e inicia `MVP.md` a partir do template atual. Ele
-não altera o código da aplicação, não cria `spec.md` e não escreve no
-repositório Specsfy.
-
-## O que será criado
-
-```text
-projeto/
-├── MVP.md
-└── .mvpfy/
-    ├── config.yaml
-    ├── state.json
-    ├── answers.jsonl
-    └── research.json
-```
-
-O `MVP.md` é o arquivo que você compartilha com as equipes. O diretório
-`.mvpfy/` guarda o estado necessário para retomar a entrevista, registrar as
-respostas e conservar as pesquisas feitas para o projeto.
-
-## Confira a instalação
-
-Para testar o próprio repositório do MVPFy, use:
-
-```bash
-npm test
-```
-
-No projeto consumidor, carregue `$mvpfy` e peça para começar. A primeira
-mensagem livre deve ser salva antes da primeira pergunta fechada. Se os
-arquivos não aparecerem, consulte [Solução de problemas](solucao-de-problemas.md).
-
-## Atualize sem perder o plano
-
-Atualize as skills pelo mesmo comando usado na instalação. Ao encontrar um
-`MVP.md` de uma versão anterior, a orquestradora compara o template atual e
-chama `mvpfy-migrate` antes de perguntar algo novo. As respostas já registradas
-continuam no arquivo e o próximo turno trata apenas da primeira lacuna relevante.
-
-Pela CLI, use `mvpfy update --project .`. Sem subcomando, `mvpfy --project .`
-abre a TUI. O comando delega a atualização ao
-CLI oficial `skills` e mantém a mesma origem usada pela instalação.
-
-Se o terminal informar que `mvpfy` não foi encontrado, use um prefixo global
-explícito e recarregue o índice de comandos do shell:
-
-```bash
-export MVPath="$HOME/.npm-global"
-npm install --global --prefix "$MVPath" @promovaweb/mvpfy
-export PATH="$MVPath/bin:$PATH"
-rehash 2>/dev/null || true
-command -v mvpfy
+npm install --global @promovaweb/mvpfy
 mvpfy --version
 ```
 
-Para uso imediato sem alterar o `PATH`, execute:
+## Prepare o projeto
+
+Na raiz do projeto consumidor, execute os dois comandos abaixo. Eles instalam as
+skills e preparam os arquivos locais:
 
 ```bash
-npx --yes @promovaweb/mvpfy --project .
+mvpfy install --project .
+node skills/mvpfy/scripts/setup-project.mjs --project .
 ```
+
+O primeiro comando instala as skills do MVPFy. O segundo cria `MVP.md` e
+`.mvpfy/` para guardar o plano e o estado necessário para retomar a entrevista,
+sem alterar o código da aplicação ou os arquivos do Specsfy.
+
+Confira o resultado com os dois comandos abaixo. Eles mostram se o projeto e o
+planejamento já estão prontos:
+
+```bash
+mvpfy doctor --project .
+mvpfy progress --project .
+```
+
+Com o projeto preparado, carregue `$mvpfy` no agente e peça para começar. A
+primeira mensagem livre será registrada antes da primeira pergunta fechada.
+
+## Atualize as skills
+
+Na mesma raiz do projeto, execute o comando de atualização. Ele mantém as
+skills disponíveis para a próxima sessão:
+
+```bash
+mvpfy update --project .
+```
+
+Quando já existir um `MVP.md` de uma versão anterior, a atualização compara o
+template e chama `mvpfy-migrate` antes de continuar. As respostas registradas
+permanecem disponíveis para a próxima lacuna da entrevista.
+
+Se algo não aparecer no projeto, consulte [Solução de problemas](solucao-de-problemas.md).
+Essa página reúne as verificações para corrigir a instalação.
