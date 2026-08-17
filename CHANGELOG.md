@@ -4,6 +4,11 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.7] - 2026-08-17
+
+- Restringe o comando `install` aos agentes Claude Code e Codex.
+- Remove o uso de `--all`, que poderia instalar as skills em outros agentes.
+
 ## [0.4.6] - 2026-08-17
 
 - Sincroniza os artefatos do ebook com a documentação atual do guia do usuário.

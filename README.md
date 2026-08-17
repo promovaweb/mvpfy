@@ -57,8 +57,8 @@ mvpfy --project .
 ```
 
 A TUI mostra o progresso por área, renderiza o `MVP.md` com cores e oferece as
-ações de instalação e atualização das skills. Essas ações executam `skills add`
-e `skills update` por baixo dos panos.
+ações de instalação e atualização das skills. A instalação executa `skills add`
+somente para Claude Code e Codex; a atualização usa `skills update`.
 
 No projeto que receberá as skills, use `$mvpfy` como porta de entrada. Para
 preparar um projeto local manualmente:

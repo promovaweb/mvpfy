@@ -36,8 +36,9 @@ A aba **Skills** oferece duas ações:
 - `I` instala ou reconcilia as skills do MVPFy;
 - `R` atualiza as skills já instaladas.
 
-As ações executam `skills add promovaweb/mvpfy --all --copy --yes` e
-`skills update --project --yes`. O MVPFy não substitui o CLI oficial nem cria
+As ações executam `skills add promovaweb/mvpfy --skill '*' --agent claude-code
+codex --copy --yes` e `skills update --project --yes`. A instalação é feita
+somente para Claude Code e Codex. O MVPFy não substitui o CLI oficial nem cria
 uma cópia paralela da instalação.
 
 ## Como interpretar o resumo

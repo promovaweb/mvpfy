@@ -16,7 +16,17 @@ export async function runSkills(args, project = process.cwd()) {
     return `${result.stdout ?? ""}${result.stderr ?? ""}`.trim();
 }
 export function installArguments() {
-    return ["add", SKILLS_REPOSITORY, "--all", "--copy", "--yes"];
+    return [
+        "add",
+        SKILLS_REPOSITORY,
+        "--skill",
+        "*",
+        "--agent",
+        "claude-code",
+        "codex",
+        "--copy",
+        "--yes",
+    ];
 }
 export function updateArguments() {
     return ["update", "--project", "--yes"];

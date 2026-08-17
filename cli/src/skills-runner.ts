@@ -19,7 +19,17 @@ export async function runSkills(args: string[], project = process.cwd()): Promis
 }
 
 export function installArguments(): string[] {
-  return ["add", SKILLS_REPOSITORY, "--all", "--copy", "--yes"];
+  return [
+    "add",
+    SKILLS_REPOSITORY,
+    "--skill",
+    "*",
+    "--agent",
+    "claude-code",
+    "codex",
+    "--copy",
+    "--yes",
+  ];
 }
 
 export function updateArguments(): string[] {

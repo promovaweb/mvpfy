@@ -27,10 +27,11 @@ mvpfy skills add --project .
 mvpfy skills update --project .
 ```
 
-`install` e `skills add` executam `skills add promovaweb/mvpfy --all --copy
---yes`. `update` e `skills update` executam `skills update --project --yes`.
-O MVPFy não materializa skills diretamente. O CLI oficial continua sendo a
-fonte dessa operação.
+`install` e `skills add` executam `skills add promovaweb/mvpfy --skill '*'
+--agent claude-code codex --copy --yes`. A instalação materializa as skills
+somente para Claude Code e Codex. `update` e `skills update` executam `skills
+update --project --yes`. O MVPFy não materializa skills diretamente. O CLI
+oficial continua sendo a fonte dessa operação.
 
 ## Abas da TUI
 
