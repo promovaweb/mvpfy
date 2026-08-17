@@ -6,7 +6,7 @@ possa ser construído, vendido e aprendido com clientes reais.
 
 ## O resultado que você recebe
 
-Ao terminar a entrevista, o MVPFy gera um único arquivo chamado `Company.md`.
+Ao terminar a entrevista, o MVPFy gera um único arquivo chamado `MVP.md`.
 Ele funciona como uma visão compartilhada para produto, desenvolvimento,
 website, marca, marketing, vendas e operação. O arquivo não é uma transcrição
 da conversa. Ele separa o que você informou, o que foi recomendado, o que ainda
@@ -32,7 +32,7 @@ O MVPFy não constrói o software, não publica o website, não cria um logo fin
 e não promete resultado comercial. Ele prepara o plano para que outros agentes
 ou equipes executem essas tarefas.
 
-Também não cria `spec.md`, não altera o Specsfy e não converte o `Company.md`
+Também não cria `spec.md`, não altera o Specsfy e não converte o `MVP.md`
 em uma especificação do Specsfy. O produto tem seu próprio artefato, seu
 próprio estado e seus próprios scripts.
 

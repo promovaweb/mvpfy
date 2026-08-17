@@ -1,9 +1,9 @@
 ---
 name: mvpfy-migrate
-description: Compara o template atual com um Company.md existente, acrescenta seções novas e preserva todo conteúdo já preenchido.
+description: Compara o template atual com um MVP.md existente, acrescenta seções novas e preserva todo conteúdo já preenchido.
 ---
 
-# Migrar o Company.md
+# Migrar o MVP.md
 
 Leia a versão do schema no frontmatter e os IDs de seção existentes. Execute
 `scripts/migrate-company.mjs --project <diretório>` para inserir seções ausentes

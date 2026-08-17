@@ -1,0 +1,72 @@
+name: Release do MVPFy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mvpfy-release-main
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Validar e publicar release
+    if: ${{ !github.event.deleted && !github.event.created }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório completo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar testes do framework
+        run: npm test
+
+      - name: Validar SemVer e changelog
+        run: node scripts/validate-release.mjs --previous "${{ github.event.before }}"
+
+      - name: Ler versão
+        id: version
+        shell: bash
+        run: echo "version=$(tr -d '[:space:]' < VERSION)" >> "$GITHUB_OUTPUT"
+
+      - name: Recusar tag já existente
+        env:
+          TAG: v${{ steps.version.outputs.version }}
+        run: |
+          if git show-ref --tags --verify --quiet "refs/tags/$TAG"; then
+            echo "A tag $TAG já existe. Aumente VERSION antes de publicar novamente." >&2
+            exit 1
+          fi
+
+      - name: Criar e enviar tag
+        env:
+          TAG: v${{ steps.version.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" "$GITHUB_SHA" -m "MVPFy $TAG"
+          git push origin "$TAG"
+
+      - name: Preparar notas da release
+        run: node scripts/extract-release-notes.mjs --output "$RUNNER_TEMP/mvpfy-release-notes.md"
+
+      - name: Criar release no GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: v${{ steps.version.outputs.version }}
+        run: |
+          gh release create "$TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --verify-tag \
+            --title "MVPFy $TAG" \
+            --notes-file "$RUNNER_TEMP/mvpfy-release-notes.md"

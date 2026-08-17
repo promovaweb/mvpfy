@@ -5,4 +5,4 @@
 | Pendente | Pendente | Pendente | Pendente | Pendente | Pendente | Pendente |
 
 Registre mensal, anual, promoção, moeda, limites e preço sob consulta. Separe
-fato consultado de inferência. Linke a página original no `Company.md`.
+fato consultado de inferência. Linke a página original no `MVP.md`.

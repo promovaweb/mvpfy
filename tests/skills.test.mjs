@@ -34,4 +34,9 @@ test("a orquestradora exige uma pergunta por turno e leitura somente de fontes",
   assert.match(skill, /Nunca crie, edite, renomeie, remova ou migre/);
   assert.match(skill, /três opções prontas/);
   assert.match(skill, /Conversar mais sobre este tema/);
+  assert.match(skill, /initial_idea/);
+  assert.match(skill, /candidate_items/);
+  assert.match(skill, /Não comece a entrevista fechada/);
+  assert.match(skill, /Analise toda a mensagem recebida antes de formular qualquer pergunta/);
+  assert.match(skill, /Se a pessoa enviar a ideia completa em uma única mensagem/);
 });

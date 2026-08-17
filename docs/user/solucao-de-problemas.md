@@ -8,7 +8,7 @@ Confirme que o comando foi executado na raiz do projeto consumidor:
 node skills/mvpfy/scripts/setup-project.mjs --project .
 ```
 
-Depois confira se existem `Company.md` e `.mvpfy/state.json`. O comando deve
+Depois confira se existem `MVP.md` e `.mvpfy/state.json`. O comando deve
 ser executado dentro do consumidor, não na raiz do repositório `mvpfy` para
 alterar o próprio pacote.
 

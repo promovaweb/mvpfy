@@ -15,6 +15,6 @@ Separe declaração do usuário, comprovação, hipótese e recomendação.
 
 Entregue ao orquestrador os campos preenchidos, as lacunas que mudam o produto
 e uma pergunta curta quando ainda faltar um ponto essencial. Registre a
-hipótese principal de validação no `Company.md` sem apresentá-la como fato.
+hipótese principal de validação no `MVP.md` sem apresentá-la como fato.
 
 Use [problem-map.md](references/problem-map.md) para o mapa de investigação.

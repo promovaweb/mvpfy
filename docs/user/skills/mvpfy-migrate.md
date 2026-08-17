@@ -1,6 +1,6 @@
 # Skill `mvpfy-migrate`
 
-Esta skill atualiza um `Company.md` quando o template evolui. Ela usa IDs de
+Esta skill atualiza um `MVP.md` quando o template evolui. Ela usa IDs de
 seção e versão de schema para inserir o que falta no lugar correto.
 
 ## Fluxo

@@ -13,7 +13,7 @@ problema → público → produto → SaaS
       ↓          ↓        ↓       ↓
 mercado → preço → tecnologia → marketing
       ↓
-marca → Company.md → migração quando o template mudar
+marca → MVP.md → migração quando o template mudar
 ```
 
 Essa ordem é adaptativa. Uma fonte já existente pode preencher uma área inteira
@@ -33,7 +33,7 @@ ou fazer a orquestradora voltar a um domínio anterior.
 | [`mvpfy-pricing`](mvpfy-pricing.md) | Valor e cobrança precisam de hipótese | Faixas, planos e cenários |
 | [`mvpfy-technology`](mvpfy-technology.md) | A jornada permite desenhar a base técnica | Arquitetura Laravel e custos |
 | [`mvpfy-marketing`](mvpfy-marketing.md) | Oferta e público precisam chegar ao mercado | Aquisição, conteúdo e venda |
-| [`mvpfy-document`](mvpfy-document.md) | Você pede o plano ou há dados suficientes | `Company.md` renderizado e validado |
+| [`mvpfy-document`](mvpfy-document.md) | Você pede o plano ou há dados suficientes | `MVP.md` renderizado e validado |
 | [`mvpfy-migrate`](mvpfy-migrate.md) | O template mudou | Documento atualizado sem perda |
 
 Cada página explica entradas, análise, saída, limites, exemplo e próximo

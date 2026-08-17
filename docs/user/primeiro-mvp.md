@@ -12,6 +12,21 @@ Você pode iniciar assim:
 Quero criar um sistema para pequenas agências que perdem leads dos clientes.
 ```
 
+Ou pode enviar um contexto completo de uma vez:
+
+```text
+Quero um SaaS para pequenas agências acompanharem leads dos clientes. A
+agência paga, o cliente acompanha apenas os próprios contatos e o MVP deve
+receber o lead, atribuí-lo a alguém e mostrar um resumo. Já imagino CRM,
+integração com WhatsApp e um painel. Quero usar Laravel em uma VPS e cobrar
+mensalidade.
+```
+
+O agente analisa esse texto inteiro antes de perguntar. CRM, WhatsApp e painel
+ficam como candidatos para investigação, enquanto problema, público, jornada,
+tecnologia e cobrança já podem preencher partes do plano. Você pode mandar
+mais mensagens antes de escolher `4. Continuar para as perguntas`.
+
 O MVPFy não transforma essa frase diretamente em módulos. Ele começa
 entendendo a situação.
 
@@ -92,7 +107,7 @@ O especialista de preço transforma esses dados em uma faixa inicial, não em um
 promessa. O documento pode trazer um cenário enxuto, um cenário base e um
 cenário de crescimento.
 
-## 7. Gere o Company.md
+## 7. Gere o MVP.md
 
 Quando você pedir “gerar o documento”, o MVPFy consolida todas as áreas. Uma
 versão inicial pode ter estado `preliminary` e mostrar `Pendente` nas lacunas.
@@ -102,7 +117,7 @@ passar a `ready`.
 
 ## 8. O que você entrega às equipes
 
-O `Company.md` permite que cada equipe comece do mesmo entendimento:
+O `MVP.md` permite que cada equipe comece do mesmo entendimento:
 
 - produto recebe escopo e critérios de aceite;
 - desenvolvimento recebe arquitetura, contas e integrações;

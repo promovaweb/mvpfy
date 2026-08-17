@@ -6,7 +6,7 @@ orquestradora e os organiza conforme o template.
 
 ## Arquivos usados
 
-- `assets/Company.template.md`;
+- `assets/MVP.template.md`;
 - `scripts/render-company.mjs`;
 - `scripts/validate-company.mjs`;
 - `references/document-rules.md`.

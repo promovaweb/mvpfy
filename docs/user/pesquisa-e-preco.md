@@ -14,7 +14,7 @@ Informe uma URL ou nome. A skill `mvpfy-market` procura, quando disponível:
 - moeda, limites e condições do plano;
 - diferença entre concorrente direto, indireto e alternativa manual.
 
-O `Company.md` registra fonte e data. Preço ausente continua como “não
+O `MVP.md` registra fonte e data. Preço ausente continua como “não
 publicado”; o MVPFy não inventa uma faixa e não trata promoção como preço
 permanente.
 

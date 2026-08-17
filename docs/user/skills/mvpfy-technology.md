@@ -16,7 +16,7 @@ e coerente com a fase da empresa.
 
 ## Entrega
 
-O `Company.md` recebe arquitetura, dados conceituais, autenticação, papéis,
+O `MVP.md` recebe arquitetura, dados conceituais, autenticação, papéis,
 contas, isolamento, integrações, filas, arquivos, segurança básica,
 observabilidade e custo mensal por cenário.
 

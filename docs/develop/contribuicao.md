@@ -26,7 +26,7 @@ precisa aparecer na skill, na política, no contrato e no teste correspondente.
 
 Leia specs, backlogs e docs do projeto consumidor quando isso ajudar o MVPFy a
 evitar perguntas repetidas. Não altere esses arquivos. Dentro do ecossistema,
-este submódulo só publica a própria biblioteca e seu `Company.md` no projeto
+este submódulo só publica a própria biblioteca e seu `MVP.md` no projeto
 consumidor.
 
 ## Validação

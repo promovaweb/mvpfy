@@ -14,7 +14,7 @@ primeiro software oferecido como serviço. Você conversa normalmente com a
 skill `mvpfy`; ela faz uma pergunta por vez, guarda cada resposta e aciona os
 especialistas adequados para produto, mercado, preço, tecnologia e marketing.
 
-O resultado é um `Company.md` que outras pessoas conseguem usar para criar o
+O resultado é um `MVP.md` que outras pessoas conseguem usar para criar o
 website, desenhar a marca, construir a versão 1.0, vender o serviço e operar
 os primeiros clientes.
 
@@ -24,10 +24,10 @@ da documentação e no padrão visual do ebook.
 
 ## Leia online ou como ebook
 
-Este percurso integra a edição portátil **v0.2.0**:
+Este percurso integra a edição portátil **v0.3.0**:
 
-- [PDF](../../ebooks/MVPFy-Documentacao-Completa-v0.2.0.pdf), para leitura e impressão;
-- [EPUB](../../ebooks/MVPFy-Documentacao-Completa-v0.2.0.epub), para leitores digitais;
+- [PDF](../../ebooks/MVPFy-Documentacao-Completa-v0.3.0.pdf), para leitura e impressão;
+- [EPUB](../../ebooks/MVPFy-Documentacao-Completa-v0.3.0.epub), para leitores digitais;
 - [manifesto](../../ebooks/build.json), com a versão e os hashes do build.
 
 O ebook inclui também a referência técnica e a especificação. A ordem de
@@ -56,7 +56,7 @@ fora do recorte principal.
 2. Siga [Instalação](instalacao.md) para preparar um projeto consumidor.
 3. Execute [Primeiro MVP](primeiro-mvp.md) com um exemplo completo.
 4. Consulte [Entrevista](entrevista.md) para pausar, continuar e corrigir.
-5. Veja [Company.md](company.md) para entender o documento produzido.
+5. Veja [MVP.md](mvp.md) para entender o documento produzido.
 6. Use [Pesquisa e preço](pesquisa-e-preco.md) e [Tecnologia e operação](tecnologia-e-operacao.md) quando essas áreas entrarem na conversa.
 7. Consulte o [catálogo de skills](skills/README.md) para entender cada especialista.
 

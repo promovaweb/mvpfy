@@ -1,7 +1,7 @@
 # Política de migração
 
 1. Leia `schema_version` e os IDs atuais.
-2. Compare o template com `Company.md`.
+2. Compare o template com `MVP.md`.
 3. Insira blocos ausentes na posição canônica.
 4. Preserve texto preenchido, inclusive escolhas antigas.
 5. Marque campos novos como pendentes.

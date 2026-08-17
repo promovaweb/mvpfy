@@ -1,7 +1,7 @@
 # Contexto do produto
 
 O MVPFy organiza a definição do primeiro SaaS de uma empresa em formação. Seu
-artefato central é `Company.md`, não `spec.md`.
+artefato central é `MVP.md`, não `spec.md`.
 
 O produto recebe ideia, documentos já existentes e respostas do usuário. Ele
 produz uma síntese com problema, público, escopo, SaaS, preço, tecnologia,

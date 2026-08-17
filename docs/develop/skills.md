@@ -19,7 +19,7 @@ exata.
 | `mvpfy-pricing` | Cobrança e cenários | `mvpfy-technology` |
 | `mvpfy-technology` | Stack e operação | `mvpfy-marketing` ou documento |
 | `mvpfy-marketing` | Aquisição e venda | Documento |
-| `mvpfy-document` | Company.md | Validação |
+| `mvpfy-document` | MVP.md | Validação |
 | `mvpfy-migrate` | Evolução de schema | Orquestradora |
 
 ## Estrutura de uma skill

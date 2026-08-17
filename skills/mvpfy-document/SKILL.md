@@ -1,11 +1,11 @@
 ---
 name: mvpfy-document
-description: Gera, atualiza e valida o Company.md do MVPFy com seções estáveis, estado claro e preservação do conteúdo existente.
+description: Gera, atualiza e valida o MVP.md do MVPFy com seções estáveis, estado claro e preservação do conteúdo existente.
 ---
 
-# Consolidar o Company.md
+# Consolidar o MVP.md
 
-Use `assets/Company.template.md` como fonte estrutural. O documento final deve
+Use `assets/MVP.template.md` como fonte estrutural. O documento final deve
 ser um único arquivo Markdown, compreensível sem o histórico da conversa, com
 metadados, resumo do MVP, problema, público, personas, escopo, SaaS, mercado,
 preço, custos, tecnologia, marketing, métricas, plano de execução e pendências.

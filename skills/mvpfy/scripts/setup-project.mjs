@@ -7,14 +7,16 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomUUID } from "node:crypto";
+import { mesclar, normalizarCabecalho } from "../../mvpfy-document/scripts/render-company.mjs";
 
 const argumentos = lerArgumentos(process.argv.slice(2));
 const projeto = path.resolve(argumentos.project || process.cwd());
 const raizSkill = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const template = path.join(raizSkill, "..", "mvpfy-document", "assets", "Company.template.md");
+const template = path.join(raizSkill, "..", "mvpfy-document", "assets", "MVP.template.md");
 const estadoDir = path.join(projeto, ".mvpfy");
 const estadoPath = path.join(estadoDir, "state.json");
-const companyPath = path.join(projeto, "Company.md");
+const mvpPath = path.join(projeto, "MVP.md");
+const legadoPath = path.join(projeto, "Company.md");
 const agora = new Date().toISOString();
 
 await mkdir(estadoDir, { recursive: true });
@@ -29,6 +31,10 @@ if (!existsSync(estadoPath)) {
         project_slug: path.basename(projeto),
         language: "pt-BR",
         interview_status: "not_started",
+        interview_stage: "initial_idea",
+        initial_idea: null,
+        initial_idea_parts: [],
+        candidate_items: [],
         active_domain: "problem",
         last_question_id: null,
         answered_question_ids: [],
@@ -54,7 +60,7 @@ if (!existsSync(estadoPath)) {
 if (!existsSync(path.join(estadoDir, "config.yaml"))) {
   await writeFile(
     path.join(estadoDir, "config.yaml"),
-    `project_id: ${path.basename(projeto)}\nlanguage: pt-BR\nproduct_type: SaaS\ncompany_file: Company.md\ntemplate_schema: 1.0.0\n`,
+    `project_id: ${path.basename(projeto)}\nlanguage: pt-BR\nproduct_type: SaaS\nmvp_file: MVP.md\ntemplate_schema: 1.0.0\n`,
     "utf8",
   );
 }
@@ -65,12 +71,13 @@ for (const arquivo of ["answers.jsonl", "research.json", "template-version"]) {
   await writeFile(destino, arquivo === "research.json" ? "{}\n" : arquivo === "template-version" ? "1.0.0\n" : "", "utf8");
 }
 
-if (!existsSync(companyPath)) {
+if (!existsSync(mvpPath)) {
   const conteudo = await readFile(template, "utf8");
   const estado = JSON.parse(await readFile(estadoPath, "utf8"));
+  const legado = existsSync(legadoPath) ? await readFile(legadoPath, "utf8") : conteudo;
   await writeFile(
-    companyPath,
-    conteudo
+    mvpPath,
+    normalizarCabecalho(mesclar(conteudo, legado))
       .replace("project_id: Pendente", `project_id: ${estado.project_id}`)
       .replace("project_name: Pendente", `project_name: ${path.basename(projeto)}`)
       .replace("created_at: Pendente", `created_at: ${agora}`)

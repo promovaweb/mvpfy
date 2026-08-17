@@ -7,14 +7,14 @@ necessário, controla a entrevista e consolida o resultado.
 ## Quando usar
 
 Use `$mvpfy` para começar, continuar, pausar, corrigir uma escolha, revisar
-uma área ou gerar o `Company.md`.
+uma área ou gerar o `MVP.md`.
 
 ## O que ela lê
 
 - `.mvpfy/config.yaml`;
 - `.mvpfy/state.json`;
 - `.mvpfy/answers.jsonl`;
-- `Company.md`;
+- `MVP.md`;
 - template atual;
 - specs, backlogs, briefs, docs, tickets e planos já existentes no projeto
   consumidor, sempre em modo somente leitura.
@@ -46,4 +46,4 @@ pergunta no turno.
 
 Specs, backlogs e documentos do projeto podem ser lidos como contexto. O
 MVPFy não cria, altera, renomeia, remove ou migra esses arquivos. O único
-documento final que ele escreve é `Company.md`, além do estado em `.mvpfy/`.
+documento final que ele escreve é `MVP.md`, além do estado em `.mvpfy/`.

@@ -40,5 +40,5 @@ uma justificativa de contrato, segurança, desempenho ou posicionamento.
 ## Operação assistida
 
 Durante a validação, liberar conta, acompanhar onboarding ou conferir uma
-assinatura manualmente pode ser aceitável. O `Company.md` registra o processo,
+assinatura manualmente pode ser aceitável. O `MVP.md` registra o processo,
 a pessoa responsável e o momento em que a automação passa a valer a pena.

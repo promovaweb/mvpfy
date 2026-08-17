@@ -24,6 +24,11 @@ Os campos centrais são `project_id`, `interview_status`, `active_domain`,
 O estado é uma visão atual. Para saber como uma resposta chegou até ali, leia
 `answers.jsonl`.
 
+Antes das perguntas fechadas, o evento `intake.initial-idea` guarda a descrição
+livre do SaaS e do MVP. O estado mantém `interview_stage: initial_idea` até esse
+evento ser salvo; depois passa para `questions`. Os itens mencionados nessa
+entrada ficam em `candidate_items` com o status `candidate`.
+
 ## Evento de resposta
 
 ```json
@@ -52,5 +57,5 @@ mesmo turno.
 
 Specs, backlogs, docs, briefs e planos existentes podem ser lidos para
 preencher fatos e evitar repetição. A rotina de leitura deve ser somente de
-consulta. Ela não deve criar, editar ou migrar arquivos fora de `Company.md` e
+consulta. Ela não deve criar, editar ou migrar arquivos fora de `MVP.md` e
 `.mvpfy/`.

@@ -16,7 +16,7 @@ como “qualquer empresa”.
 
 ## Saída
 
-O `Company.md` recebe um segmento prioritário e, no máximo, três personas
+O `MVP.md` recebe um segmento prioritário e, no máximo, três personas
 úteis: produto, compra e marketing quando forem diferentes. Cada persona tem
 contexto, objetivo, dor, alternativa, objeção, gatilho e canal.
 

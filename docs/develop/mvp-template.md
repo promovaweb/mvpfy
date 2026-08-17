@@ -1,7 +1,7 @@
-# Template e `Company.md`
+# Template e `MVP.md`
 
 O template canônico está em
-[`skills/mvpfy-document/assets/Company.template.md`](../../skills/mvpfy-document/assets/Company.template.md).
+[`skills/mvpfy-document/assets/MVP.template.md`](../../skills/mvpfy-document/assets/MVP.template.md).
 Ele é a fonte estrutural do documento entregue pelo MVPFy.
 
 ## IDs estáveis

@@ -15,7 +15,7 @@ flowchart TD
     E --> F[record-answer.mjs]
     F --> G[state.json e answers.jsonl]
     G --> H[Especialista do domínio]
-    H --> I[Company.md]
+    H --> I[MVP.md]
     I --> J[document e migrate]
 ```
 
@@ -51,5 +51,5 @@ quantidade de perguntas. Nenhum desses arquivos é uma saída do MVPFy e nenhum
 ## Fora da arquitetura
 
 O MVPFy não implementa software SaaS, não executa código de produção e não
-altera o repositório Specsfy. O escopo de escrita é `Company.md`, `.mvpfy/` e,
+altera o repositório Specsfy. O escopo de escrita é `MVP.md`, `.mvpfy/` e,
 quando a pessoa pedir, os artefatos de documentação do próprio pacote.

@@ -25,7 +25,7 @@ seu domínio exige:
 
 | Diretório | Arquivos relevantes |
 | --- | --- |
-| `skills/mvpfy/` | `SKILL.md`, `references/interview-policy.md`, `references/contracts.md`, `references/state-schema.md`, `scripts/setup-project.mjs`, `scripts/record-answer.mjs`. |
+| `skills/mvpfy/` | `SKILL.md`, `references/interview-policy.md`, `references/contracts.md`, `references/state-schema.md`, `scripts/setup-project.mjs`, `scripts/record-initial-idea.mjs` e `scripts/record-answer.mjs`. |
 | `skills/mvpfy-problem/` | `SKILL.md`, `references/problem-map.md`. |
 | `skills/mvpfy-audience/` | `SKILL.md`, `references/audience-map.md`. |
 | `skills/mvpfy-product/` | `SKILL.md`, `references/product-scope.md`. |
@@ -35,7 +35,7 @@ seu domínio exige:
 | `skills/mvpfy-pricing/` | `SKILL.md`, `references/pricing-model.md`. |
 | `skills/mvpfy-technology/` | `SKILL.md`, `references/technology-baseline.md`. |
 | `skills/mvpfy-marketing/` | `SKILL.md`, `references/go-to-market.md`. |
-| `skills/mvpfy-document/` | `SKILL.md`, `assets/Company.template.md`, renderer e validator. |
+| `skills/mvpfy-document/` | `SKILL.md`, `assets/MVP.template.md`, renderer e validator. |
 | `skills/mvpfy-migrate/` | `SKILL.md`, política e script de migração. |
 
 ### Arquivos comuns de cada skill
@@ -46,7 +46,7 @@ seu domínio exige:
 | `agents/openai.yaml` | Nome exibido, descrição curta e prompt padrão da interface. |
 | `references/*.md` | Regras detalhadas do domínio, contrato ou política de operação. |
 | `scripts/*.mjs` | Transformações determinísticas, sem dependência de uma conversa. |
-| `assets/Company.template.md` | Estrutura canônica copiada e atualizada no projeto consumidor. |
+| `assets/MVP.template.md` | Estrutura canônica copiada e atualizada no projeto consumidor. |
 
 ### Referências por domínio
 
@@ -69,11 +69,12 @@ seu domínio exige:
 
 | Script | Entrada | Saída |
 | --- | --- | --- |
-| `setup-project.mjs` | Diretório consumidor. | `Company.md` e `.mvpfy/`. |
+| `setup-project.mjs` | Diretório consumidor. | `MVP.md` e `.mvpfy/`. |
+| `record-initial-idea.mjs` | Projeto preparado e descrição livre da ideia. | Evento de entrada, ideia inicial e itens candidatos persistidos. |
 | `record-answer.mjs` | Projeto, pergunta, resposta e campos extraídos. | Evento em `answers.jsonl` e estado atualizado. |
-| `render-company.mjs` | Projeto com estado e template. | `Company.md` atualizado ou relatório `--check`. |
-| `validate-company.mjs` | `Company.md` e frontmatter. | Resultado estrutural e estado de prontidão. |
-| `migrate-company.mjs` | `Company.md` e template vigente. | Documento migrado sem duplicação. |
+| `render-company.mjs` | Projeto com estado e template. | `MVP.md` atualizado ou relatório `--check`. |
+| `validate-company.mjs` | `MVP.md` e frontmatter. | Resultado estrutural e estado de prontidão. |
+| `migrate-company.mjs` | `MVP.md` e template vigente. | Documento migrado sem duplicação. |
 
 ## Documentação
 
@@ -114,11 +115,16 @@ versionados e os aliases em `ebooks/` são entregas publicadas.
 | `package.json` | Scripts `test`, `setup:example`, `ebook` e `ebook:verify`. |
 | `tests/skills.test.mjs` | Catálogo, metadados e contrato de pergunta única. |
 | `tests/scripts.test.mjs` | Setup, persistência, migração e validação do documento. |
+| `tests/release.test.mjs` | Sincronização de SemVer e extração das notas. |
+| `scripts/validate-release.mjs` | Valida `VERSION`, `package.json`, changelog e avanço entre commits. |
+| `scripts/extract-release-notes.mjs` | Extrai a seção da versão para a release do GitHub. |
+| `.github/workflows/release.yml` | Valida, cria a tag e publica a release após push na `main`. |
 | `CHANGELOG.md` | Histórico das versões do pacote e da documentação. |
+| `VERSION` | Fonte canônica do SemVer do framework. |
 | `LICENSE` | Licença do projeto. |
 
 ## Arquivos que o consumidor recebe
 
-Ao executar `setup-project.mjs`, o consumidor recebe `Company.md` e `.mvpfy/`.
+Ao executar `setup-project.mjs`, o consumidor recebe `MVP.md` e `.mvpfy/`.
 Ele não recebe `spec.md`, não altera `specsfy/` e não transforma arquivos
 existentes em artefatos do MVPFy.

@@ -1,6 +1,6 @@
 {
   "name": "@promovaweb/mvpfy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "engines": { "node": ">=22" },
@@ -8,6 +8,8 @@
     "test": "node --test tests/*.test.mjs",
     "setup:example": "node skills/mvpfy/scripts/setup-project.mjs --project example",
     "ebook": "bash .ebook/build-ebook.sh",
-    "ebook:verify": "bash .ebook/build-ebook.sh --check"
+    "ebook:verify": "bash .ebook/build-ebook.sh --check",
+    "release:check": "node scripts/validate-release.mjs",
+    "release:notes": "node scripts/extract-release-notes.mjs"
   }
 }

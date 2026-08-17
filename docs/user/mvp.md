@@ -1,6 +1,6 @@
-# O arquivo `Company.md`
+# O arquivo `MVP.md`
 
-`Company.md` é a entrega central do MVPFy. Ele deve ser compreensível sem o
+`MVP.md` é a entrega central do MVPFy. Ele deve ser compreensível sem o
 histórico da conversa e útil para equipes diferentes trabalharem no mesmo MVP.
 
 ## Estados do documento

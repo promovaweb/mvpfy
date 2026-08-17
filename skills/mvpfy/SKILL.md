@@ -1,6 +1,6 @@
 ---
 name: mvpfy
-description: Orquestra a entrevista adaptativa para definir o primeiro MVP SaaS, guardar cada resposta e consolidar o plano em Company.md.
+description: Orquestra a entrevista adaptativa para definir o primeiro MVP SaaS, guardar cada resposta e consolidar o plano em MVP.md.
 ---
 
 # Orquestrar o MVPFy
@@ -11,31 +11,58 @@ deve permanecer focado na versão 1.0.
 
 ## Fluxo por turno
 
-1. Leia `.mvpfy/config.yaml`, `.mvpfy/state.json`, `.mvpfy/answers.jsonl`,
-   `Company.md` e a versão atual do template. Também procure, somente para
+1. Verifique se `.mvpfy/state.json` possui `initial_idea`. Se não possuir,
+   faça a entrada inicial livre: convide a pessoa a escrever, em um único
+   texto, o que o SaaS faz, para quem serve, qual problema resolve e quais
+   módulos, recursos ou integrações ela já imaginou. Não mostre as opções da
+   entrevista antes de receber o primeiro texto.
+2. Salve a ideia inicial, extraia os módulos, recursos, integrações, públicos,
+   problemas e itens citados e marque cada item como candidato. Não trate um
+   item mencionado como requisito aprovado. Guarde esses itens em
+   `candidate_items`.
+3. Analise toda a mensagem recebida antes de formular qualquer pergunta. Uma
+   única mensagem pode responder várias áreas. Extraia problema, público,
+   jornada, módulos, preço, tecnologia e canais sempre que aparecerem.
+4. Leia `.mvpfy/config.yaml`, `.mvpfy/state.json`, `.mvpfy/answers.jsonl`,
+   `MVP.md` e a versão atual do template. Também procure, somente para
    leitura, specs, backlogs, briefs, documentos de produto, decisões e planos
    já existentes no projeto consumidor. Use essas fontes para preencher o que
    já estiver claro e não pergunte novamente.
-2. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
+5. Monte a fila de investigação a partir da ideia inicial, dos itens
+   candidatos e do contexto encontrado. Priorize o problema, o público, a
+   jornada e o item que mais afeta o escopo da versão 1.0.
+6. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
    gerar o arquivo ou corrigir uma resposta.
-3. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
+7. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
    migração. Use `$mvpfy-migrate` antes de perguntar algo novo.
-4. Consulte a especialista da área com maior impacto sobre o pedido atual.
-5. Faça somente uma pergunta principal por turno. Exiba sempre cinco opções:
+8. Consulte a especialista da área com maior impacto sobre o pedido atual.
+9. Faça somente uma pergunta principal por turno. Exiba sempre cinco opções:
    três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este tema`.
    Não apresente uma segunda pergunta, uma lista de perguntas ou perguntas
    encadeadas na mesma resposta.
-6. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
+10. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
    texto original, a interpretação e os campos cobertos. Só depois escolha a
    próxima pergunta.
-7. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
+11. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
    histórico quando o usuário corrigir algo.
-8. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
+12. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
    quando os campos mínimos já estiverem preenchidos.
 
 ## Regras de conversa
 
 - Nunca apresente um formulário longo.
+- Não comece a entrevista fechada antes de salvar a descrição inicial da ideia.
+- A entrada inicial é uma solicitação de texto livre guiado. Oriente a pessoa
+  com os quatro pontos `o que faz`, `para quem serve`, `qual problema resolve`
+  e `o que já imaginou`, sem transformar a orientação em quatro perguntas.
+  Depois de cada mensagem inicial, acolha o conteúdo, salve-o e ofereça
+  `4. Continuar para as perguntas`. A pessoa pode enviar várias mensagens
+  antes de escolher essa opção.
+- Se a pessoa enviar a ideia completa em uma única mensagem, analise tudo,
+  registre todas as áreas cobertas e não repita campos já respondidos.
+- Antes de cada pergunta, compare a mensagem atual, os eventos salvos, o
+  `MVP.md` e as referências somente de leitura. Pergunte apenas pelo campo que
+  ainda não tiver resposta suficiente.
 - Nunca apresente mais de uma pergunta principal no mesmo turno. Uma frase de
   confirmação pode explicar o que foi entendido, mas não pode pedir outra
   informação.
@@ -45,6 +72,9 @@ deve permanecer focado na versão 1.0.
   etapa. Use a opção 5 para receber texto livre sobre a mesma pergunta. A
   opção 5 não abre uma segunda pergunta no mesmo turno.
 - Não repita uma pergunta respondida com clareza.
+- Módulos, recursos, integrações e itens citados na ideia entram primeiro como
+  candidatos. Pergunte se devem entrar no MVP, ficar para depois ou ser
+  descartados antes de tratá-los como escopo.
 - Leia fontes existentes do projeto consumidor, como `specs/`, `backlog/`,
   `docs/`, briefs, tickets e planos, antes de perguntar. Essas fontes são
   somente referências de contexto.
@@ -67,7 +97,7 @@ O MVPFy pode ler `spec.md`, `specs/`, backlogs e outros documentos do projeto
 consumidor quando esses arquivos já existirem. A leitura serve para aproveitar
 informações e reduzir perguntas. Nunca crie, edite, renomeie, remova ou migre
 arquivos do Specsfy. Nunca execute comandos para alterar o repositório
-`specsfy`. O artefato do MVPFy continua sendo somente `Company.md` e o estado
+`specsfy`. O artefato do MVPFy continua sendo somente `MVP.md` e o estado
 em `.mvpfy/`.
 
 ## Especialistas

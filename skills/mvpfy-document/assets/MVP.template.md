@@ -10,7 +10,7 @@ updated_at: Pendente
 language: pt-BR
 ---
 
-# Company.md
+# MVP.md
 
 Este arquivo reúne o plano da versão 1.0 do primeiro produto SaaS. Os rótulos
 `Confirmado`, `Recomendado`, `Hipótese` e `Pendente` preservam a origem de cada

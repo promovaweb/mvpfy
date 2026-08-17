@@ -4,7 +4,7 @@ docs/user/proposta.md
 docs/user/instalacao.md
 docs/user/primeiro-mvp.md
 docs/user/entrevista.md
-docs/user/company.md
+docs/user/mvp.md
 docs/user/pesquisa-e-preco.md
 docs/user/tecnologia-e-operacao.md
 docs/user/solucao-de-problemas.md
@@ -26,9 +26,10 @@ docs/develop/arquitetura.md
 docs/develop/skills.md
 docs/develop/contratos.md
 docs/develop/estado-e-persistencia.md
-docs/develop/company-template.md
+docs/develop/mvp-template.md
 docs/develop/scripts.md
 docs/develop/arquivos.md
+docs/develop/release.md
 docs/develop/ebook-e-documentacao.md
 docs/develop/testes.md
 docs/develop/contribuicao.md

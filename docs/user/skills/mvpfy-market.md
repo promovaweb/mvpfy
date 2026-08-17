@@ -15,7 +15,7 @@ data e separa inferência de informação publicada.
 
 ## Saída
 
-Uma tabela no `Company.md` com referência, tipo, público, promessa, recursos,
+Uma tabela no `MVP.md` com referência, tipo, público, promessa, recursos,
 preço, lacuna, link e data da consulta.
 
 ## Exemplo

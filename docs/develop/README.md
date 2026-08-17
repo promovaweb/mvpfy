@@ -10,7 +10,7 @@
 <!-- markdownlint-enable MD033 -->
 
 Este percurso explica como o MVPFy funciona por dentro e como alterar a
-biblioteca sem romper a entrevista, a persistência ou o `Company.md`. Ele é
+biblioteca sem romper a entrevista, a persistência ou o `MVP.md`. Ele é
 destinado a agentes e pessoas que contribuem com skills, scripts, template,
 documentação, ebook ou testes.
 
@@ -29,8 +29,9 @@ usuário](../user/README.md).
 | arquitetura e responsabilidades | [Arquitetura](arquitetura.md) |
 | cada skill e seu handoff | [Skills](skills.md) |
 | estado, respostas e gravação | [Estado e persistência](estado-e-persistencia.md) |
-| template e `Company.md` | [Template do documento](company-template.md) |
+| template e `MVP.md` | [Template do documento](mvp-template.md) |
 | comandos e arquivos executáveis | [Scripts](scripts.md) |
+| SemVer, changelog e GitHub Release | [Versionamento e releases](release.md) |
 | testes e validações | [Testes](testes.md) |
 | ebook e manutenção das páginas | [Documentação e ebook](ebook-e-documentacao.md) |
 | contribuição completa | [Contribuição](contribuicao.md) |

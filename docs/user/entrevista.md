@@ -3,13 +3,56 @@
 A entrevista é a interface principal do MVPFy. Você fala em linguagem comum e
 a orquestradora escolhe a próxima lacuna com maior impacto no plano.
 
+## Entrada inicial
+
+Antes da primeira pergunta com opções, descreva livremente a ideia do SaaS e
+do MVP. Conte o que o produto pode fazer, para quem ele serviria e quais
+módulos, recursos ou integrações você já imaginou. Essa é a única entrada livre
+de abertura. O MVPFy salva o texto e separa os itens citados como candidatos.
+
+Depois disso, começa a entrevista com uma pergunta por vez e cinco opções. Um
+item citado não entra automaticamente na versão 1.0: ele será investigado e
+poderá entrar no MVP, ficar para depois ou ser descartado.
+
+Você também pode enviar tudo em uma mensagem. Por exemplo:
+
+```text
+Quero um SaaS para pequenas agências acompanharem leads de seus clientes.
+Hoje elas usam planilhas e WhatsApp. A agência paga, cada cliente vê apenas
+seus próprios leads e o MVP precisa cadastrar o lead, atribuí-lo a alguém e
+mostrar um resumo. Quero começar com Laravel em uma VPS e cobrar mensalidade.
+```
+
+Nesse caso, o MVPFy registra problema, público, comprador, permissões, jornada,
+tecnologia e cobrança antes de perguntar. Ele não pergunta novamente quem paga
+nem quais etapas já foram descritas. A próxima pergunta trata apenas da lacuna
+mais importante que restar.
+
+Se ainda quiser acrescentar informações, envie outra mensagem. Todas são
+acolhidas e salvas. Quando terminar, escolha `4. Continuar para as perguntas`.
+
+O encerramento da entrada inicial pode aparecer assim:
+
+```text
+MVPFy: Entendi a ideia e já registrei o problema, o público, a jornada e os
+itens candidatos. Você quer acrescentar algo antes de começar?
+1. Acrescentar outro módulo ou recurso.
+2. Explicar melhor o público ou o problema.
+3. Informar tecnologia, preço ou canal de venda.
+4. Continuar para as perguntas.
+5. Conversar mais sobre este tema.
+```
+
+As opções 1, 2, 3 e 5 permitem continuar enviando conteúdo. A opção 4 salva o
+estado da entrada e libera a próxima pergunta fechada.
+
 ## O ciclo de cada resposta
 
 1. Você responde com número, texto, combinação de opções ou “não sei”.
 2. O MVPFy guarda a resposta original.
 3. A resposta é normalizada sem alterar seu sentido.
 4. Fatos, escolhas, hipóteses e áreas cobertas são extraídos.
-5. `state.json` e `Company.md` são atualizados quando aplicável.
+5. `state.json` e `MVP.md` são atualizados quando aplicável.
 6. A orquestradora recalcula o que ainda falta.
 7. Uma única pergunta seguinte é apresentada.
 

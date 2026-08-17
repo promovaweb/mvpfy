@@ -6,16 +6,23 @@ O MVPFy é uma suíte de skills para uma pessoa que está criando uma empresa e
 seu primeiro produto SaaS. Ele transforma contexto em um plano de MVP para
 produto, desenvolvimento, website, marca, marketing, vendas e operação.
 
-O artefato central é `Company.md`. O MVPFy não cria `spec.md`, não executa o
+O artefato central é `MVP.md`. O MVPFy não cria `spec.md`, não executa o
 método do Specsfy e não altera arquivos do repositório Specsfy.
 
 ## Entrada e fontes
 
 O usuário pode começar com uma frase, uma ideia detalhada, URLs de concorrentes
 ou arquivos existentes no projeto. A orquestradora lê, em modo somente leitura,
-`Company.md`, `.mvpfy/`, specs, backlogs, briefs, docs, tickets e planos. Uma
+`MVP.md`, `.mvpfy/`, specs, backlogs, briefs, docs, tickets e planos. Uma
 informação clara encontrada nessas fontes conta como contexto preenchido e não
 deve voltar como pergunta.
+
+Uma mensagem pode conter o plano inteiro conhecido até aquele momento. Antes
+de cada pergunta, a orquestradora analisa a mensagem completa, os eventos
+anteriores, o `MVP.md` e as referências disponíveis. Ela registra todos os
+campos identificados e pergunta somente sobre a lacuna prioritária restante.
+Mensagens adicionais durante a entrada inicial são acumuladas; a opção 4
+continua disponível para iniciar as perguntas fechadas.
 
 ## Contrato rígido da entrevista
 
@@ -44,7 +51,7 @@ mostrar um formulário ou adicionar uma sexta opção.
 4. Receber número ou texto livre.
 5. Salvar resposta bruta e interpretação.
 6. Atualizar fatos, escolhas, hipóteses e áreas cobertas.
-7. Atualizar `Company.md` quando aplicável.
+7. Atualizar `MVP.md` quando aplicável.
 8. Só então selecionar o próximo turno.
 
 Se a gravação falhar, o MVPFy repete a mesma pergunta. Ele não avança com
@@ -64,7 +71,7 @@ estado incerto.
 | `mvpfy-pricing` | Modelo de cobrança, faixas e cenários econômicos. |
 | `mvpfy-technology` | Laravel, VPS, dados, arquivos, IA e operação. |
 | `mvpfy-marketing` | Website, conteúdo, leads, venda e lançamento. |
-| `mvpfy-document` | Renderização e validação do `Company.md`. |
+| `mvpfy-document` | Renderização e validação do `MVP.md`. |
 | `mvpfy-migrate` | Atualização do template com preservação. |
 
 ## Escopo do primeiro SaaS
@@ -84,7 +91,7 @@ provedor de e-mail e IA entram conforme a jornada exigir. Node.js só entra com
 justificativa concreta. A recomendação registra custo, premissa e condição para
 revisão.
 
-## `Company.md`
+## `MVP.md`
 
 O template possui 35 seções com IDs estáveis. O documento distingue confirmado,
 recomendado, hipótese e pendência. `preliminary` significa que há lacunas;
@@ -106,6 +113,6 @@ specs, backlogs, `spec.md` ou qualquer arquivo externo ao MVPFy.
 - leitura de contexto existente sem escrita nesses arquivos;
 - retomada depois de pausa;
 - correção com histórico;
-- `Company.md` idempotente e validável;
+- `MVP.md` idempotente e validável;
 - 12 skills com responsabilidades separadas;
 - PDF e EPUB reconstruíveis a partir da documentação.

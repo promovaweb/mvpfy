@@ -1,6 +1,6 @@
-# Regras do Company.md
+# Regras do MVP.md
 
-O arquivo entregue é sempre `Company.md`. Cada bloco canônico possui um
+O arquivo entregue é sempre `MVP.md`. Cada bloco canônico possui um
 comentário `mvpfy:section:<id>`. O renderer deve preservar texto entre o
 heading e o próximo ID, inserir novas seções na posição do template e manter o
 frontmatter como YAML válido.

@@ -12,7 +12,7 @@
 O MVPFy transforma uma ideia inicial em um plano utilizável para construir e
 validar o primeiro SaaS de uma empresa. A conversa acontece com perguntas
 simples, uma por vez. O trabalho especializado fica distribuído nas skills e
-o resultado é consolidado em um único `Company.md`.
+o resultado é consolidado em um único `MVP.md`.
 
 A documentação segue a separação usada pelo Specsfy: um percurso para quem
 usa o produto e outro para quem mantém a biblioteca.
@@ -37,6 +37,6 @@ gerados a partir das páginas listadas em [reading-order.txt](reading-order.txt)
 ## Fonte de verdade
 
 As skills em `skills/`, os scripts em cada pacote, os testes em `tests/` e o
-template `skills/mvpfy-document/assets/Company.template.md` descrevem o
+template `skills/mvpfy-document/assets/MVP.template.md` descrevem o
 comportamento executável. A documentação explica esse comportamento e não
 substitui os arquivos que o runtime lê.

@@ -18,7 +18,7 @@ Depois, inicie a estrutura local:
 node skills/mvpfy/scripts/setup-project.mjs --project .
 ```
 
-O comando prepara `.mvpfy/` e cria `Company.md` a partir do template. Ele não
+O comando prepara `.mvpfy/` e cria `MVP.md` a partir do template. Ele não
 altera código da aplicação, não cria `spec.md` e não escreve no repositório
 Specsfy.
 
@@ -26,7 +26,7 @@ Specsfy.
 
 ```text
 projeto/
-├── Company.md
+├── MVP.md
 └── .mvpfy/
     ├── config.yaml
     ├── state.json
@@ -34,7 +34,7 @@ projeto/
     └── research.json
 ```
 
-`Company.md` é o arquivo que você compartilha com as equipes. `.mvpfy/` guarda
+`MVP.md` é o arquivo que você compartilha com as equipes. `.mvpfy/` guarda
 o estado operacional para retomar a entrevista, registrar respostas e manter
 pesquisas. Consulte [Estado e persistência](../develop/estado-e-persistencia.md)
 para os campos e as regras de gravação.
@@ -54,6 +54,6 @@ criada, confira [Solução de problemas](solucao-de-problemas.md).
 ## Atualização
 
 Atualize as skills pelo mesmo mecanismo usado na instalação. Ao encontrar um
-`Company.md` de uma versão anterior, a orquestradora compara o template e usa
+`MVP.md` de uma versão anterior, a orquestradora compara o template e usa
 `mvpfy-migrate` antes de fazer novas perguntas. A atualização preserva as
 respostas existentes.
