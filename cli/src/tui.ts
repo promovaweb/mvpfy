@@ -46,7 +46,8 @@ export const TUI_BINDINGS = {
   "C-q": "Sair",
   escape: "Voltar",
   "C-u": "Atualizar",
-  "C-p": "Progresso",
+  "C-h": "Home",
+  "C-p": "Home (compatibilidade)",
   "C-a": "Áreas",
   "C-m": "MVP.md",
   "C-k": "Skills",
@@ -55,14 +56,14 @@ export const TUI_BINDINGS = {
   r: "Atualizar skills",
 } as const;
 
-export type Tab = "progress" | "areas" | "document" | "skills" | "about";
+export type Tab = "home" | "areas" | "document" | "skills" | "about";
 
 export const TUI_TABS: ReadonlyArray<{
   id: Tab;
   label: string;
   key: string;
 }> = [
-  { id: "progress", label: "Progresso", key: "C-p" },
+  { id: "home", label: "Home", key: "C-h" },
   { id: "areas", label: "Áreas", key: "C-a" },
   { id: "document", label: "MVP.md", key: "C-m" },
   { id: "skills", label: "Skills", key: "C-k" },
@@ -89,7 +90,7 @@ export class MvpfyTui {
   #status?: Widgets.BoxElement;
   #projectInput?: Widgets.TextboxElement;
   #snapshot?: ProgressSnapshot;
-  #tab: Tab = "progress";
+  #tab: Tab = "home";
   #tabButtons = new Map<Tab, Widgets.ButtonElement>();
   #poller: NodeJS.Timeout | undefined;
   #lastBackAt = 0;
@@ -250,7 +251,7 @@ export class MvpfyTui {
     screen.key(["C-q"], () => screen.destroy());
     screen.key(["escape"], () => this.goBack());
     screen.key(["C-u"], () => void this.refresh());
-    screen.key(["C-p"], () => this.showTab("progress"));
+    screen.key(["C-h", "backspace", "C-p"], () => this.showTab("home"));
     screen.key(["C-a"], () => this.showTab("areas"));
     screen.key(["C-m"], () => this.showTab("document"));
     screen.key(["C-k"], () => this.showTab("skills"));
@@ -292,7 +293,7 @@ export class MvpfyTui {
       button.style.bold = id === tab;
     }
     for (const child of [...this.#body.children]) child.destroy();
-    if (tab === "progress") this.renderProgress(this.#body);
+    if (tab === "home") this.renderProgress(this.#body);
     else if (tab === "areas") this.renderAreas(this.#body);
     else if (tab === "document") void this.renderDocument(this.#body);
     else if (tab === "skills") this.renderSkills(this.#body);
@@ -304,7 +305,7 @@ export class MvpfyTui {
     const now = Date.now();
     if (now - this.#lastBackAt < 50) return;
     this.#lastBackAt = now;
-    if (this.#tab !== "progress") this.showTab("progress");
+    if (this.#tab !== "home") this.showTab("home");
   }
 
   private renderProgress(body: Widgets.BoxElement): void {
@@ -332,32 +333,25 @@ export class MvpfyTui {
         style: { fg: TUI_THEME.text, bg: background, border: { fg: border } },
       });
     });
+    const completedSections = snapshot.areas.reduce((sum, area) => sum + area.complete, 0);
+    const totalSections = snapshot.areas.reduce((sum, area) => sum + area.total, 0);
     blessed.box({
       parent: body,
       top: 9,
       left: 0,
-      width: "49%",
-      bottom: 0,
-      border: "line",
-      label: " Áreas do MVP ",
-      padding: { left: 1, right: 1 },
-      content: snapshot.areas.map(areaLine).join("\n"),
-      style: { fg: TUI_THEME.text, bg: TUI_THEME.surface, border: { fg: TUI_THEME.border } },
-    });
-    blessed.box({
-      parent: body,
-      top: 9,
-      left: "51%",
       right: 0,
-      bottom: 0,
+      height: 7,
       border: "line",
-      label: " Próximo ponto ",
-      padding: { left: 1, right: 1 },
+      padding: { left: 2, right: 2 },
+      valign: "middle",
       content:
-        `${snapshot.next_gap?.label ?? "Nenhuma pendência identificada."}\n\n` +
-        `Modelo SaaS: ${tenancyLabel(snapshot.tenancy)}\n` +
-        `Documento: ${snapshot.document ? "MVP.md encontrado" : "MVP.md pendente"}`,
-      style: { fg: TUI_THEME.text, bg: TUI_THEME.surface, border: { fg: TUI_THEME.warning } },
+        "Visão consolidada do andamento do MVP. Os números são recalculados " +
+        "quando os arquivos mudam.\n\n" +
+        `Seções completas: ${completedSections}/${totalSections}  ·  ` +
+        `Modelo SaaS: ${tenancyLabel(snapshot.tenancy)}  ·  ` +
+        `Documento: ${snapshot.document ? "MVP.md encontrado" : "MVP.md pendente"}\n\n` +
+        `Próximo ponto: ${snapshot.next_gap?.label ?? "Nenhuma pendência identificada."}`,
+      style: { fg: TUI_THEME.text, bg: TUI_THEME.surface, border: { fg: TUI_THEME.border } },
     });
   }
 
@@ -535,10 +529,6 @@ function buttonStyle(primary: boolean): Record<string, unknown> {
 
 function panelStyle(): Record<string, unknown> {
   return { fg: TUI_THEME.text, bg: TUI_THEME.surface, border: { fg: TUI_THEME.border } };
-}
-
-function areaLine(area: ProgressArea): string {
-  return `${symbol(area.status)} ${area.label.padEnd(18, " ")} ${String(area.percent).padStart(3, " ")}%`;
 }
 
 function symbol(status: ProgressArea["status"]): string {

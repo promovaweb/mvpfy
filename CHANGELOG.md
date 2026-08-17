@@ -4,6 +4,15 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.4] - 2026-08-17
+
+- Aproxima a tela inicial do padrão Home do Specsfy, com quatro cards e um
+  painel consolidado de leitura.
+- Usa `Home` e `Ctrl+H` como entrada principal da TUI, mantendo `Ctrl+P` como
+  atalho compatível.
+- Reduz a densidade visual da tela inicial sem remover o detalhamento da aba
+  `Áreas`.
+
 ## [0.4.3] - 2026-08-17
 
 - Alinha a TUI do MVPFy ao design system terminal da Promovaweb, baseado no

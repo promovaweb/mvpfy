@@ -25,6 +25,10 @@ test("o runner chama skills add e skills update", async () => {
 test("a TUI possui abas de áreas e do MVP renderizado", async () => {
   const source = await readFile(path.join(root, "cli/src/tui.ts"), "utf8");
   assert.match(source, /label: "Áreas"/);
+  assert.match(source, /label: "Home"/);
+  assert.match(source, /key: "C-h"/);
+  assert.match(source, /Seções completas:/);
+  assert.doesNotMatch(source, /label: " Áreas do MVP "/);
   assert.match(source, /label: "MVP\.md"/);
   assert.match(source, /marked\.parse/);
   assert.match(source, /MVPFy — Dashboard de MVP e skills/);

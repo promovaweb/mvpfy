@@ -23,7 +23,8 @@ export declare const TUI_BINDINGS: {
     readonly "C-q": "Sair";
     readonly escape: "Voltar";
     readonly "C-u": "Atualizar";
-    readonly "C-p": "Progresso";
+    readonly "C-h": "Home";
+    readonly "C-p": "Home (compatibilidade)";
     readonly "C-a": "Áreas";
     readonly "C-m": "MVP.md";
     readonly "C-k": "Skills";
@@ -31,7 +32,7 @@ export declare const TUI_BINDINGS: {
     readonly i: "Instalar";
     readonly r: "Atualizar skills";
 };
-export type Tab = "progress" | "areas" | "document" | "skills" | "about";
+export type Tab = "home" | "areas" | "document" | "skills" | "about";
 export declare const TUI_TABS: ReadonlyArray<{
     id: Tab;
     label: string;

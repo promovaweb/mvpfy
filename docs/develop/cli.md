@@ -34,7 +34,7 @@ fonte dessa operação.
 
 ## Abas da TUI
 
-- **Progresso**: percentual geral, áreas, modelo SaaS e próximo ponto.
+- **Home**: percentual geral, áreas, modelo SaaS e próximo ponto.
 - **Áreas**: detalhe das seções de cada área do MVP.
 - **MVP.md**: documento completo renderizado com cores, somente para leitura.
 - **Skills**: ações de instalação e atualização.

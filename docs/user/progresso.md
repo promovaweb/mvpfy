@@ -24,7 +24,7 @@ Para abrir o painel:
 mvpfy --project .
 ```
 
-Na aba **Progresso**, você vê o resumo geral, as áreas e o próximo ponto. Na
+Na aba **Home**, você vê o resumo geral, as áreas e o próximo ponto. Na
 aba **Áreas**, pode navegar por cada grupo e ver quais seções estão completas.
 Na aba **MVP.md**, o documento é renderizado com cores e pode ser percorrido
 com as setas do terminal. Essa leitura não altera o arquivo.
