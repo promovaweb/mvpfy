@@ -35,19 +35,10 @@ Não pule essa pergunta porque a mensagem inicial usou “multitenante” ou
 “multi-tenant”. A escolha precisa aparecer como resposta persistida em
 `saas.tenancy-model`.
 
-Quando a resposta for a opção 1, abra a trilha multitenante. Pergunte uma coisa
-por turno, somente até registrar:
-
-1. O que representa um tenant: empresa, equipe, filial, cliente de uma
-   agência ou outro grupo.
-2. Qual pessoa cria o tenant e administra seu espaço.
-3. Como membros entram: convite do administrador, cadastro próprio ou
-   implantação acompanhada.
-4. Uma pessoa pode participar de mais de um tenant?
-5. Quais papéis precisam existir dentro do tenant?
-6. O que precisa ficar invisível para os outros tenants?
-7. O banco será compartilhado com separação lógica ou dedicado por tenant?
-8. Como o tenant será criado, configurado e levado ao primeiro valor?
+Quando a resposta for a opção 1, faça no máximo uma pergunta adicional que
+combine a unidade do tenant e a pessoa administradora. Membros, papéis,
+isolamento, banco e provisionamento são recomendações do especialista, não uma
+nova fila de perguntas.
 
 Se a resposta for a opção 2, pergunte apenas o modelo de instalação e o motivo
 da separação. Se for a opção 3, explique a diferença prática antes de pedir uma
@@ -59,7 +50,7 @@ tecnologia, registre todos esses campos antes de escrever a próxima pergunta.
 Não repita nenhum deles. A próxima pergunta trata somente da lacuna que
 continuar relevante para o MVP.
 
-## Perguntas
+## Perguntas por etapa
 
 Faça exatamente uma pergunta principal por turno. Cada turno de investigação
 deve exibir cinco opções nesta ordem: três respostas prontas, `4. Avançar` e
@@ -69,22 +60,22 @@ inicial, as três primeiras opções podem orientar a continuação do relato; a
 opção 4 sempre deve continuar para as perguntas e a opção 5 deve acolher mais
 texto sobre a ideia.
 
-1. Modelo multitenante ou instalação separada.
-2. Unidade, titularidade e membros do tenant, quando aplicável.
-3. Situação e ideia.
-4. Problema principal.
-5. Pessoa mais afetada.
-6. Alternativa usada hoje.
-7. Resultado esperado.
-8. Jornada principal.
-9. Recurso indispensável.
-10. Usuário, comprador e pagador.
-11. Primeiro valor do SaaS.
-12. Concorrentes ou alternativas.
-13. Cobrança e ticket.
-14. Volume inicial e custo.
-15. Aquisição e venda.
-16. Nome e posição da marca.
+O percurso fechado tem no máximo oito perguntas. Cada etapa deve receber uma
+pergunta essencial, somente se a entrada inicial, os arquivos de referência e
+as respostas anteriores ainda não tiverem coberto o assunto:
+
+| Etapa | Limite | Foco |
+| --- | ---: | --- |
+| Problema | 1 | Situação, dor e alternativa atual |
+| Público | 1 | Pessoa usuária, compradora e pagadora |
+| Produto | 1 | Jornada principal e recurso indispensável |
+| SaaS | 2 | Modelo de atendimento e, se necessário, unidade do tenant |
+| Mercado | 1 | Alternativa, valor percebido e faixa de cobrança |
+| Tecnologia | 1 | Stack, volume e operação inicial |
+| Marketing | 1 | Primeiro canal de aquisição e venda |
+
+Marca, nome e slogan são gerados a partir do material reunido. Não ganham uma
+pergunta própria no percurso inicial.
 
 ## Prioridade
 
@@ -92,10 +83,11 @@ Priorize a lacuna que muda problema, público, jornada, preço ou operação. Um
 resposta rica pode cobrir várias áreas. Não reabra uma resposta clara apenas
 para completar uma tabela.
 
-Faça uma pergunta adicional quando houver contradição, público sem prioridade,
-mais de uma jornada central, preço sem unidade de valor ou arquitetura sem
-volume previsto. Se a pessoa disser “não sei”, registre a hipótese necessária
-e siga para uma recomendação curta.
+Use uma pergunta adicional apenas dentro do limite da etapa. Se a pessoa disser
+“não sei”, registre a hipótese necessária, recomende um caminho simples e siga.
+Ao atingir oito respostas fechadas, encerre a entrevista normal e gere ou
+atualize o `MVP.md`. Detalhes restantes ficam como recomendações, hipóteses ou
+pendências para uma revisão solicitada depois.
 
 Antes de criar a pergunta, leia fontes já existentes no projeto consumidor,
 como `spec.md`, `specs/`, `backlog/`, `docs/`, briefs, tickets e planos. Use o

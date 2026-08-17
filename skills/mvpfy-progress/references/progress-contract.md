@@ -40,5 +40,5 @@ Leia `state.tenancy` e informe explicitamente um destes estados:
 - comparação em aberto.
 
 Quando o modelo for multitenante e houver campos ausentes, a próxima lacuna
-deve apontar tenant, titularidade, membros, isolamento ou provisionamento antes
-de detalhes menos importantes.
+deve apontar a unidade do tenant e sua administração. Os demais campos podem
+ser recomendados sem abrir uma fila nova de perguntas.

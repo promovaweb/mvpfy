@@ -57,3 +57,41 @@ test("setup transforma Company.md legado em MVP.md sem apagar a origem", async (
     await rm(projeto, { recursive: true, force: true });
   }
 });
+
+test("limita a entrevista por etapa e encerra após oito respostas", async () => {
+  const projeto = await mkdtemp(path.join(os.tmpdir(), "mvpfy-limite-"));
+  const responder = async (stage, questionId) => executar("node", [
+    "skills/mvpfy/scripts/record-answer.mjs",
+    "--project", projeto,
+    "--stage", stage,
+    "--question-id", questionId,
+    "--question-text", `Pergunta de ${stage}`,
+    "--raw-answer", "Resposta suficiente",
+    "--normalized-answer", "Resposta suficiente",
+  ], { cwd: raiz });
+
+  try {
+    await executar("node", ["skills/mvpfy/scripts/setup-project.mjs", "--project", projeto], { cwd: raiz });
+    await executar("node", ["skills/mvpfy/scripts/record-initial-idea.mjs", "--project", projeto, "--idea", "SaaS de teste"], { cwd: raiz });
+    await executar("node", ["skills/mvpfy/scripts/record-initial-idea.mjs", "--project", projeto, "--continue"], { cwd: raiz });
+    await responder("problem", "problem.context");
+    await assert.rejects(responder("problem", "problem.impact"), /A etapa problem já recebeu sua pergunta essencial/);
+
+    await responder("audience", "audience.primary");
+    await responder("product", "product.journey");
+    await responder("saas", "saas.tenancy-model");
+    await responder("saas", "saas.tenant-unit");
+    await responder("market", "market.value");
+    await responder("technology", "technology.stack");
+    await responder("marketing", "marketing.channel");
+
+    const estado = JSON.parse(await readFile(path.join(projeto, ".mvpfy", "state.json"), "utf8"));
+    assert.equal(estado.closed_question_count, 8);
+    assert.equal(estado.stage_question_counts.saas, 2);
+    assert.equal(estado.interview_stage, "finalization");
+    assert.equal(estado.interview_status, "ready");
+    await assert.rejects(responder("marketing", "marketing.second-channel"), /Limite de 8 perguntas fechadas/);
+  } finally {
+    await rm(projeto, { recursive: true, force: true });
+  }
+});

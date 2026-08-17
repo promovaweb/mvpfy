@@ -4,6 +4,15 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.5] - 2026-08-16
+
+- Limita a entrevista fechada a oito perguntas no total.
+- Distribui as perguntas por etapa, com uma pergunta essencial por área e duas
+  no máximo para SaaS.
+- Registra o uso por etapa no estado e encerra o fluxo normal em `finalization`.
+- Mantém detalhes de multitenancy como recomendações técnicas para evitar uma
+  trilha longa durante o planejamento do MVP.
+
 ## [0.4.4] - 2026-08-17
 
 - Aproxima a tela inicial do padrão Home do Specsfy, com quatro cards e um

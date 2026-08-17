@@ -17,7 +17,8 @@ plano.
 ## `state.json`
 
 Os campos centrais são `project_id`, `interview_status`, `active_domain`,
-`last_question_id`, `answered_question_ids`, `facts`, `choices`, `assumptions`,
+`last_question_id`, `answered_question_ids`, `closed_question_count`,
+`max_closed_questions`, `stage_question_counts`, `facts`, `choices`, `assumptions`,
 `recommendations`, `gaps`, `conflicts`, `section_status` e
 `research_status`. O bloco `tenancy` começa como pendente e guarda o modelo,
 unidade do tenant, titularidade, membros, vínculo entre tenants, isolamento,
@@ -32,6 +33,11 @@ evento ser salvo. Depois passa para `questions`, mas a pergunta
 `saas.tenancy-model` continua obrigatória como primeiro turno fechado. Os itens mencionados nessa
 entrada ficam em `candidate_items` com o status `candidate`.
 
+O limite padrão é de oito perguntas fechadas. `stage_question_counts` registra
+o uso por etapa: uma pergunta para problema, público, produto, mercado,
+tecnologia e marketing; duas para SaaS. Ao atingir o teto, o estado passa para
+`finalization` e a próxima ação é consolidar o `MVP.md`.
+
 ## Evento de resposta
 
 ```json
@@ -39,6 +45,7 @@ entrada ficam em `candidate_items` com o status `candidate`.
   "event_id": "uuid",
   "timestamp": "2026-08-16T12:00:00Z",
   "question_id": "problem.context",
+  "stage": "problem",
   "question_text": "Onde o problema aparece?",
   "raw_answer": "Em clínicas pequenas",
   "normalized_answer": "Clínicas pequenas",

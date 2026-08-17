@@ -40,6 +40,13 @@ atual e segue para a próxima lacuna. `Conversar mais sobre este tema` abre
 texto livre sobre a pergunta atual. A resposta livre é salva, analisada e só
 então a próxima pergunta pode aparecer em um novo turno.
 
+O percurso fechado tem no máximo oito perguntas. Cada etapa recebe uma pergunta
+essencial: problema, público, produto, mercado, tecnologia e marketing. SaaS
+pode receber duas, uma para o modelo de atendimento e outra para a unidade do
+tenant. Se a entrada inicial ou as fontes de consulta já cobrirem uma etapa,
+ela é pulada. Depois do teto, o sistema consolida o `MVP.md` e registra o
+restante como recomendação ou hipótese.
+
 É inválido exibir duas perguntas, pedir que a pessoa responda dois campos,
 mostrar um formulário ou adicionar uma sexta opção.
 

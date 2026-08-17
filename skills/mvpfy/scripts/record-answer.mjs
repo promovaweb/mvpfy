@@ -18,10 +18,36 @@ if (!argumentos["question-id"] || !argumentos["raw-answer"]) {
 }
 
 const estado = JSON.parse(await readFile(estadoPath, "utf8"));
+const ids = new Set(estado.answered_question_ids || []);
+const isCorrection = Boolean(argumentos.supersedes);
+const count = Number(estado.closed_question_count || 0);
+const limit = Math.max(Number(estado.max_closed_questions || 8), 8);
+const stage = String(argumentos.stage || "general");
+const stageLimits = {
+  problem: 1,
+  audience: 1,
+  product: 1,
+  saas: 2,
+  market: 1,
+  technology: 1,
+  marketing: 1,
+  brand: 0,
+  general: limit,
+};
+const stageCounts = { ...(estado.stage_question_counts || {}) };
+const stageCount = Number(stageCounts[stage] || 0);
+const stageLimit = stageLimits[stage] ?? 1;
+if (!isCorrection && count >= limit) {
+  throw new Error(`Limite de ${limit} perguntas fechadas atingido. Gere ou revise o MVP.md.`);
+}
+if (!isCorrection && stageCount >= stageLimit) {
+  throw new Error(`A etapa ${stage} já recebeu sua pergunta essencial. Siga para outra etapa.`);
+}
 const evento = {
   event_id: randomUUID(),
   timestamp: agora,
   question_id: argumentos["question-id"],
+  stage,
   question_text: argumentos["question-text"] || "",
   raw_answer: argumentos["raw-answer"],
   normalized_answer: argumentos["normalized-answer"] || argumentos["raw-answer"],
@@ -54,12 +80,17 @@ if (argumentos["tenancy-data"]) {
 }
 
 await appendFile(answersPath, `${JSON.stringify(evento)}\n`, "utf8");
-const ids = new Set(estado.answered_question_ids || []);
 ids.add(evento.question_id);
+const nextCount = isCorrection ? count : count + 1;
+if (!isCorrection) stageCounts[stage] = stageCount + 1;
 const novoEstado = {
   ...estado,
   tenancy,
-  interview_status: "in_progress",
+  interview_status: nextCount >= limit ? "ready" : "in_progress",
+  interview_stage: nextCount >= limit ? "finalization" : estado.interview_stage,
+  closed_question_count: nextCount,
+  max_closed_questions: limit,
+  stage_question_counts: stageCounts,
   last_question_id: evento.question_id,
   answered_question_ids: [...ids],
   updated_at: agora,

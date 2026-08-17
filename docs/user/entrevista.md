@@ -62,13 +62,26 @@ O sistema atenderá várias empresas ou equipes separadas dentro da mesma aplica
 5. Conversar mais sobre este tema
 ```
 
-Se você escolher a primeira opção, a conversa segue para tenant, titularidade,
+Se você escolher a primeira opção, a conversa pode fazer uma única pergunta
+curta sobre a unidade do tenant e a pessoa administradora. Os detalhes de
 membros, papéis, acesso entre espaços, separação de dados, banco e criação de
-novos tenants. Essas respostas orientam a arquitetura, o onboarding, as
-permissões, o preço e o custo de operação.
+novos tenants viram recomendações técnicas. Assim, o MVP não vira um cadastro
+interminável de regras de acesso.
 
 Se ainda não souber, a opção 5 permite conversar sobre a diferença antes de
 registrar a escolha. A pergunta continua sendo uma por vez.
+
+## Quantas perguntas serão feitas
+
+A entrevista fechada tem no máximo oito perguntas. Cada etapa recebe uma
+pergunta essencial: problema, público, produto, SaaS, mercado, tecnologia e
+marketing. A etapa SaaS pode receber uma segunda pergunta curta. Se a ideia
+inicial já respondeu uma etapa, ela é pulada. O que permanecer será registrado
+como recomendação ou hipótese no `MVP.md`.
+
+Depois da oitava resposta, o MVPFy encerra a entrevista normal e monta o
+documento. Você pode pedir uma revisão específica depois, mas o fluxo inicial
+não continua perguntando sem fim.
 
 ## O que acontece depois da sua resposta
 

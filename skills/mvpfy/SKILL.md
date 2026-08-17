@@ -31,15 +31,13 @@ deve permanecer focado na versão 1.0.
 5. Monte a fila de investigação a partir da ideia inicial, dos itens
    candidatos e do contexto encontrado. Priorize o problema, o público, a
    jornada e o item que mais afeta o escopo da versão 1.0.
-6. Antes da fila comum, confirme obrigatoriamente o modelo de atendimento do
-   SaaS com a pergunta `saas.tenancy-model`. A pergunta deve aparecer mesmo se
-   a ideia inicial já usar a palavra multitenante, para registrar a escolha
-   explícita da pessoa.
-7. Se a resposta for multitenante, abra a trilha `saas.multitenancy` e faça as
-   perguntas necessárias sobre unidade do tenant, titularidade, membros,
-   vínculo de uma pessoa a vários tenants, isolamento, banco e provisionamento.
-   Não avance para arquitetura ou preço enquanto a separação entre tenants não
-   tiver uma descrição suficiente.
+6. Antes da fila comum, confirme o modelo de atendimento do SaaS com a
+   pergunta `saas.tenancy-model`. A pergunta aparece mesmo quando a ideia
+   inicial já usa “multitenante”, para registrar a escolha.
+7. Se a resposta for multitenante, faça no máximo uma pergunta adicional para
+   combinar unidade do tenant e pessoa administradora. Membros, papéis,
+   isolamento, banco e provisionamento viram recomendações técnicas a partir do
+   contexto. Não abra uma trilha longa para um detalhe de MVP.
 8. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
    gerar o arquivo, corrigir uma resposta ou mostrar o progresso.
 9. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
@@ -49,17 +47,25 @@ deve permanecer focado na versão 1.0.
    três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este tema`.
    Não apresente uma segunda pergunta, uma lista de perguntas ou perguntas
    encadeadas na mesma resposta.
-12. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
+12. Respeite o limite persistido de oito perguntas fechadas. Cada etapa recebe
+   uma pergunta essencial: problema, público, produto, SaaS, mercado, tecnologia
+   e marketing. SaaS pode receber uma segunda pergunta curta. Se a etapa já
+   atingiu seu limite, registre uma recomendação e avance.
+13. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
    texto original, a interpretação e os campos cobertos. Só depois escolha a
    próxima pergunta.
-13. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
+14. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
    histórico quando o usuário corrigir algo.
-14. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
+15. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
    quando os campos mínimos já estiverem preenchidos.
-15. Quando a pessoa pedir progresso ou perguntar o que falta, use
+16. Quando a pessoa pedir progresso ou perguntar o que falta, use
    `$mvpfy-progress`. Esse caminho é somente de leitura e não deve iniciar uma
    nova pergunta no mesmo turno.
-16. Antes de publicar ou recompilar a documentação, confirme a separação entre
+17. Ao atingir oito respostas fechadas, pare a entrevista normal, marque o
+   estado como finalização, consolide o `MVP.md` e marque detalhes restantes
+   como recomendação ou hipótese. Só abra uma revisão depois de um pedido
+   explícito da pessoa.
+18. Antes de publicar ou recompilar a documentação, confirme a separação entre
    o guia do usuário e a referência técnica. O ebook deve usar apenas a ordem
    de páginas do público escolhido. Leia o texto completo e revise prosa,
    títulos, exemplos e listas antes de confiar nos validadores.
@@ -79,6 +85,10 @@ deve permanecer focado na versão 1.0.
 - Antes de cada pergunta, compare a mensagem atual, os eventos salvos, o
   `MVP.md` e as referências somente de leitura. Pergunte apenas pelo campo que
   ainda não tiver resposta suficiente.
+- A entrevista fechada tem no máximo oito perguntas. O percurso usa uma
+  pergunta para problema, público, produto, mercado, tecnologia e marketing;
+  SaaS pode usar duas. Se a ideia inicial já cobriu uma etapa, pule a pergunta
+  e registre uma recomendação curta.
 - Nunca apresente mais de uma pergunta principal no mesmo turno. Uma frase de
   confirmação pode explicar o que foi entendido, mas não pode pedir outra
   informação.

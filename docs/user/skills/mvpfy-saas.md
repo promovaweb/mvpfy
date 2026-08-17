@@ -6,7 +6,8 @@ usar o serviço, pagar, receber suporte e encerrar o acesso quando necessário.
 
 Ela começa confirmando se várias empresas ou equipes usarão a mesma aplicação.
 Essa pergunta vem logo depois da ideia inicial. Se a resposta for multitenante,
-a especialista abre uma trilha própria antes de tratar preço ou arquitetura.
+a especialista faz no máximo uma pergunta curta sobre a unidade do espaço e sua
+administração antes de tratar preço ou arquitetura.
 
 ## O que ela procura
 
@@ -21,7 +22,7 @@ a especialista abre uma trilha própria antes de tratar preço ou arquitetura.
 - cancelamento, inadimplência e suporte.
 - processos manuais aceitáveis durante a validação.
 
-Na trilha multitenante, também procura:
+Com essa resposta, ela recomenda:
 
 - unidade do tenant.
 - titularidade e administração.
@@ -29,6 +30,9 @@ Na trilha multitenante, também procura:
 - participação de uma pessoa em vários tenants.
 - limite dos dados e banco.
 - criação e configuração de novos tenants.
+
+Esses itens não abrem uma fila adicional. Eles aparecem como recomendações
+para o MVP, usando o suporte de Teams do Laravel quando fizer sentido.
 
 ## Um exemplo
 

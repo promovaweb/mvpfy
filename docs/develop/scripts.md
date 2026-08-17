@@ -40,6 +40,7 @@ escolha e seus campos relacionados, use `--tenancy-data` com um objeto JSON:
 ```bash
 node skills/mvpfy/scripts/record-answer.mjs \
   --project . \
+  --stage saas \
   --question-id saas.tenancy-model \
   --raw-answer "Sim, várias empresas na mesma aplicação" \
   --normalized-answer "Multitenant compartilhado" \
@@ -52,6 +53,7 @@ node skills/mvpfy/scripts/record-answer.mjs \
 ```bash
 node skills/mvpfy/scripts/record-answer.mjs \
   --project . \
+  --stage problem \
   --question-id problem.context \
   --question-text "Onde o problema aparece?" \
   --raw-answer "Em clínicas pequenas" \
@@ -61,6 +63,10 @@ node skills/mvpfy/scripts/record-answer.mjs \
 
 O comando acrescenta um evento em `answers.jsonl`, atualiza campos do estado e
 não deve ser chamado depois de uma pergunta que ainda não foi salva.
+`--stage` aceita `problem`, `audience`, `product`, `saas`, `market`,
+`technology` ou `marketing`. O estado recusa mais de uma pergunta nessas etapas,
+exceto SaaS, que aceita duas, e recusa qualquer resposta fechada depois do
+oitavo registro.
 
 ## Renderizar e validar
 

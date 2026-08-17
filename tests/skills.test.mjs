@@ -43,6 +43,9 @@ test("a orquestradora exige uma pergunta por turno e leitura somente de fontes",
   assert.match(skill, /saas\.tenancy-model/);
   assert.match(skill, /unidade do tenant/);
   assert.match(skill, /--tenancy-data/);
+  assert.match(skill, /no máximo oito perguntas/);
+  assert.match(skill, /uma pergunta essencial/);
+  assert.match(skill, /estado como finalização/);
 });
 
 test("a trilha SaaS trata multitenancy e Teams do Laravel", async () => {
@@ -51,7 +54,8 @@ test("a trilha SaaS trata multitenancy e Teams do Laravel", async () => {
   const technology = await readFile(path.join(skillsDir, "mvpfy-technology", "SKILL.md"), "utf8");
   assert.match(saas, /primeira pergunta fechada/);
   assert.match(saas, /Teams/);
-  assert.match(multitenancy, /Uma pessoa pode participar de mais de um tenant/);
-  assert.match(multitenancy, /banco será compartilhado/);
+  assert.match(multitenancy, /pergunta adicional/);
+  assert.match(multitenancy, /Não faça perguntas separadas/);
+  assert.match(multitenancy, /banco ou provisionamento/);
   assert.match(technology, /Teams/);
 });

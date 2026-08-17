@@ -10,6 +10,10 @@ problema, o público, as personas, a jornada, o escopo da versão 1.0, o modelo
 SaaS, o preço, os custos, a tecnologia, o marketing, as métricas e as próximas
 validações.
 
+A entrevista fechada é curta: uma pergunta essencial por etapa e no máximo oito
+perguntas no total. A etapa SaaS pode usar duas. O restante vira recomendação no
+`MVP.md` para manter o foco na versão 1.0.
+
 O MVPFy pode ler specs, backlogs, briefs e documentos já existentes no projeto
 consumidor para evitar perguntas repetidas. Essa leitura é somente de
 referência. O MVPFy não cria, altera ou migra `spec.md`, `specs/` ou qualquer

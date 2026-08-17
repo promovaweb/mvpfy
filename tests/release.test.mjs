@@ -27,8 +27,8 @@ test("o extrator produz notas somente da versão atual", async () => {
   try {
     await executar("node", ["scripts/extract-release-notes.mjs", "--output", saida], { cwd: raiz });
     const notas = await readFile(saida, "utf8");
-    assert.match(notas, /padrão Home do Specsfy/);
-    assert.match(notas, /Ctrl\+H/);
+    assert.match(notas, /oito perguntas/);
+    assert.match(notas, /por etapa/);
   } finally {
     await rm(pasta, { recursive: true, force: true });
   }

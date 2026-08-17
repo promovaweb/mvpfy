@@ -13,9 +13,9 @@ cancelamento, inadimplência e acesso após encerramento.
 Antes de seguir para cobrança ou arquitetura, confirme se o produto será
 multitenante. Use `saas.tenancy-model` como a primeira pergunta fechada depois
 da ideia inicial. Se for multitenante, leia
-[multitenancy.md](references/multitenancy.md) e siga sua trilha até registrar
-tenant, titularidade, membros, papéis, vínculo entre tenants, isolamento,
-estratégia de banco e provisionamento.
+[multitenancy.md](references/multitenancy.md) e faça no máximo uma pergunta
+adicional sobre unidade do tenant e administração. Os demais campos são
+recomendações derivadas do contexto.
 
 Prefira operação assistida quando ela reduzir construção sem esconder o
 aprendizado. Liberação de conta, implantação, cobrança ou suporte podem ser

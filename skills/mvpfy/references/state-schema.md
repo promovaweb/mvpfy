@@ -8,6 +8,9 @@
   "language": "pt-BR",
   "interview_status": "not_started",
   "interview_stage": "initial_idea",
+  "closed_question_count": 0,
+  "max_closed_questions": 8,
+  "stage_question_counts": {},
   "initial_idea": null,
   "initial_idea_parts": [],
   "candidate_items": [],
@@ -43,3 +46,9 @@ estado mutável.
 
 Projetos antigos podem não possuir `tenancy`. Nesse caso, trate o bloco como
 pendente e faça a pergunta `saas.tenancy-model` antes da fila comum.
+
+`closed_question_count` controla o teto global de oito perguntas fechadas.
+`stage_question_counts` controla o limite de cada etapa: uma pergunta para
+problema, público, produto, mercado, tecnologia e marketing; duas para SaaS.
+Depois do teto, o estado passa para `finalization` e o agente gera ou atualiza
+`MVP.md`.
