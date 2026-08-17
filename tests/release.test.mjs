@@ -27,8 +27,8 @@ test("o extrator produz notas somente da versão atual", async () => {
   try {
     await executar("node", ["scripts/extract-release-notes.mjs", "--output", saida], { cwd: raiz });
     const notas = await readFile(saida, "utf8");
-    assert.match(notas, /prefixo global explícito/);
-    assert.match(notas, /índice de comandos do Zsh/);
+    assert.match(notas, /design system terminal da Promovaweb/);
+    assert.match(notas, /tokens de cor e atalhos/);
   } finally {
     await rm(pasta, { recursive: true, force: true });
   }

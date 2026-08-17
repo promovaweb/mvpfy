@@ -27,6 +27,12 @@ test("a TUI possui abas de áreas e do MVP renderizado", async () => {
   assert.match(source, /label: "Áreas"/);
   assert.match(source, /label: "MVP\.md"/);
   assert.match(source, /marked\.parse/);
+  assert.match(source, /MVPFy — Dashboard de MVP e skills/);
+  assert.match(source, /right: 21/);
+  assert.match(source, /content: "Atualizar  \^U"/);
+  assert.match(source, /bottom: 4/);
+  assert.match(source, /activeBackground: "#5EEDE1"/);
+  assert.match(source, /selectedBackground: "#6D28D9"/);
 });
 
 test("a entrada padrão abre a TUI e aceita --project", async () => {
