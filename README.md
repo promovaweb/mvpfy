@@ -45,7 +45,10 @@ npx skills add promovaweb/mvpfy
 Para acompanhar o plano no terminal, instale a CLI publicada no npm:
 
 ```bash
-npm install --global @promovaweb/mvpfy
+export MVPath="$HOME/.npm-global"
+npm install --global --prefix "$MVPath" @promovaweb/mvpfy
+export PATH="$MVPath/bin:$PATH"
+rehash 2>/dev/null || true
 mvpfy --project .
 ```
 
@@ -106,8 +109,8 @@ mvpfy tui --project .
 
 Use `mvpfy progress --json` para integração com outros agentes e scripts. Sem
 subcomando, `mvpfy` abre a TUI automaticamente. Se o npm global não estiver no
-`PATH`, use `npx --yes @promovaweb/mvpfy --project .` ou adicione o diretório
-indicado por `npm prefix -g` seguido de `/bin` ao `PATH`.
+`PATH`, use `npx --yes @promovaweb/mvpfy --project .` ou instale no prefixo
+explícito do exemplo e adicione `"$HOME/.npm-global/bin"` ao `PATH`.
 
 ## Validação
 

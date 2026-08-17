@@ -4,6 +4,12 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.2] - 2026-08-17
+
+- Documenta a instalação da CLI com prefixo global explícito para evitar que o
+  comando `mvpfy` fique fora do `PATH`.
+- Inclui a atualização do índice de comandos do Zsh após a instalação.
+
 ## [0.4.1] - 2026-08-16
 
 - Faz `mvpfy` abrir a TUI automaticamente sem exigir o subcomando `tui`.

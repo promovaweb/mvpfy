@@ -15,7 +15,10 @@ npx skills add promovaweb/mvpfy
 Se quiser uma visão visual do andamento, instale também a CLI:
 
 ```bash
-npm install --global @promovaweb/mvpfy
+export MVPath="$HOME/.npm-global"
+npm install --global --prefix "$MVPath" @promovaweb/mvpfy
+export PATH="$MVPath/bin:$PATH"
+rehash 2>/dev/null || true
 mvpfy --project .
 ```
 
@@ -72,12 +75,16 @@ Pela CLI, use `mvpfy update --project .`. Sem subcomando, `mvpfy --project .`
 abre a TUI. O comando delega a atualização ao
 CLI oficial `skills` e mantém a mesma origem usada pela instalação.
 
-Se o terminal informar que `mvpfy` não foi encontrado, confira o diretório
-global do npm:
+Se o terminal informar que `mvpfy` não foi encontrado, use um prefixo global
+explícito e recarregue o índice de comandos do shell:
 
 ```bash
-npm prefix -g
-export PATH="$(npm prefix -g)/bin:$PATH"
+export MVPath="$HOME/.npm-global"
+npm install --global --prefix "$MVPath" @promovaweb/mvpfy
+export PATH="$MVPath/bin:$PATH"
+rehash 2>/dev/null || true
+command -v mvpfy
+mvpfy --version
 ```
 
 Para uso imediato sem alterar o `PATH`, execute:
