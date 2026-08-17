@@ -28,6 +28,9 @@ do EPUB. Depois do build, leia o resultado completo para conferir voz, exemplos,
 ritmo e separação de públicos. Os validadores confirmam estrutura e integridade
 do arquivo, mas não substituem a leitura editorial.
 
+O PDF, o EPUB e o manifesto usam a mesma versão do framework. `VERSION` é a
+fonte canônica e `ebooks/VERSION` funciona apenas como espelho de conferência.
+
 ## Onde termina este trabalho
 
 Esta skill não cria `spec.md`, não edita backlog e não apaga uma resposta para

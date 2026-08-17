@@ -5,7 +5,13 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DOCS="$ROOT/docs/user"
 EBOOKS="$ROOT/ebooks"
-VERSION="$(tr -d '[:space:]' < "$EBOOKS/VERSION")"
+FRAMEWORK_VERSION="$(tr -d '[:space:]' < "$ROOT/VERSION")"
+EBOOK_VERSION="$(tr -d '[:space:]' < "$EBOOKS/VERSION")"
+test "$FRAMEWORK_VERSION" = "$EBOOK_VERSION" || {
+  echo "Versões divergentes: framework $FRAMEWORK_VERSION, ebook $EBOOK_VERSION" >&2
+  exit 1
+}
+VERSION="$FRAMEWORK_VERSION"
 BUILD="$ROOT/.ebook/build"
 STEM="MVPFy-Guia-do-Usuario-v$VERSION"
 PDF="$EBOOKS/$STEM.pdf"

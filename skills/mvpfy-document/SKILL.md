@@ -37,4 +37,8 @@ Depois da leitura editorial, gere PDF e EPUB, leia o resultado e rode os
 validadores do submódulo e do Hub. Um build correto comprova o arquivo gerado,
 mas não comprova a qualidade do texto.
 
+Use o mesmo SemVer do framework no PDF, no EPUB e no manifesto. `VERSION` é a
+fonte canônica e `ebooks/VERSION` é apenas um espelho conferido pelo build. Se
+os valores divergirem, corrija a versão antes de gerar ou publicar os formatos.
+
 Leia [document-rules.md](references/document-rules.md) para a ordem canônica.

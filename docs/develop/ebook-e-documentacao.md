@@ -21,12 +21,16 @@ O primeiro comando gera a edição versionada, os aliases `ebook-mvpfy.pdf` e
 `ebook-mvpfy.epub` e `ebooks/build.json`. O segundo confere arquivos, hashes,
 texto mínimo do PDF e integridade do EPUB.
 
+A versão do ebook é sempre igual à versão do framework. `VERSION` é a fonte
+canônica e `ebooks/VERSION` funciona como espelho conferido pelo build. Se os
+arquivos divergirem, o build deve falhar.
+
 ## Quando incrementar a versão
 
-Altere `ebooks/VERSION` quando o conjunto de páginas mudar. Uma nova seção ou
-capítulo usa incremento minor. correção textual sem nova área pode usar patch.
-O manifesto registra o hash das fontes, portanto o build precisa ser executado
-depois de toda mudança documental.
+Altere `VERSION` e copie o mesmo valor para `ebooks/VERSION` em toda release.
+Uma nova seção ou capítulo usa incremento minor. Correção textual sem nova área
+pode usar patch. O manifesto registra o hash das fontes, portanto o build precisa
+ser executado depois de toda mudança documental.
 
 ## Visual
 

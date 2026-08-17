@@ -99,7 +99,7 @@ seu domínio exige:
 | `.ebook/cover.svg` | Arte vetorial da capa. |
 | `.ebook/fonts/` | Inter, Manrope e licenças das fontes. |
 | `brand/logo/icon.svg` e `icon.png` | Ícone usado na capa e na documentação. |
-| `ebooks/VERSION` | Versão da edição publicada. |
+| `ebooks/VERSION` | Espelho da versão do framework, conferido antes do build. |
 | `ebooks/build.json` | Hashes das fontes e dos artefatos gerados. |
 | `ebooks/ebook-mvpfy.pdf` e `.epub` | Aliases estáveis da edição vigente. |
 | `ebooks/MVPFy-Guia-do-Usuario-v*.pdf` e `.epub` | Arquivos versionados de cada edição do usuário. |

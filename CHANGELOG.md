@@ -4,6 +4,11 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.2.3] - 2026-08-16
+
+- Alinha a versão do ebook com a versão do framework.
+- Faz o build falhar quando `VERSION` e `ebooks/VERSION` divergem.
+
 ## [0.2.2] - 2026-08-16
 
 - Reescreve o guia do usuário com prosa direta, exemplos situados e orientação
