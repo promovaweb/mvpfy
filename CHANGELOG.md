@@ -4,6 +4,14 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.1] - 2026-08-16
+
+- Faz `mvpfy` abrir a TUI automaticamente sem exigir o subcomando `tui`.
+- Aceita `mvpfy --project <caminho>` na entrada padrão.
+- Corrige o launcher npm para executar a CLI somente uma vez.
+- Documenta o uso por `npx` e a configuração do diretório global do npm no
+  `PATH`.
+
 ## [0.4.0] - 2026-08-16
 
 - Adiciona a skill `mvpfy-progress` para mostrar o andamento sem iniciar outra

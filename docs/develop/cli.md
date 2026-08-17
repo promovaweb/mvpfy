@@ -20,7 +20,7 @@ durante o build e precisa permanecer igual.
 ```bash
 mvpfy progress --project .
 mvpfy progress --project . --json
-mvpfy tui --project .
+mvpfy --project .
 mvpfy install --project .
 mvpfy update --project .
 mvpfy skills add --project .
@@ -39,6 +39,10 @@ fonte dessa operação.
 - **MVP.md**: documento completo renderizado com cores, somente para leitura.
 - **Skills**: ações de instalação e atualização.
 - **Sobre**: versão e finalidade do framework.
+
+Sem subcomando, a CLI abre a TUI. O parâmetro global `--project` seleciona o
+projeto consumidor antes da abertura. O launcher importa `cli.js`, que contém
+somente a API de comandos; isso evita executar a CLI duas vezes.
 
 O polling atualiza o painel a cada dois segundos. As mudanças são observadas
 sem escrever no projeto consumidor.

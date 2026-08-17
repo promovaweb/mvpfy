@@ -30,10 +30,10 @@ da documentação e no padrão visual do ebook.
 ## Escolha como começar
 
 Você pode ler este percurso online ou levar o conteúdo para um leitor digital.
-Esta edição portátil é a **v0.4.0**:
+Esta edição portátil é a **v0.4.1**:
 
-- [PDF](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.0.pdf), para leitura e impressão.
-- [EPUB](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.0.epub), para leitores digitais.
+- [PDF](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.1.pdf), para leitura e impressão.
+- [EPUB](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.1.epub), para leitores digitais.
 - [manifesto](../../ebooks/build.json), com a versão e os hashes do build.
 
 O ebook contém somente o guia do usuário. A ordem de compilação está em

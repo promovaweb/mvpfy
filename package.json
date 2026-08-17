@@ -1,6 +1,6 @@
 {
   "name": "@promovaweb/mvpfy",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Framework de skills e CLI para planejar o primeiro MVP SaaS.",
   "license": "MIT",
   "homepage": "https://promovaweb.com/docs/mvpfy/",
@@ -17,7 +17,7 @@
   "bin": {
     "mvpfy": "cli/bin/mvpfy.cjs"
   },
-  "main": "cli/dist/main.js",
+  "main": "cli/dist/cli.js",
   "types": "cli/dist/cli.d.ts",
   "files": [
     "cli/bin/mvpfy.cjs",

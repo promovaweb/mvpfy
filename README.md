@@ -46,7 +46,7 @@ Para acompanhar o plano no terminal, instale a CLI publicada no npm:
 
 ```bash
 npm install --global @promovaweb/mvpfy
-mvpfy tui --project .
+mvpfy --project .
 ```
 
 A TUI mostra o progresso por área, renderiza o `MVP.md` com cores e oferece as
@@ -104,7 +104,10 @@ mvpfy update --project .
 mvpfy tui --project .
 ```
 
-Use `mvpfy progress --json` para integração com outros agentes e scripts.
+Use `mvpfy progress --json` para integração com outros agentes e scripts. Sem
+subcomando, `mvpfy` abre a TUI automaticamente. Se o npm global não estiver no
+`PATH`, use `npx --yes @promovaweb/mvpfy --project .` ou adicione o diretório
+indicado por `npm prefix -g` seguido de `/bin` ao `PATH`.
 
 ## Validação
 

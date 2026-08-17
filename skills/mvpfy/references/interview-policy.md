@@ -5,7 +5,7 @@
 Antes da primeira pergunta fechada, receba um texto livre guiado da ideia do
 SaaS e do MVP. Use uma orientação única, como:
 
-> Conte, em um único texto, qual SaaS você imagina, para quem ele serve, qual
+> Conte, em um único texto, qual SaaS você imagina, qual é seu público, qual
 > problema resolve e quais módulos, recursos ou integrações você já pensou.
 
 Essa entrada pode mencionar automações e itens futuros. A pessoa pode enviar

@@ -14,6 +14,7 @@ const pacote = JSON.parse(await readFile(path.join(raiz, "package.json"), "utf8"
 const changelog = await readFile(path.join(raiz, "CHANGELOG.md"), "utf8");
 const cliVersion = await readFile(path.join(raiz, "cli", "src", "version.ts"), "utf8");
 const ebookVersion = (await readFile(path.join(raiz, "ebooks", "VERSION"), "utf8")).trim();
+const cliBuildPath = path.join(raiz, "cli", "dist", "version.js");
 
 const atual = analisarSemver(versao);
 if (!atual) {
@@ -26,6 +27,13 @@ if (pacote.version !== versao) {
 
 if (!cliVersion.includes(`VERSION = "${versao}"`)) {
   falhar(`cli/src/version.ts não usa a versão ${versao}`);
+}
+
+if (await existe(cliBuildPath)) {
+  const cliBuild = await readFile(cliBuildPath, "utf8");
+  if (!cliBuild.includes(`VERSION = "${versao}"`)) {
+    falhar(`cli/dist/version.js está desatualizado; execute npm run cli:build`);
+  }
 }
 
 if (ebookVersion !== versao) {
@@ -108,4 +116,13 @@ function escaparRegExp(valor) {
 function falhar(mensagem) {
   console.error(`Erro de release: ${mensagem}`);
   process.exit(1);
+}
+
+async function existe(arquivo) {
+  try {
+    await readFile(arquivo);
+    return true;
+  } catch {
+    return false;
+  }
 }

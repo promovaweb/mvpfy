@@ -13,7 +13,7 @@ deve permanecer focado na versão 1.0.
 
 1. Verifique se `.mvpfy/state.json` possui `initial_idea`. Se não possuir,
    faça a entrada inicial livre: convide a pessoa a escrever, em um único
-   texto, o que o SaaS faz, para quem serve, qual problema resolve e quais
+   texto, o que o SaaS faz, qual é seu público, qual problema resolve e quais
    módulos, recursos ou integrações ela já imaginou. Não mostre as opções da
    entrevista antes de receber o primeiro texto.
 2. Salve a ideia inicial, extraia os módulos, recursos, integrações, públicos,
@@ -69,7 +69,7 @@ deve permanecer focado na versão 1.0.
 - Nunca apresente um formulário longo.
 - Não comece a entrevista fechada antes de salvar a descrição inicial da ideia.
 - A entrada inicial é uma solicitação de texto livre guiado. Oriente a pessoa
-  com os quatro pontos `o que faz`, `para quem serve`, `qual problema resolve`
+  com os quatro pontos `o que faz`, `qual é o público`, `qual problema resolve`
   e `o que já imaginou`, sem transformar a orientação em quatro perguntas.
   Depois de cada mensagem inicial, acolha o conteúdo, salve-o e ofereça
   `4. Continuar para as perguntas`. A pessoa pode enviar várias mensagens
@@ -94,7 +94,7 @@ deve permanecer focado na versão 1.0.
 - Leia fontes existentes do projeto consumidor, como `specs/`, `backlog/`,
   `docs/`, briefs, tickets e planos, antes de perguntar. Essas fontes são
   somente referências de contexto.
-- Prefira perguntas sobre uma escolha observável, como quem paga, qual tarefa
+- Prefira perguntas sobre uma escolha observável, como o pagador, qual tarefa
   precisa funcionar ou qual resultado confirma valor.
 - A primeira pergunta fechada obrigatória depois da entrada inicial é:
   “O sistema atenderá várias empresas ou equipes separadas dentro da mesma

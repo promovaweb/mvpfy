@@ -28,3 +28,12 @@ test("a TUI possui abas de áreas e do MVP renderizado", async () => {
   assert.match(source, /label: "MVP\.md"/);
   assert.match(source, /marked\.parse/);
 });
+
+test("a entrada padrão abre a TUI e aceita --project", async () => {
+  const cli = await readFile(path.join(root, "cli/src/cli.ts"), "utf8");
+  const launcher = await readFile(path.join(root, "cli/bin/mvpfy.cjs"), "utf8");
+  assert.match(cli, /\.option\("--project <caminho>"/);
+  assert.match(cli, /\.action\(async \(options: RootOptions\) => openTui\(options\.project\)\)/);
+  assert.match(launcher, /dist\/cli\.js/);
+  assert.doesNotMatch(launcher, /dist\/main\.js/);
+});

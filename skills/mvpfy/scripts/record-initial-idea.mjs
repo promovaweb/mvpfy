@@ -36,7 +36,7 @@ const evento = {
   timestamp: agora,
   event_type: "initial_idea",
   question_id: "intake.initial-idea",
-  question_text: "Conte, em um único texto, qual SaaS você imagina, para quem ele serve, qual problema resolve e quais módulos, recursos ou integrações você já pensou.",
+      question_text: "Conte, em um único texto, qual SaaS você imagina, qual é seu público, qual problema resolve e quais módulos, recursos ou integrações você já pensou.",
   raw_answer: argumentos.idea,
   normalized_answer: argumentos.idea,
   extracted_fields: ["initial_idea", "candidate_items"],

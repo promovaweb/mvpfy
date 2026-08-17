@@ -21,7 +21,7 @@ das hipóteses e dos pontos ainda abertos.
 Para abrir o painel:
 
 ```bash
-mvpfy tui --project .
+mvpfy --project .
 ```
 
 Na aba **Progresso**, você vê o resumo geral, as áreas e o próximo ponto. Na

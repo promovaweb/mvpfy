@@ -27,8 +27,8 @@ test("o extrator produz notas somente da versão atual", async () => {
   try {
     await executar("node", ["scripts/extract-release-notes.mjs", "--output", saida], { cwd: raiz });
     const notas = await readFile(saida, "utf8");
-    assert.match(notas, /Adiciona a skill `mvpfy-progress`/);
-    assert.match(notas, /publicar a release no GitHub/);
+    assert.match(notas, /Faz `mvpfy` abrir a TUI automaticamente/);
+    assert.match(notas, /Corrige o launcher npm/);
   } finally {
     await rm(pasta, { recursive: true, force: true });
   }

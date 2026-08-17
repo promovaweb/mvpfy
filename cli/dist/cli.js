@@ -10,7 +10,8 @@ export function buildProgram() {
         .description("Planeja o primeiro MVP SaaS e acompanha o progresso no terminal.")
         .version(VERSION, "--version")
         .showHelpAfterError()
-        .action(async () => openTui(process.cwd()));
+        .option("--project <caminho>", "raiz do projeto consumidor", process.cwd())
+        .action(async (options) => openTui(options.project));
     program.command("progress").description("exibe o progresso das áreas do MVP")
         .addOption(projectOption()).option("--json", "emite JSON").action(async (options) => {
         const snapshot = await scanProgress(options.project);

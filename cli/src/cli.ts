@@ -12,7 +12,8 @@ export function buildProgram(): Command {
     .description("Planeja o primeiro MVP SaaS e acompanha o progresso no terminal.")
     .version(VERSION, "--version")
     .showHelpAfterError()
-    .action(async () => openTui(process.cwd()));
+    .option("--project <caminho>", "raiz do projeto consumidor", process.cwd())
+    .action(async (options: RootOptions) => openTui(options.project));
 
   program.command("progress").description("exibe o progresso das áreas do MVP")
     .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
@@ -76,6 +77,7 @@ export async function runCli(argv = process.argv): Promise<number> {
 }
 
 interface ProjectOptions { project: string; }
+interface RootOptions { project: string; }
 
 function projectOption(): Option {
   return new Option("--project <caminho>", "raiz do projeto consumidor").default(process.cwd());

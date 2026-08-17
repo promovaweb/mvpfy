@@ -16,7 +16,7 @@ Se quiser uma visão visual do andamento, instale também a CLI:
 
 ```bash
 npm install --global @promovaweb/mvpfy
-mvpfy tui --project .
+mvpfy --project .
 ```
 
 O painel mostra as áreas do MVP, abre uma aba colorida para leitura do
@@ -68,5 +68,20 @@ Atualize as skills pelo mesmo comando usado na instalação. Ao encontrar um
 chama `mvpfy-migrate` antes de perguntar algo novo. As respostas já registradas
 continuam no arquivo e o próximo turno trata apenas da primeira lacuna relevante.
 
-Pela CLI, use `mvpfy update --project .`. O comando delega a atualização ao
+Pela CLI, use `mvpfy update --project .`. Sem subcomando, `mvpfy --project .`
+abre a TUI. O comando delega a atualização ao
 CLI oficial `skills` e mantém a mesma origem usada pela instalação.
+
+Se o terminal informar que `mvpfy` não foi encontrado, confira o diretório
+global do npm:
+
+```bash
+npm prefix -g
+export PATH="$(npm prefix -g)/bin:$PATH"
+```
+
+Para uso imediato sem alterar o `PATH`, execute:
+
+```bash
+npx --yes @promovaweb/mvpfy --project .
+```

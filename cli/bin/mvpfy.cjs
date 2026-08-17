@@ -2,7 +2,7 @@
 
 /** Inicia o executável compilado da CLI do MVPFy. */
 
-import("../dist/main.js")
+import("../dist/cli.js")
   .then(({ runCli }) => runCli())
   .then((code) => {
     process.exitCode = Number(code ?? 0);
