@@ -1,3 +1,4 @@
+# Ordem exclusiva do Guia do usuário do MVPFy.
 docs/user/README.md
 docs/user/proposta.md
 docs/user/instalacao.md

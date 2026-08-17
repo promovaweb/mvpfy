@@ -41,4 +41,4 @@ npm run ebook:verify
 ```
 
 Se uma página estiver ausente, confira o caminho correspondente em
-`docs/reading-order.txt`.
+`docs/user/reading-order.txt`.

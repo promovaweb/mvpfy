@@ -80,8 +80,8 @@ node skills/mvpfy/scripts/setup-project.mjs --project .
 
 O [guia do usuário](docs/user/README.md) apresenta o percurso completo. O
 [guia de desenvolvimento](docs/develop/README.md) explica contratos, scripts e
-testes. O [ebook](ebooks/ebook-mvpfy.pdf) reúne a documentação em uma edição
-portátil.
+testes. O [ebook](ebooks/ebook-mvpfy.pdf) publica somente o Guia do usuário em
+uma edição portátil.
 
 ## Validação
 

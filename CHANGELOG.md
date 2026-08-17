@@ -4,6 +4,12 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.2.1] - 2026-08-17
+
+- Corrige o ebook para publicar somente o Guia do usuário, seguindo a
+  estrutura adotada por Specsfy e ClickUpfy.
+- Separa o percurso técnico e a especificação do ebook do usuário.
+
 ## [0.2.0] - 2026-08-16
 
 - Reorganiza a documentação em percursos de usuário e desenvolvimento.
@@ -12,7 +18,7 @@ publicação no GitHub quando essa versão avança na `main`.
 - Documenta a leitura somente de specs, backlogs e documentos existentes no
   projeto consumidor.
 - Formaliza uma pergunta por turno com três opções, `Avançar` e conversa livre.
-- Atualiza o ebook completo para PDF e EPUB v0.3.0.
+- Atualiza a edição anterior do ebook para PDF e EPUB v0.3.0.
 - Adiciona `VERSION` como fonte canônica do SemVer do framework.
 - Valida a sincronização entre `VERSION`, `package.json` e `CHANGELOG.md`.
 - Publica tags e releases do GitHub automaticamente após push na `main`.

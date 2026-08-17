@@ -85,7 +85,7 @@ seu domínio exige:
 | `docs/develop/` | Pessoas que alteram o pacote. |
 | `docs/develop/context/` | Contexto transversal carregável por agentes. |
 | `docs/specification.md` | Especificação funcional do MVPFy. |
-| `docs/reading-order.txt` | Ordem única usada pelo ebook. |
+| `docs/user/reading-order.txt` | Ordem exclusiva do Guia do usuário usado pelo ebook. |
 
 ## Pipeline do ebook
 
@@ -102,7 +102,7 @@ seu domínio exige:
 | `ebooks/VERSION` | Versão da edição publicada. |
 | `ebooks/build.json` | Hashes das fontes e dos artefatos gerados. |
 | `ebooks/ebook-mvpfy.pdf` e `.epub` | Aliases estáveis da edição vigente. |
-| `ebooks/MVPFy-Documentacao-Completa-v*.pdf` e `.epub` | Arquivos versionados de cada edição. |
+| `ebooks/MVPFy-Guia-do-Usuario-v*.pdf` e `.epub` | Arquivos versionados de cada edição do usuário. |
 
 O diretório `.ebook/build/` é temporário e está no `.gitignore`. Os arquivos
 versionados e os aliases em `ebooks/` são entregas publicadas.

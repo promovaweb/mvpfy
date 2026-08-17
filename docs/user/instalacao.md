@@ -36,7 +36,7 @@ projeto/
 
 `MVP.md` é o arquivo que você compartilha com as equipes. `.mvpfy/` guarda
 o estado operacional para retomar a entrevista, registrar respostas e manter
-pesquisas. Consulte [Estado e persistência](../develop/estado-e-persistencia.md)
+pesquisas. O diretório `.mvpfy/` mantém o estado para a retomada da entrevista.
 para os campos e as regras de gravação.
 
 ## Conferir a instalação

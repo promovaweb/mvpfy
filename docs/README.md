@@ -30,9 +30,10 @@ usa o produto e outro para quem mantém a biblioteca.
 
 ## Ebook
 
-O [ebook do MVPFy](../ebooks/ebook-mvpfy.pdf) reúne os dois percursos, a
-especificação e os exemplos em uma edição portátil. O PDF e o EPUB são
-gerados a partir das páginas listadas em [reading-order.txt](reading-order.txt).
+O [ebook do MVPFy](../ebooks/ebook-mvpfy.pdf) reúne somente o percurso do
+usuário em uma edição portátil. O PDF e o EPUB são gerados a partir das páginas do usuário listadas em
+[docs/user/reading-order.txt](user/reading-order.txt). A documentação técnica
+fica disponível separadamente em `docs/develop/` e `docs/specification.md`.
 
 ## Fonte de verdade
 

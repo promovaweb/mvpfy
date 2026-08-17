@@ -24,14 +24,15 @@ da documentação e no padrão visual do ebook.
 
 ## Leia online ou como ebook
 
-Este percurso integra a edição portátil **v0.3.0**:
+Este percurso integra a edição portátil **v0.4.0**:
 
-- [PDF](../../ebooks/MVPFy-Documentacao-Completa-v0.3.0.pdf), para leitura e impressão;
-- [EPUB](../../ebooks/MVPFy-Documentacao-Completa-v0.3.0.epub), para leitores digitais;
+- [PDF](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.0.pdf), para leitura e impressão;
+- [EPUB](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.0.epub), para leitores digitais;
 - [manifesto](../../ebooks/build.json), com a versão e os hashes do build.
 
-O ebook inclui também a referência técnica e a especificação. A ordem de
-compilação está em [reading-order.txt](../reading-order.txt).
+O ebook contém somente este percurso do usuário. A ordem de compilação está em
+[reading-order.txt](reading-order.txt). A referência técnica e a especificação
+continuam disponíveis na documentação online para agentes e contribuidores.
 
 ## O que o MVPFy resolve
 

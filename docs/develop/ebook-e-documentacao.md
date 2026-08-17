@@ -1,13 +1,14 @@
 # Documentação e ebook
 
 O percurso do usuário, o percurso técnico e a especificação são Markdown. O
-ebook é um formato derivado dessas páginas, não uma segunda fonte de conteúdo.
+ebook é um formato derivado exclusivamente do percurso do usuário, não uma
+segunda fonte de conteúdo.
 
 ## Ordem das páginas
 
-`docs/reading-order.txt` lista cada página na ordem pedagógica. O build lê os
-caminhos, verifica se existem e passa a mesma sequência ao Pandoc para PDF e
-EPUB.
+`docs/user/reading-order.txt` lista somente as páginas destinadas ao usuário.
+O build verifica esses caminhos e passa a mesma sequência ao Pandoc para PDF e
+EPUB. As páginas técnicas não entram nessa edição.
 
 ## Build
 

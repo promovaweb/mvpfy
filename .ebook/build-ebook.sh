@@ -3,18 +3,18 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DOCS="$ROOT/docs"
+DOCS="$ROOT/docs/user"
 EBOOKS="$ROOT/ebooks"
 VERSION="$(tr -d '[:space:]' < "$EBOOKS/VERSION")"
 BUILD="$ROOT/.ebook/build"
-STEM="MVPFy-Documentacao-Completa-v$VERSION"
+STEM="MVPFy-Guia-do-Usuario-v$VERSION"
 PDF="$EBOOKS/$STEM.pdf"
 EPUB="$EBOOKS/$STEM.epub"
 HTML="$BUILD/$STEM.html"
 COVER="$BUILD/$STEM-cover.png"
 MANIFEST="$EBOOKS/build.json"
 
-for arquivo in "$ROOT/docs/reading-order.txt" "$ROOT/.ebook/pdf.css" "$ROOT/.ebook/epub.css" "$ROOT/.ebook/template.html" "$ROOT/.ebook/metadata.yaml" "$ROOT/.ebook/cover.svg" "$ROOT/.ebook/fonts/inter-latin.woff2" "$ROOT/.ebook/fonts/manrope-latin.woff2" "$ROOT/brand/logo/icon.png"; do
+for arquivo in "$DOCS/reading-order.txt" "$ROOT/.ebook/pdf.css" "$ROOT/.ebook/epub.css" "$ROOT/.ebook/template.html" "$ROOT/.ebook/metadata.yaml" "$ROOT/.ebook/cover.svg" "$ROOT/.ebook/fonts/inter-latin.woff2" "$ROOT/.ebook/fonts/manrope-latin.woff2" "$ROOT/brand/logo/icon.png"; do
   test -f "$arquivo" || { echo "Fonte ausente: $arquivo" >&2; exit 1; }
 done
 
@@ -66,21 +66,21 @@ magick -size 1600x2560 xc:'#ffffff' \
   -fill '#12213e' -pointsize 124 -annotate +150+700 'Primeiro' -annotate +150+850 'MVP SaaS' \
   -font "$FONT" -fill '#334155' -pointsize 48 -annotate +150+1040 'Entrevista, produto, preço e tecnologia' \
   -stroke '#cbd5e1' -strokewidth 4 -draw 'line 150,2200 1450,2200' \
-  -stroke none -fill '#64748b' -pointsize 38 -annotate +150+2310 'DOCUMENTAÇÃO COMPLETA' "$COVER"
+  -stroke none -fill '#64748b' -pointsize 38 -annotate +150+2310 'GUIA DO USUÁRIO' "$COVER"
 
 INPUTS=()
-for pagina in "${PAGINAS[@]}"; do INPUTS+=("${pagina#docs/}"); done
+for pagina in "${PAGINAS[@]}"; do INPUTS+=("${pagina#docs/user/}"); done
 (
   cd "$DOCS"
   pandoc "${INPUTS[@]}" --from=gfm --to=html5 --standalone --toc --toc-depth=2 \
     --template="$ROOT/.ebook/template.html" --css="$ROOT/.ebook/pdf.css" \
     --resource-path="$ROOT/.ebook:$ROOT:$DOCS" --metadata-file="$ROOT/.ebook/metadata.yaml" \
-    --metadata title="MVPFy — Documentação completa · v$VERSION" --metadata version="$VERSION" \
+    --metadata title="MVPFy — Guia do usuário · v$VERSION" --metadata version="$VERSION" \
     --metadata date="$(date +%d/%m/%Y)" --variable brand_name="MVPFy" \
-    --variable document_type="Documentação completa" \
-    --variable tagline="Entrevista e plano do primeiro SaaS" \
-    --variable description="Guia do usuário e referência técnica para transformar uma ideia em um plano de MVP SaaS." \
-    --variable source_label="docs/" --variable footer_label="MVPFy — Documentação" \
+    --variable document_type="Guia do usuário" \
+    --variable tagline="Defina o primeiro MVP SaaS" \
+    --variable description="Percurso do usuário para transformar uma ideia em um plano de MVP SaaS." \
+    --variable source_label="docs/user/" --variable footer_label="MVPFy — Guia do usuário" \
     --variable logo="$ROOT/brand/logo/icon.png" --output="$HTML"
 )
 weasyprint "$HTML" "$PDF"
@@ -89,7 +89,7 @@ weasyprint "$HTML" "$PDF"
   pandoc "${INPUTS[@]}" --from=gfm --to=epub3 --standalone --toc --toc-depth=2 \
     --epub-cover-image="$COVER" --css="$ROOT/.ebook/epub.css" \
     --resource-path="$ROOT/.ebook:$ROOT:$DOCS" --metadata-file="$ROOT/.ebook/metadata.yaml" \
-    --metadata title="MVPFy — Documentação completa · v$VERSION" --metadata version="$VERSION" --output="$EPUB"
+    --metadata title="MVPFy — Guia do usuário · v$VERSION" --metadata version="$VERSION" --output="$EPUB"
 )
 cp "$PDF" "$EBOOKS/ebook-mvpfy.pdf"
 cp "$EPUB" "$EBOOKS/ebook-mvpfy.epub"
