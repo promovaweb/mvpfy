@@ -4,6 +4,7 @@ docs/user/proposta.md
 docs/user/instalacao.md
 docs/user/primeiro-mvp.md
 docs/user/entrevista.md
+docs/user/progresso.md
 docs/user/mvp.md
 docs/user/pesquisa-e-preco.md
 docs/user/tecnologia-e-operacao.md
@@ -21,3 +22,4 @@ docs/user/skills/mvpfy-technology.md
 docs/user/skills/mvpfy-marketing.md
 docs/user/skills/mvpfy-document.md
 docs/user/skills/mvpfy-migrate.md
+docs/user/skills/mvpfy-progress.md

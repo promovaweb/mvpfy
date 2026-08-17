@@ -1,15 +1,58 @@
 {
   "name": "@promovaweb/mvpfy",
-  "version": "0.3.0",
-  "private": true,
+  "version": "0.4.0",
+  "description": "Framework de skills e CLI para planejar o primeiro MVP SaaS.",
+  "license": "MIT",
+  "homepage": "https://promovaweb.com/docs/mvpfy/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/promovaweb/mvpfy.git"
+  },
+  "bugs": {
+    "email": "contato@promovaweb.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "mvpfy": "cli/bin/mvpfy.cjs"
+  },
+  "main": "cli/dist/main.js",
+  "types": "cli/dist/cli.d.ts",
+  "files": [
+    "cli/bin/mvpfy.cjs",
+    "cli/dist",
+    "skills",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "VERSION"
+  ],
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs cli/tests/*.test.mjs",
     "setup:example": "node skills/mvpfy/scripts/setup-project.mjs --project example",
     "ebook": "bash .ebook/build-ebook.sh",
     "ebook:verify": "bash .ebook/build-ebook.sh --check",
     "release:check": "node scripts/validate-release.mjs",
-    "release:notes": "node scripts/extract-release-notes.mjs"
+    "release:notes": "node scripts/extract-release-notes.mjs",
+    "cli": "node cli/dist/main.js",
+    "cli:typecheck": "tsc -p cli/tsconfig.json --noEmit",
+    "cli:build": "tsc -p cli/tsconfig.json",
+    "cli:test": "node --test cli/tests/*.test.mjs",
+    "cli:check": "npm run cli:typecheck && npm run cli:test && npm run cli:build && npm pack --dry-run"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
+    "neo-blessed": "^0.2.0",
+    "skills": "^1.5.22"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.27",
+    "@types/node": "^24.10.0",
+    "typescript": "^7.0.2"
   }
 }

@@ -31,6 +31,7 @@ usuário](../user/README.md).
 | estado, respostas e gravação | [Estado e persistência](estado-e-persistencia.md) |
 | template e `MVP.md` | [Template do documento](mvp-template.md) |
 | comandos e arquivos executáveis | [Scripts](scripts.md) |
+| CLI, TUI e integração com skills | [CLI](cli.md) |
 | SemVer, changelog e GitHub Release | [Versionamento e releases](release.md) |
 | testes e validações | [Testes](testes.md) |
 | ebook e manutenção das páginas | [Documentação e ebook](ebook-e-documentacao.md) |

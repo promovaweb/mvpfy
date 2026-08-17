@@ -83,6 +83,13 @@ Na raiz de `mvpfy`:
 npm test
 npm run ebook
 npm run ebook:verify
+npm run cli:check
+```
+
+Para consultar o progresso sem abrir a TUI, use o script somente de leitura:
+
+```bash
+node skills/mvpfy/scripts/progress.mjs --project .
 ```
 
 Os comandos do pacote não editam `specsfy/`. Validações do Hub executadas na

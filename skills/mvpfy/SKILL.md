@@ -41,7 +41,7 @@ deve permanecer focado na versão 1.0.
    Não avance para arquitetura ou preço enquanto a separação entre tenants não
    tiver uma descrição suficiente.
 8. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
-   gerar o arquivo ou corrigir uma resposta.
+   gerar o arquivo, corrigir uma resposta ou mostrar o progresso.
 9. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
    migração. Use `$mvpfy-migrate` antes de perguntar algo novo.
 10. Consulte a especialista da área com maior impacto sobre o pedido atual.
@@ -56,7 +56,10 @@ deve permanecer focado na versão 1.0.
    histórico quando o usuário corrigir algo.
 14. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
    quando os campos mínimos já estiverem preenchidos.
-15. Antes de publicar ou recompilar a documentação, confirme a separação entre
+15. Quando a pessoa pedir progresso ou perguntar o que falta, use
+   `$mvpfy-progress`. Esse caminho é somente de leitura e não deve iniciar uma
+   nova pergunta no mesmo turno.
+16. Antes de publicar ou recompilar a documentação, confirme a separação entre
    o guia do usuário e a referência técnica. O ebook deve usar apenas a ordem
    de páginas do público escolhido. Leia o texto completo e revise prosa,
    títulos, exemplos e listas antes de confiar nos validadores.
@@ -112,6 +115,8 @@ deve permanecer focado na versão 1.0.
   retorno.
 - Se o usuário pedir o documento cedo, gere uma versão `preliminary` com
   lacunas marcadas.
+- Se o usuário pedir “mostrar progresso” ou “o que falta?”, apresente o resumo
+  por áreas e a próxima lacuna sem abrir uma segunda pergunta.
 - Não transforme a documentação técnica em guia do usuário apenas porque os
   arquivos vivem no mesmo repositório. A estrutura de projetos de referência
   pode orientar a organização, mas o conteúdo precisa ser escrito para o
@@ -131,7 +136,7 @@ em `.mvpfy/`.
 Carregue somente a especialista necessária: `mvpfy-problem`,
 `mvpfy-audience`, `mvpfy-product`, `mvpfy-saas`, `mvpfy-brand`,
 `mvpfy-market`, `mvpfy-pricing`, `mvpfy-technology`, `mvpfy-marketing`,
-`mvpfy-document` ou `mvpfy-migrate`. A orquestradora coordena a ordem e a
+`mvpfy-document`, `mvpfy-migrate` ou `mvpfy-progress`. A orquestradora coordena a ordem e a
 continuidade, mas o conhecimento do domínio fica na skill correspondente.
 
 Leia [interview-policy.md](references/interview-policy.md) para priorizar

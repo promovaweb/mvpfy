@@ -42,6 +42,17 @@ patch, minor e major e para entender as recusas do workflow.
 npx skills add promovaweb/mvpfy
 ```
 
+Para acompanhar o plano no terminal, instale a CLI publicada no npm:
+
+```bash
+npm install --global @promovaweb/mvpfy
+mvpfy tui --project .
+```
+
+A TUI mostra o progresso por área, renderiza o `MVP.md` com cores e oferece as
+ações de instalação e atualização das skills. Essas ações executam `skills add`
+e `skills update` por baixo dos panos.
+
 No projeto que receberá as skills, use `$mvpfy` como porta de entrada. Para
 preparar um projeto local manualmente:
 
@@ -65,6 +76,7 @@ node skills/mvpfy/scripts/setup-project.mjs --project .
 | `mvpfy-marketing` | Aquisição, conteúdo, leads, venda e lançamento. |
 | `mvpfy-document` | Geração e validação do `MVP.md`. |
 | `mvpfy-migrate` | Atualização do template sem perda de conteúdo. |
+| `mvpfy-progress` | Leitura do andamento sem iniciar outra pergunta. |
 
 ## Princípios
 
@@ -82,6 +94,17 @@ O [guia do usuário](docs/user/README.md) apresenta o percurso completo. O
 [guia de desenvolvimento](docs/develop/README.md) explica contratos, scripts e
 testes. O [ebook](ebooks/ebook-mvpfy.pdf) publica somente o Guia do usuário em
 uma edição portátil.
+
+## CLI
+
+```bash
+mvpfy progress --project .
+mvpfy install --project .
+mvpfy update --project .
+mvpfy tui --project .
+```
+
+Use `mvpfy progress --json` para integração com outros agentes e scripts.
 
 ## Validação
 

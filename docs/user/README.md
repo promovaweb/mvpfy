@@ -30,10 +30,10 @@ da documentação e no padrão visual do ebook.
 ## Escolha como começar
 
 Você pode ler este percurso online ou levar o conteúdo para um leitor digital.
-Esta edição portátil é a **v0.3.0**:
+Esta edição portátil é a **v0.4.0**:
 
-- [PDF](../../ebooks/MVPFy-Guia-do-Usuario-v0.3.0.pdf), para leitura e impressão.
-- [EPUB](../../ebooks/MVPFy-Guia-do-Usuario-v0.3.0.epub), para leitores digitais.
+- [PDF](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.0.pdf), para leitura e impressão.
+- [EPUB](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.0.epub), para leitores digitais.
 - [manifesto](../../ebooks/build.json), com a versão e os hashes do build.
 
 O ebook contém somente o guia do usuário. A ordem de compilação está em
@@ -65,7 +65,8 @@ encaixa no percurso principal.
 4. Consulte [Entrevista](entrevista.md) para entender a conversa e a retomada.
 5. Abra [MVP.md](mvp.md) para conhecer o documento entregue.
 6. Use [Pesquisa e preço](pesquisa-e-preco.md) e [Tecnologia e operação](tecnologia-e-operacao.md) quando essas partes fizerem sentido para sua ideia.
-7. Consulte o [catálogo de skills](skills/README.md) se quiser saber qual especialista trata cada assunto.
+7. Consulte [Progresso](progresso.md) para acompanhar as áreas do MVP pela CLI ou TUI.
+8. Consulte o [catálogo de skills](skills/README.md) se quiser saber qual especialista trata cada assunto.
 
 ## Você pode continuar depois
 

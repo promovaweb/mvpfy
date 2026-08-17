@@ -12,6 +12,17 @@ Na raiz do projeto consumidor, execute:
 npx skills add promovaweb/mvpfy
 ```
 
+Se quiser uma visão visual do andamento, instale também a CLI:
+
+```bash
+npm install --global @promovaweb/mvpfy
+mvpfy tui --project .
+```
+
+O painel mostra as áreas do MVP, abre uma aba colorida para leitura do
+`MVP.md` e oferece instalação e atualização usando `skills add` e `skills
+update`.
+
 Depois, prepare os arquivos locais:
 
 ```bash
@@ -56,3 +67,6 @@ Atualize as skills pelo mesmo comando usado na instalação. Ao encontrar um
 `MVP.md` de uma versão anterior, a orquestradora compara o template atual e
 chama `mvpfy-migrate` antes de perguntar algo novo. As respostas já registradas
 continuam no arquivo e o próximo turno trata apenas da primeira lacuna relevante.
+
+Pela CLI, use `mvpfy update --project .`. O comando delega a atualização ao
+CLI oficial `skills` e mantém a mesma origem usada pela instalação.

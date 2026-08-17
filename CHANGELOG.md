@@ -4,6 +4,17 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.0] - 2026-08-16
+
+- Adiciona a skill `mvpfy-progress` para mostrar o andamento sem iniciar outra
+  pergunta.
+- Adiciona a CLI `mvpfy`, publicada no pacote npm `@promovaweb/mvpfy`.
+- Adiciona uma TUI com progresso por áreas do MVP, gerenciamento de skills e
+  leitura colorida do `MVP.md`.
+- Faz a CLI delegar instalação e atualização ao `skills add` e `skills update`.
+- Mantém framework, CLI, ebook e changelog na mesma versão SemVer.
+- Atualiza o workflow para publicar a release no GitHub e o pacote no npm.
+
 ## [0.3.0] - 2026-08-16
 
 - Torna obrigatória a pergunta sobre o modelo multitenante logo após a ideia

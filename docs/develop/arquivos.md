@@ -17,6 +17,7 @@ raiz do submódulo `mvpfy`.
 | `ebooks/` | PDF, EPUB e manifesto gerados. |
 | `.ebook/` | Configuração do pipeline do ebook. |
 | `brand/` | Ícone e recursos visuais locais do ebook. |
+| `cli/` | Código TypeScript, build e launcher da CLI/TUI. |
 
 ## Skills
 
@@ -37,6 +38,7 @@ seu domínio exige:
 | `skills/mvpfy-marketing/` | `SKILL.md`, `references/go-to-market.md`. |
 | `skills/mvpfy-document/` | `SKILL.md`, `assets/MVP.template.md`, renderer e validator. |
 | `skills/mvpfy-migrate/` | `SKILL.md`, política e script de migração. |
+| `skills/mvpfy-progress/` | `SKILL.md` e contrato de leitura do progresso. |
 
 ### Arquivos comuns de cada skill
 
@@ -64,6 +66,7 @@ seu domínio exige:
 | `mvpfy-marketing` | `go-to-market.md`. |
 | `mvpfy-document` | `document-rules.md`. |
 | `mvpfy-migrate` | `migration-policy.md`. |
+| `mvpfy-progress` | `progress-contract.md`. |
 
 ### Scripts executáveis
 
@@ -75,6 +78,17 @@ seu domínio exige:
 | `render-company.mjs` | Projeto com estado e template. | `MVP.md` atualizado ou relatório `--check`. |
 | `validate-company.mjs` | `MVP.md` e frontmatter. | Resultado estrutural e estado de prontidão. |
 | `migrate-company.mjs` | `MVP.md` e template vigente. | Documento migrado sem duplicação. |
+| `progress.mjs` | Projeto consumidor com `state.json` e `MVP.md`. | JSON somente de leitura com progresso por áreas. |
+
+### CLI
+
+| Caminho | Função |
+| --- | --- |
+| `cli/src/cli.ts` | Comandos públicos. |
+| `cli/src/progress.ts` | Projeção de progresso usada pela CLI e TUI. |
+| `cli/src/tui.ts` | Abas, atalhos, polling e leitura colorida do `MVP.md`. |
+| `cli/src/skills-runner.ts` | Delegação para `skills add` e `skills update`. |
+| `cli/bin/mvpfy.cjs` | Entrada do executável publicado no npm. |
 
 ## Documentação
 
@@ -112,7 +126,7 @@ versionados e os aliases em `ebooks/` são entregas publicadas.
 | Arquivo | Finalidade |
 | --- | --- |
 | `AGENTS.md` | Regras locais, idioma, fontes e validações. |
-| `package.json` | Scripts `test`, `setup:example`, `ebook` e `ebook:verify`. |
+| `package.json` | Scripts de teste, CLI, ebook, pacote e release. |
 | `tests/skills.test.mjs` | Catálogo, metadados e contrato de pergunta única. |
 | `tests/scripts.test.mjs` | Setup, persistência, migração e validação do documento. |
 | `tests/release.test.mjs` | Sincronização de SemVer e extração das notas. |

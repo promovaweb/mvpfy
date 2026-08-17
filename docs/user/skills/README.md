@@ -38,6 +38,7 @@ lista fixa de perguntas.
 | [`mvpfy-marketing`](mvpfy-marketing.md) | Oferta e público precisam chegar ao mercado | Aquisição, conteúdo e venda |
 | [`mvpfy-document`](mvpfy-document.md) | Você pede o plano ou há dados suficientes | `MVP.md` renderizado e validado |
 | [`mvpfy-migrate`](mvpfy-migrate.md) | O template mudou | Documento atualizado sem perda |
+| [`mvpfy-progress`](mvpfy-progress.md) | Você quer ver o andamento sem abrir uma pergunta | Resumo por áreas e próxima lacuna |
 
 Cada página explica o que a especialista recebe, como trabalha, o que entrega
 e onde termina sua responsabilidade. Os exemplos usam uma ideia de SaaS para

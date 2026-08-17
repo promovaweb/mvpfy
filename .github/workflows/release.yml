@@ -27,9 +27,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Instalar dependências
+        run: npm ci
 
       - name: Validar testes do framework
         run: npm test
+
+      - name: Validar CLI e pacote npm
+        run: npm run cli:check
 
       - name: Validar SemVer e changelog
         run: node scripts/validate-release.mjs --previous "${{ github.event.before }}"
@@ -70,3 +77,8 @@ jobs:
             --verify-tag \
             --title "MVPFy $TAG" \
             --notes-file "$RUNNER_TEMP/mvpfy-release-notes.md"
+
+      - name: Publicar pacote npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public

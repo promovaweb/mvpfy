@@ -12,6 +12,8 @@ const argumentos = lerArgumentos(process.argv.slice(2));
 const versao = (await readFile(path.join(raiz, "VERSION"), "utf8")).trim();
 const pacote = JSON.parse(await readFile(path.join(raiz, "package.json"), "utf8"));
 const changelog = await readFile(path.join(raiz, "CHANGELOG.md"), "utf8");
+const cliVersion = await readFile(path.join(raiz, "cli", "src", "version.ts"), "utf8");
+const ebookVersion = (await readFile(path.join(raiz, "ebooks", "VERSION"), "utf8")).trim();
 
 const atual = analisarSemver(versao);
 if (!atual) {
@@ -20,6 +22,14 @@ if (!atual) {
 
 if (pacote.version !== versao) {
   falhar(`package.json usa ${pacote.version}, mas VERSION usa ${versao}`);
+}
+
+if (!cliVersion.includes(`VERSION = "${versao}"`)) {
+  falhar(`cli/src/version.ts não usa a versão ${versao}`);
+}
+
+if (ebookVersion !== versao) {
+  falhar(`ebooks/VERSION usa ${ebookVersion}, mas VERSION usa ${versao}`);
 }
 
 const titulo = new RegExp(`^## \\[${escaparRegExp(versao)}\\](?: - (\\d{4}-\\d{2}-\\d{2}))?\\s*$`, "m");

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Progress"
+  short_description: "Exibe o andamento do plano do MVP"
+  default_prompt: "Use $mvpfy-progress para mostrar o progresso do MVP sem iniciar outra pergunta."
