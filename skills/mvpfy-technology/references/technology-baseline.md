@@ -6,6 +6,11 @@ transacional, filas e tarefas agendadas quando necessários. Use Node.js apenas
 com justificativa concreta. Um provedor de IA entra somente quando uma função
 do produto exigir texto, imagem ou conversa.
 
-Descreva conta, isolamento, autenticação, permissões, backup, logs,
+Descreva tenant, conta, isolamento, autenticação, permissões, backup, logs,
 monitoramento, ambientes, integrações e custo mensal. Inclua gatilhos para
 trocar a configuração inicial.
+
+Para um SaaS multitenante em Laravel, avalie o suporte de Teams da solução
+adotada para equipes, membros, convites e papéis. Teams organiza a associação
+das pessoas, mas não substitui o isolamento de dados nem as regras de
+autorização do produto.

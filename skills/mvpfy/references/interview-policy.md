@@ -17,6 +17,43 @@ Extraia esses elementos como candidatos. Um candidato é algo citado para
 investigação, não uma funcionalidade aprovada. A fila deve começar pelos itens
 que ajudam a confirmar problema, público, jornada e limite da versão 1.0.
 
+## Pergunta obrigatória sobre multitenancy
+
+Depois de salvar a entrada inicial e antes da primeira pergunta comum, confirme
+explicitamente o modelo de atendimento:
+
+```text
+O sistema atenderá várias empresas ou equipes separadas dentro da mesma aplicação?
+1. Sim. Vários clientes usarão a mesma aplicação, com dados separados.
+2. Não. Cada cliente terá uma instalação ou ambiente próprio.
+3. Ainda não sei. Quero comparar os dois modelos.
+4. Avançar
+5. Conversar mais sobre este tema
+```
+
+Não pule essa pergunta porque a mensagem inicial usou “multitenante” ou
+“multi-tenant”. A escolha precisa aparecer como resposta persistida em
+`saas.tenancy-model`.
+
+Quando a resposta for a opção 1, abra a trilha multitenante. Pergunte uma coisa
+por turno, somente até registrar:
+
+1. O que representa um tenant: empresa, equipe, filial, cliente de uma
+   agência ou outro grupo.
+2. Qual pessoa cria o tenant e administra seu espaço.
+3. Como membros entram: convite do administrador, cadastro próprio ou
+   implantação acompanhada.
+4. Uma pessoa pode participar de mais de um tenant?
+5. Quais papéis precisam existir dentro do tenant?
+6. O que precisa ficar invisível para os outros tenants?
+7. O banco será compartilhado com separação lógica ou dedicado por tenant?
+8. Como o tenant será criado, configurado e levado ao primeiro valor?
+
+Se a resposta for a opção 2, pergunte apenas o modelo de instalação e o motivo
+da separação. Se for a opção 3, explique a diferença prática antes de pedir uma
+nova escolha. Toda pergunta mantém três opções, `Avançar` e `Conversar mais
+sobre este tema`.
+
 Se uma mensagem já trouxer problema, público, jornada, módulos, preço e
 tecnologia, registre todos esses campos antes de escrever a próxima pergunta.
 Não repita nenhum deles. A próxima pergunta trata somente da lacuna que
@@ -32,20 +69,22 @@ inicial, as três primeiras opções podem orientar a continuação do relato; a
 opção 4 sempre deve continuar para as perguntas e a opção 5 deve acolher mais
 texto sobre a ideia.
 
-1. Situação e ideia.
-2. Problema principal.
-3. Pessoa mais afetada.
-4. Alternativa usada hoje.
-5. Resultado esperado.
-6. Jornada principal.
-7. Recurso indispensável.
-8. Usuário, comprador e pagador.
-9. Primeiro valor do SaaS.
-10. Concorrentes ou alternativas.
-11. Cobrança e ticket.
-12. Volume inicial e custo.
-13. Aquisição e venda.
-14. Nome e posição da marca.
+1. Modelo multitenante ou instalação separada.
+2. Unidade, titularidade e membros do tenant, quando aplicável.
+3. Situação e ideia.
+4. Problema principal.
+5. Pessoa mais afetada.
+6. Alternativa usada hoje.
+7. Resultado esperado.
+8. Jornada principal.
+9. Recurso indispensável.
+10. Usuário, comprador e pagador.
+11. Primeiro valor do SaaS.
+12. Concorrentes ou alternativas.
+13. Cobrança e ticket.
+14. Volume inicial e custo.
+15. Aquisição e venda.
+16. Nome e posição da marca.
 
 ## Prioridade
 

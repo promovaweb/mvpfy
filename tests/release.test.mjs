@@ -27,8 +27,8 @@ test("o extrator produz notas somente da versão atual", async () => {
   try {
     await executar("node", ["scripts/extract-release-notes.mjs", "--output", saida], { cwd: raiz });
     const notas = await readFile(saida, "utf8");
-    assert.match(notas, /Alinha a versão do ebook com a versão do framework/);
-    assert.match(notas, /Faz o build falhar quando/);
+    assert.match(notas, /Torna obrigatória a pergunta sobre o modelo multitenante/);
+    assert.match(notas, /Inclui Laravel Teams como referência/);
   } finally {
     await rm(pasta, { recursive: true, force: true });
   }

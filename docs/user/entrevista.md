@@ -48,6 +48,28 @@ itens candidatos. Você quer acrescentar algo antes de começar?
 As opções 1, 2, 3 e 5 permitem continuar enviando conteúdo. A opção 4 salva o
 estado da entrada e libera a próxima pergunta fechada.
 
+## A primeira pergunta fechada
+
+Depois de salvar a ideia inicial, o MVPFy confirma o modelo de atendimento antes
+de investigar problema, preço ou tecnologia:
+
+```text
+O sistema atenderá várias empresas ou equipes separadas dentro da mesma aplicação?
+1. Sim. Vários clientes usarão a mesma aplicação, com dados separados.
+2. Não. Cada cliente terá uma instalação ou ambiente próprio.
+3. Ainda não sei. Quero comparar os dois modelos.
+4. Avançar
+5. Conversar mais sobre este tema
+```
+
+Se você escolher a primeira opção, a conversa segue para tenant, titularidade,
+membros, papéis, acesso entre espaços, separação de dados, banco e criação de
+novos tenants. Essas respostas orientam a arquitetura, o onboarding, as
+permissões, o preço e o custo de operação.
+
+Se ainda não souber, a opção 5 permite conversar sobre a diferença antes de
+registrar a escolha. A pergunta continua sendo uma por vez.
+
 ## O que acontece depois da sua resposta
 
 1. Você responde com número, texto, combinação de opções ou “não sei”.

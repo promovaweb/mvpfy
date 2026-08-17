@@ -19,14 +19,17 @@ plano.
 Os campos centrais são `project_id`, `interview_status`, `active_domain`,
 `last_question_id`, `answered_question_ids`, `facts`, `choices`, `assumptions`,
 `recommendations`, `gaps`, `conflicts`, `section_status` e
-`research_status`.
+`research_status`. O bloco `tenancy` começa como pendente e guarda o modelo,
+unidade do tenant, titularidade, membros, vínculo entre tenants, isolamento,
+estratégia de banco e provisionamento.
 
 O estado é uma visão atual. Para saber como uma resposta chegou até ali, leia
 `answers.jsonl`.
 
 Antes das perguntas fechadas, o evento `intake.initial-idea` guarda a descrição
 livre do SaaS e do MVP. O estado mantém `interview_stage: initial_idea` até esse
-evento ser salvo. depois passa para `questions`. Os itens mencionados nessa
+evento ser salvo. Depois passa para `questions`, mas a pergunta
+`saas.tenancy-model` continua obrigatória como primeiro turno fechado. Os itens mencionados nessa
 entrada ficam em `candidate_items` com o status `candidate`.
 
 ## Evento de resposta

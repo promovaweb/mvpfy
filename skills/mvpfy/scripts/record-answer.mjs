@@ -32,11 +32,33 @@ const evento = {
   supersedes: argumentos.supersedes || null,
 };
 
+let tenancy = estado.tenancy || {
+  status: "pending",
+  model: null,
+  tenant_unit: null,
+  owner_role: null,
+  membership_model: null,
+  cross_tenant_membership: null,
+  isolation_strategy: null,
+  database_strategy: null,
+  provisioning: null,
+};
+if (argumentos["tenancy-data"]) {
+  let dados;
+  try {
+    dados = JSON.parse(argumentos["tenancy-data"]);
+  } catch {
+    throw new Error("O valor de --tenancy-data precisa ser JSON válido.");
+  }
+  tenancy = { ...tenancy, ...dados, status: dados.status || "confirmed" };
+}
+
 await appendFile(answersPath, `${JSON.stringify(evento)}\n`, "utf8");
 const ids = new Set(estado.answered_question_ids || []);
 ids.add(evento.question_id);
 const novoEstado = {
   ...estado,
+  tenancy,
   interview_status: "in_progress",
   last_question_id: evento.question_id,
   answered_question_ids: [...ids],

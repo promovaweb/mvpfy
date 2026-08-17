@@ -31,23 +31,32 @@ deve permanecer focado na versão 1.0.
 5. Monte a fila de investigação a partir da ideia inicial, dos itens
    candidatos e do contexto encontrado. Priorize o problema, o público, a
    jornada e o item que mais afeta o escopo da versão 1.0.
-6. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
+6. Antes da fila comum, confirme obrigatoriamente o modelo de atendimento do
+   SaaS com a pergunta `saas.tenancy-model`. A pergunta deve aparecer mesmo se
+   a ideia inicial já usar a palavra multitenante, para registrar a escolha
+   explícita da pessoa.
+7. Se a resposta for multitenante, abra a trilha `saas.multitenancy` e faça as
+   perguntas necessárias sobre unidade do tenant, titularidade, membros,
+   vínculo de uma pessoa a vários tenants, isolamento, banco e provisionamento.
+   Não avance para arquitetura ou preço enquanto a separação entre tenants não
+   tiver uma descrição suficiente.
+8. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
    gerar o arquivo ou corrigir uma resposta.
-7. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
+9. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
    migração. Use `$mvpfy-migrate` antes de perguntar algo novo.
-8. Consulte a especialista da área com maior impacto sobre o pedido atual.
-9. Faça somente uma pergunta principal por turno. Exiba sempre cinco opções:
+10. Consulte a especialista da área com maior impacto sobre o pedido atual.
+11. Faça somente uma pergunta principal por turno. Exiba sempre cinco opções:
    três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este tema`.
    Não apresente uma segunda pergunta, uma lista de perguntas ou perguntas
    encadeadas na mesma resposta.
-10. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
+12. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
    texto original, a interpretação e os campos cobertos. Só depois escolha a
    próxima pergunta.
-11. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
+13. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
    histórico quando o usuário corrigir algo.
-12. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
+14. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
    quando os campos mínimos já estiverem preenchidos.
-13. Antes de publicar ou recompilar a documentação, confirme a separação entre
+15. Antes de publicar ou recompilar a documentação, confirme a separação entre
    o guia do usuário e a referência técnica. O ebook deve usar apenas a ordem
    de páginas do público escolhido. Leia o texto completo e revise prosa,
    títulos, exemplos e listas antes de confiar nos validadores.
@@ -84,6 +93,15 @@ deve permanecer focado na versão 1.0.
   somente referências de contexto.
 - Prefira perguntas sobre uma escolha observável, como quem paga, qual tarefa
   precisa funcionar ou qual resultado confirma valor.
+- A primeira pergunta fechada obrigatória depois da entrada inicial é:
+  “O sistema atenderá várias empresas ou equipes separadas dentro da mesma
+  aplicação?”. Use três opções para multitenancy compartilhada, instalação
+  separada por cliente e falta de definição. Mantenha `Avançar` e
+  `Conversar mais sobre este tema` como opções 4 e 5.
+- Para a resposta multitenante, siga a ordem de
+  [multitenancy.md](../mvpfy-saas/references/multitenancy.md).
+- Ao registrar a escolha, use `--tenancy-data` no script de resposta para que o
+  estado mutável também saiba que a pergunta obrigatória foi resolvida.
 - Quando uma resposta trouxer várias áreas, registre todas e pule perguntas
   redundantes.
 - Quando houver mais de uma leitura plausível, mostre até três interpretações

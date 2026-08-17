@@ -34,6 +34,19 @@ node skills/mvpfy/scripts/record-initial-idea.mjs --project . --continue
 
 Esse comando só libera as perguntas depois que `initial_idea` estiver salvo.
 
+A primeira pergunta fechada confirma `saas.tenancy-model`. Para persistir a
+escolha e seus campos relacionados, use `--tenancy-data` com um objeto JSON:
+
+```bash
+node skills/mvpfy/scripts/record-answer.mjs \
+  --project . \
+  --question-id saas.tenancy-model \
+  --raw-answer "Sim, várias empresas na mesma aplicação" \
+  --normalized-answer "Multitenant compartilhado" \
+  --extracted-fields "saas.tenancy-model,saas.isolation" \
+  --tenancy-data '{"model":"multitenant_shared","status":"confirmed"}'
+```
+
 ## Registrar resposta
 
 ```bash

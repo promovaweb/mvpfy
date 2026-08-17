@@ -88,9 +88,10 @@ Pendente.
 Entrada, tarefa principal, resultado e primeiro valor: Pendente.
 
 <!-- mvpfy:section:account-model -->
-## 12. Modelo de conta, acesso e isolamento entre clientes
+## 12. Modelo de tenant, conta, acesso e isolamento entre clientes
 
-Titular, membros, papéis, autenticação e separação dos dados: Pendente.
+Modelo multitenante ou instalação separada, unidade do tenant, titular, membros,
+papéis, autenticação e separação dos dados: Pendente.
 
 <!-- mvpfy:section:onboarding -->
 ## 13. Onboarding, ativação e primeiro valor

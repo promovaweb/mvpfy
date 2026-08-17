@@ -11,6 +11,17 @@
   "initial_idea": null,
   "initial_idea_parts": [],
   "candidate_items": [],
+  "tenancy": {
+    "status": "pending",
+    "model": null,
+    "tenant_unit": null,
+    "owner_role": null,
+    "membership_model": null,
+    "cross_tenant_membership": null,
+    "isolation_strategy": null,
+    "database_strategy": null,
+    "provisioning": null
+  },
   "active_domain": "problem",
   "last_question_id": null,
   "answered_question_ids": [],
@@ -29,3 +40,6 @@
 `answers.jsonl` é append-only. Uma correção cria outro evento com `supersedes`.
 O script de persistência usa arquivo temporário e substituição atômica para o
 estado mutável.
+
+Projetos antigos podem não possuir `tenancy`. Nesse caso, trate o bloco como
+pendente e faça a pergunta `saas.tenancy-model` antes da fila comum.

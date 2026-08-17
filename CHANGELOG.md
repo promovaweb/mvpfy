@@ -4,6 +4,15 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.3.0] - 2026-08-16
+
+- Torna obrigatória a pergunta sobre o modelo multitenante logo após a ideia
+  inicial do SaaS.
+- Adiciona uma trilha para tenant, titularidade, membros, papéis, vínculo entre
+  tenants, isolamento, banco e provisionamento.
+- Inclui Laravel Teams como referência para equipes, membros, convites e papéis.
+- Mantém a versão do ebook igual à versão do framework.
+
 ## [0.2.3] - 2026-08-16
 
 - Alinha a versão do ebook com a versão do framework.

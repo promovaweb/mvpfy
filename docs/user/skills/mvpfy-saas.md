@@ -4,6 +4,10 @@ Esta especialista explica o que acontece ao redor do software. Um SaaS não
 termina quando a pessoa entra na tela principal. Uma pessoa precisa criar o espaço,
 usar o serviço, pagar, receber suporte e encerrar o acesso quando necessário.
 
+Ela começa confirmando se várias empresas ou equipes usarão a mesma aplicação.
+Essa pergunta vem logo depois da ideia inicial. Se a resposta for multitenante,
+a especialista abre uma trilha própria antes de tratar preço ou arquitetura.
+
 ## O que ela procura
 
 - B2B, B2C ou profissionais independentes.
@@ -17,11 +21,24 @@ usar o serviço, pagar, receber suporte e encerrar o acesso quando necessário.
 - cancelamento, inadimplência e suporte.
 - processos manuais aceitáveis durante a validação.
 
+Na trilha multitenante, também procura:
+
+- unidade do tenant.
+- titularidade e administração.
+- convites, membros e papéis.
+- participação de uma pessoa em vários tenants.
+- limite dos dados e banco.
+- criação e configuração de novos tenants.
+
 ## Um exemplo
 
 Uma agência pode criar o espaço, adicionar seus clientes e manter a cobrança no
 próprio contrato. Cada cliente acompanha seus leads, sem acesso aos dados de
-outras espaços. Esse arranjo muda permissões, preço e onboarding.
+outros espaços. Esse arranjo muda permissões, preço e onboarding.
+
+Quando Laravel for escolhido, o plano avalia o suporte de Teams da solução
+adotada para equipes, membros, convites e papéis. Teams ajuda na associação de
+pessoas ao tenant, mas não substitui as regras de isolamento e autorização.
 
 ## Ponto de partida técnico
 

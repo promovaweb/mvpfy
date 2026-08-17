@@ -36,7 +36,7 @@ Primeiro, o plano explica o ponto de partida:
 Depois, ele descreve o produto e a relação com cada cliente:
 
 - jornada principal.
-- espaço, acesso e separação de dados.
+- modelo multitenante, espaço, acesso e separação de dados.
 - onboarding e primeiro valor.
 - escopo funcional da versão 1.0.
 - módulos e funcionalidades.

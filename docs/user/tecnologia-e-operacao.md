@@ -26,6 +26,7 @@ O plano não precisa desenhar cada classe do sistema. Ele precisa responder às
 perguntas que afetam a jornada e a operação:
 
 - como o espaço é criado e identificado.
+- se o produto é multitenante ou usa instalação separada por cliente.
 - como os dados de clientes ficam separados.
 - quais pessoas acessam cada parte.
 - quais integrações são indispensáveis.
@@ -37,6 +38,11 @@ perguntas que afetam a jornada e a operação:
 Para a maioria dos primeiros SaaS, o MVPFy prefere uma aplicação compartilhada
 com separação lógica segura entre espaços. Uma instância dedicada só entra
 quando contrato, segurança, desempenho ou posicionamento exigirem esse custo.
+
+Quando Laravel for escolhido para um SaaS multitenante, o plano avalia o suporte
+de Teams da solução adotada para representar equipes, membros, convites e
+papéis. Essa base organiza a associação das pessoas, mas cada consulta ainda
+precisa respeitar o tenant ativo e sua separação de dados.
 
 ## Comece com operação acompanhada
 
