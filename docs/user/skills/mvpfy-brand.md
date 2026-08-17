@@ -1,29 +1,30 @@
-# Skill `mvpfy-brand`
+# A marca: `mvpfy-brand`
 
 Esta especialista prepara a direção da marca depois que problema, público e
-promessa têm base suficiente. O resultado orienta naming e comunicação, sem
-afirmar disponibilidade de domínio ou marca registrada sem pesquisa.
+promessa já têm uma base. O trabalho ajuda a escolher uma linguagem para o
+produto e orientar naming e comunicação. Disponibilidade de domínio ou registro
+de marca só entra como fato depois de uma pesquisa própria.
 
-## Entrega
+## O que entra no plano
 
-- categoria;
-- posicionamento em uma frase;
-- benefício central;
-- diferenciais;
-- personalidade e tom;
-- palavras a usar e evitar;
-- critérios para o nome;
-- sugestões de nome quando solicitadas;
-- slogans curtos;
+- categoria.
+- posicionamento em uma frase.
+- benefício central.
+- diferenciais.
+- personalidade e tom.
+- palavras a usar e evitar.
+- regras para o nome.
+- sugestões de nome quando solicitadas.
+- slogans curtos.
 - direção visual conceitual.
 
-## Exemplo
+## Um exemplo
 
 Se o valor for dar visibilidade aos leads para agências pequenas, o
-posicionamento deve falar de acompanhamento e resultado, sem depender de uma
-promessa genérica de inteligência artificial.
+posicionamento deve falar de acompanhamento e resultado. A marca não precisa
+depender de uma promessa genérica de inteligência artificial.
 
-## Não faz
+## Onde termina este trabalho
 
-Não cria logo final, não verifica disponibilidade automaticamente e não deixa
-o nome substituir a definição do problema.
+Esta especialista não cria o logo final, não confirma disponibilidade sem
+pesquisa e não usa o nome para encobrir um problema ainda indefinido.

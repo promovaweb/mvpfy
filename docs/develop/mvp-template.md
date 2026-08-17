@@ -38,7 +38,7 @@ node skills/mvpfy-document/scripts/validate-company.mjs --project .
 
 O primeiro comando cria ou atualiza. `--check` verifica se a renderização
 precisaria mudar. O validator exige problema, público, proposta, jornada,
-conta, onboarding, cobrança, escopo, preço, tecnologia, aquisição, métricas e
+espaço do cliente, onboarding, cobrança, escopo, preço, tecnologia, aquisição, métricas e
 pendências.
 
 ## Migração
@@ -48,5 +48,5 @@ node skills/mvpfy-migrate/scripts/migrate-company.mjs --project .
 ```
 
 O migrador adiciona seções ausentes, preserva o texto e atualiza a versão
-somente depois de uma gravação válida. Ele nunca toca em `spec.md`, `specs/`,
+somente depois de uma gravação válida. Ele nunca modifica `spec.md`, `specs/`,
 backlogs ou no repositório Specsfy.

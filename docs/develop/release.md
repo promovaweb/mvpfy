@@ -33,7 +33,7 @@ versão estável. Mesmo nesse estágio, não reutilize uma versão já publicada
 2. Atualize `VERSION` com a próxima versão.
 3. Atualize `package.json.version` para o mesmo valor.
 4. Crie a seção `## [X.Y.Z] - AAAA-MM-DD` no topo de `CHANGELOG.md`.
-5. Explique a alteração e o efeito para quem usa o MVPFy.
+5. Explique a alteração e o efeito para a pessoa que usa o MVPFy.
 6. Rode as verificações locais.
 7. Faça commit e push na `main`.
 
@@ -56,11 +56,11 @@ npm run ebook:verify
 O workflow roda em todo push na `main`. A publicação só prossegue quando a
 versão atual é maior que a versão do commit anterior. Depois, ele:
 
-1. executa `npm test`;
-2. valida `VERSION`, `package.json` e `CHANGELOG.md`;
-3. recusa uma tag `vX.Y.Z` que já exista;
-4. cria e envia a tag anotada;
-5. extrai as notas da seção correspondente;
+1. executa `npm test`.
+2. valida `VERSION`, `package.json` e `CHANGELOG.md`.
+3. recusa uma tag `vX.Y.Z` que já exista.
+4. cria e envia a tag anotada.
+5. extrai as notas da seção correspondente.
 6. cria a GitHub Release com a tag e essas notas.
 
 Isso mantém uma relação direta entre commit, tag, versão e changelog.
@@ -69,11 +69,11 @@ Isso mantém uma relação direta entre commit, tag, versão e changelog.
 
 O workflow falha quando:
 
-- `VERSION` não usa `MAJOR.MINOR.PATCH` válido;
-- `package.json.version` diverge de `VERSION`;
-- o changelog não tem a seção da versão atual;
-- a versão não avançou em relação ao commit anterior;
-- a tag da versão já existe;
+- `VERSION` não usa `MAJOR.MINOR.PATCH` válido.
+- `package.json.version` diverge de `VERSION`.
+- o changelog não tem a seção da versão atual.
+- a versão não avançou em relação ao commit anterior.
+- a tag da versão já existe.
 - os testes falham.
 
 Corrija a versão no commit seguinte e faça novo push. Não remova tags ou

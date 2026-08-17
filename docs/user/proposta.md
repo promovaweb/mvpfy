@@ -1,64 +1,64 @@
-# A proposta do MVPFy
+# O que o MVPFy prepara
 
-O MVPFy existe para uma situação específica: você está montando uma empresa do
-zero e precisa transformar a primeira ideia de software em um MVP SaaS que
-possa ser construído, vendido e aprendido com clientes reais.
+O MVPFy foi criado para o primeiro momento de uma empresa. Você tem uma ideia
+de software, ainda precisa descobrir o recorte comercial e quer chegar a uma
+versão que possa ser construída, vendida e aprendida com clientes reais.
 
-## O resultado que você recebe
+## O plano que sai da conversa
 
-Ao terminar a entrevista, o MVPFy gera um único arquivo chamado `MVP.md`.
-Ele funciona como uma visão compartilhada para produto, desenvolvimento,
-website, marca, marketing, vendas e operação. O arquivo não é uma transcrição
-da conversa. Ele separa o que você informou, o que foi recomendado, o que ainda
-é hipótese e o que precisa ser confirmado.
+Ao terminar a entrevista, o MVPFy reúne o trabalho em um único arquivo chamado
+`MVP.md`. O arquivo serve como ponto de encontro para produto,
+desenvolvimento, website, marca, marketing, vendas e operação.
 
-O documento cobre:
+Você não recebe uma cópia bruta da conversa. O plano separa o que você descreveu,
+o que uma especialista recomendou, o que ainda precisa ser testado e o que
+continua sem resposta. Assim, uma equipe consegue ler o contexto sem depender
+do histórico do chat.
 
-- empresa, contexto e modelo SaaS;
-- problema, alternativa atual e hipótese de valor;
-- público, comprador, pagador, usuários e personas;
-- proposta, jornada principal e escopo da versão 1.0;
-- conta, onboarding, ativação, assinatura, suporte e cancelamento;
-- marca, nome, slogan e posicionamento inicial;
-- concorrentes, preços observados e alternativas manuais;
-- preço, custo operacional, receita recorrente e margem;
-- Laravel, VPS, banco, arquivos, e-mail, IA e operação;
-- website, conteúdo, captação, vendas e lançamento;
-- métricas, validações, pendências e plano de execução.
+O plano cobre as perguntas que mais afetam a primeira versão:
 
-## O que não faz parte
+- a empresa, o contexto e a forma de oferecer o SaaS.
+- o problema, a alternativa usada hoje e a hipótese de valor.
+- o público, o cliente pagador, o pagador, as pessoas usuárias e as personas.
+- a promessa, a jornada central e o limite da versão 1.0.
+- o espaço, o onboarding, a ativação, a assinatura, o suporte e o cancelamento.
+- o posicionamento inicial, o nome, a marca e o slogan.
+- concorrentes, preços observados e alternativas manuais.
+- preço, custo operacional, receita recorrente e margem estimada.
+- Laravel, VPS, banco, arquivos, e-mail, IA e rotina de operação.
+- website, conteúdo, captação, vendas, lançamento, métricas e próximos passos.
 
-O MVPFy não constrói o software, não publica o website, não cria um logo final
-e não promete resultado comercial. Ele prepara o plano para que outros agentes
-ou equipes executem essas tarefas.
+## O que fica fora deste trabalho
 
-Também não cria `spec.md`, não altera o Specsfy e não converte o `MVP.md`
-em uma especificação do Specsfy. O produto tem seu próprio artefato, seu
-próprio estado e seus próprios scripts.
+O MVPFy não constrói o software, publica o website ou entrega um logo final.
+Ele prepara o contexto para que outros agentes e equipes executem essas
+atividades com menos suposições.
 
-## Por que SaaS é um recorte necessário
+O framework também não cria `spec.md`, não altera o Specsfy e não converte o
+`MVP.md` em uma especificação do Specsfy. O MVPFy possui seu próprio arquivo,
+seu próprio estado e seus próprios scripts.
 
-Um software oferecido como serviço exige mais do que uma lista de
-funcionalidades. O plano precisa explicar quem cria a conta, quem usa, quem
-paga, como a pessoa chega ao primeiro valor, como o acesso é mantido e como o
-serviço é encerrado.
+## Por que o plano trata o serviço inteiro
 
-Durante a entrevista, o MVPFy pode recomendar processos manuais para validação.
-Por exemplo, uma pessoa pode liberar uma conta, acompanhar a implantação ou
-conferir um pagamento sem que a primeira versão automatize tudo. Essa escolha
-fica registrada para que a equipe saiba o que é operação provisória e o que é
-requisito do produto.
+Uma lista de funcionalidades não explica como um SaaS funciona. O plano
+precisa mostrar qual pessoa cria o espaço, qual pessoa usa, qual pessoa paga, como a primeira pessoa
+chega ao valor e o que acontece com o acesso depois.
 
-## O princípio da versão 1.0
+Durante a validação, algumas tarefas podem continuar manuais. Uma pessoa pode
+liberar um espaço, acompanhar a implantação e conferir um pagamento enquanto a
+equipe aprende com os primeiros clientes. O `MVP.md` registra essa rotina, seu
+responsável e o momento previsto para automatizá-la.
 
-O MVPFy procura manter uma combinação simples: um público prioritário, um
-problema principal, uma promessa central e uma jornada que entrega essa
-promessa de ponta a ponta. Recursos adicionais entram em “Fora do MVP e
-evolução futura” quando não são necessários para validar o produto.
+## O limite da versão 1.0
 
-## Uma distinção importante
+O plano procura manter quatro pontos ligados: um público prioritário, um
+problema principal, uma promessa central e uma jornada capaz de entregar essa
+promessa do começo ao fim. Um recurso pode ser útil e ainda assim ficar para
+depois se não for necessário para testar essa combinação.
+
+## Recomendação não é obrigação
 
 O MVPFy pode sugerir Laravel, VPS, Supabase, armazenamento de objetos e um
-provedor de IA. Essas são recomendações iniciais baseadas no padrão da
-Promovaweb, não decisões irrevogáveis. O projeto final precisa registrar a
-razão de cada escolha e o gatilho para revisá-la.
+provedor de IA. Essas escolhas partem do padrão da Promovaweb e do contexto
+fornecido por você. O plano também registra a razão da recomendação e o sinal
+que justificaria uma revisão.

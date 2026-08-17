@@ -1,37 +1,36 @@
-# Solução de problemas
+# Quando algo não funcionar
 
-## A instalação não cria o estado
+## O estado não aparece depois da instalação
 
-Confirme que o comando foi executado na raiz do projeto consumidor:
+Confirme que o comando foi executado na raiz do projeto que receberá o plano:
 
 ```bash
 node skills/mvpfy/scripts/setup-project.mjs --project .
 ```
 
-Depois confira se existem `MVP.md` e `.mvpfy/state.json`. O comando deve
-ser executado dentro do consumidor, não na raiz do repositório `mvpfy` para
-alterar o próprio pacote.
+Depois, confira se existem `MVP.md` e `.mvpfy/state.json`. O comando deve rodar
+no projeto consumidor. Executá-lo na raiz do repositório `mvpfy` tenta preparar
+o próprio pacote, não o projeto da entrevista.
 
-## A pergunta seguinte repetiu uma resposta
+## A pergunta repetiu algo que você já informou
 
-Confira se a resposta anterior foi salva no `answers.jsonl` e se os campos
-extraídos foram atualizados no `state.json`. Uma resposta com texto livre pode
-precisar de interpretação; ela não deve ser descartada só porque não contém um
-número.
+Confira se a mensagem anterior foi salva no `answers.jsonl` e se as áreas
+extraídas chegaram ao `state.json`. Uma resposta livre pode precisar de uma
+leitura adicional. A ausência de um número não torna a mensagem inválida.
 
-## O documento está como `preliminary`
+## O documento continua como `preliminary`
 
-Abra a seção “Hipóteses e pendências”. Esse estado significa que falta pelo
-menos um item necessário para descrever o primeiro SaaS. Peça “continuar” ou
-“o que falta?” para voltar à pendência prioritária.
+Abra a seção “Hipóteses e pendências”. Esse estado informa que ainda falta um
+item necessário para descrever o primeiro SaaS. Peça “continuar” ou “o que
+falta?” para voltar ao próximo ponto relevante.
 
-## Uma escolha anterior mudou
+## Você mudou uma escolha anterior
 
-Diga claramente a alteração, por exemplo: “o público agora são clínicas, não
-agências”. O MVPFy preserva a resposta anterior como histórico, registra a nova
-resposta e revisa as áreas afetadas.
+Diga a alteração com clareza, por exemplo: “o público agora são clínicas, não
+agências”. O MVPFy conserva a mensagem anterior no histórico, registra a nova
+e revisa as áreas afetadas.
 
-## O ebook está desatualizado
+## O ebook não mostra a versão atual
 
 No repositório `mvpfy`, execute:
 
@@ -40,5 +39,5 @@ npm run ebook
 npm run ebook:verify
 ```
 
-Se uma página estiver ausente, confira o caminho correspondente em
-`docs/user/reading-order.txt`.
+Se uma página não aparecer, confira o caminho correspondente em
+`docs/user/reading-order.txt`. Essa lista deve conter apenas o guia do usuário.

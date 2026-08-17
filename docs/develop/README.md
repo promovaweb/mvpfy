@@ -49,7 +49,7 @@ usuário](../user/README.md).
 
 Uma mudança começa pelo comportamento observável. Depois, ajuste a skill ou o
 script responsável, escreva um teste focal, atualize a documentação de usuário
-e técnica e reconstrua o ebook. O [mapa de arquivos](arquivos.md) ajuda a
+e técnica e reconstrua o ebook. O [índice de arquivos](arquivos.md) ajuda a
 encontrar o owner correto antes da edição.
 
 ## Contexto técnico

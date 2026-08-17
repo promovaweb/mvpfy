@@ -1,27 +1,28 @@
-# Skill `mvpfy-migrate`
+# A atualização do template: `mvpfy-migrate`
 
-Esta skill atualiza um `MVP.md` quando o template evolui. Ela usa IDs de
-seção e versão de schema para inserir o que falta no lugar correto.
+Esta skill cuida da atualização do `MVP.md` quando o template evolui. Ela usa
+IDs de seção e a versão do schema para acrescentar o que falta sem apagar o
+plano que você já construiu.
 
-## Fluxo
+## Como a atualização acontece
 
 1. Ler a versão do documento.
-2. Ler IDs existentes.
-3. Comparar com o template atual.
-4. Inserir seções ausentes.
+2. Localizar os identificadores existentes.
+3. Comparar o arquivo com o template atual.
+4. Inserir as seções ausentes.
 5. Preservar o conteúdo preenchido.
 6. Marcar campos novos como pendentes.
-7. Atualizar a versão após gravação válida.
-8. Devolver à orquestradora uma única pergunta nova relevante.
+7. Atualizar a versão depois de uma gravação válida.
+8. Entregar à orquestradora uma única pergunta nova relevante.
 
-## Exemplo
+## Um exemplo
 
-Se o template ganhar “Plano de onboarding” e o documento já descreve convite e
+Se o template ganhar “Plano de onboarding” e o documento já descrever convite e
 primeiro valor em outra seção, o texto antigo permanece. A nova seção recebe
-uma síntese segura ou “Pendente”; o MVPFy pergunta somente o detalhe que não
-puder ser inferido.
+uma síntese segura ou “Pendente”. O MVPFy pergunta somente o detalhe que não
+puder ser entendido a partir do material existente.
 
-## Não faz
+## Onde termina este trabalho
 
-Não remove histórico, não duplica seções, não migra arquivos do Specsfy e não
-faz uma rodada de perguntas em lote.
+Esta skill não remove histórico, não duplica seções, não migra arquivos do
+Specsfy e não cria uma série de perguntas em lote.

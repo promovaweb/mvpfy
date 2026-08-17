@@ -14,8 +14,8 @@ validar o primeiro SaaS de uma empresa. A conversa acontece com perguntas
 simples, uma por vez. O trabalho especializado fica distribuído nas skills e
 o resultado é consolidado em um único `MVP.md`.
 
-A documentação segue a separação usada pelo Specsfy: um percurso para quem
-usa o produto e outro para quem mantém a biblioteca.
+A documentação segue a separação usada pelo Specsfy: um percurso para a pessoa
+que usa o produto e outro para a equipe que mantém a biblioteca.
 
 ## Percursos
 

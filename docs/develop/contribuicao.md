@@ -3,7 +3,7 @@
 ## Antes de editar
 
 Leia `AGENTS.md`, confirme o estado Git do submódulo e identifique o owner no
-[mapa de arquivos](arquivos.md). Preserve alterações locais que não pertencem
+[estrutura de arquivos](arquivos.md). Preserve alterações locais que não pertencem
 à tarefa.
 
 ## Ao mudar comportamento

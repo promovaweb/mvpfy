@@ -26,7 +26,7 @@ O estado é uma visão atual. Para saber como uma resposta chegou até ali, leia
 
 Antes das perguntas fechadas, o evento `intake.initial-idea` guarda a descrição
 livre do SaaS e do MVP. O estado mantém `interview_stage: initial_idea` até esse
-evento ser salvo; depois passa para `questions`. Os itens mencionados nessa
+evento ser salvo. depois passa para `questions`. Os itens mencionados nessa
 entrada ficam em `candidate_items` com o status `candidate`.
 
 ## Evento de resposta

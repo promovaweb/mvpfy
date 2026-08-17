@@ -1,21 +1,21 @@
-# Skill `mvpfy-problem`
+# O problema: `mvpfy-problem`
 
-Esta especialista transforma uma descrição de solução em um problema de
-negócio observável. “Preciso de um aplicativo” é uma entrada; a saída precisa
-explicar qual situação gera perda, atraso, erro, custo ou insegurança.
+Esta especialista ajuda a tirar a conversa do nome da solução. “Preciso de um
+aplicativo” pode ser o começo do relato, mas o plano precisa explicar o que
+acontece hoje, qual grupo enfrenta a situação e qual consequência torna a mudança valiosa.
 
-## Analisa
+## O que ela procura
 
-- situação e frequência;
-- pessoa afetada;
-- tarefa que ela tenta realizar;
-- impacto atual;
-- alternativa usada hoje;
-- motivo da insuficiência;
-- comprovações já disponíveis;
+- situação e frequência.
+- pessoa afetada.
+- tarefa que ela tenta realizar.
+- impacto atual.
+- alternativa usada hoje.
+- motivo da insuficiência.
+- comprovações já disponíveis.
 - hipótese que o MVP deve testar.
 
-## Saída
+## O que entra no `MVP.md`
 
 ```text
 Para [público], que precisa [tarefa], o problema é [dificuldade], causando
@@ -23,14 +23,14 @@ Para [público], que precisa [tarefa], o problema é [dificuldade], causando
 testar [hipótese].
 ```
 
-## Exemplo
+## Um exemplo
 
-“Agências perdem leads” ainda precisa de frequência, consequência e alternativa.
-Se o contexto existente já disser que os contatos chegam por três canais e são
-controlados em planilhas, a especialista usa essa informação e pergunta apenas
-o ponto decisivo que faltar.
+“Agências perdem leads” ainda não explica a frequência, a consequência nem a
+alternativa atual. Se o contexto já disser que os contatos chegam por três
+canais e terminam em planilhas, a especialista aproveita esses dados. Ela
+pergunta somente o ponto que ainda muda a leitura do problema.
 
-## Não faz
+## Onde termina este trabalho
 
-Não escolhe framework, não cria módulos e não define preço. Faz handoff para
-`mvpfy-audience` quando o grupo afetado estiver claro.
+Esta especialista não escolhe framework, cria módulos ou define preço. Quando o
+grupo afetado estiver claro, ela entrega o contexto para `mvpfy-audience`.

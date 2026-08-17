@@ -1,28 +1,28 @@
-# Instalação em um projeto consumidor
+# Prepare o projeto que receberá o MVP
 
-O MVPFy é instalado no projeto que vai receber o planejamento. O repositório
-`mvpfy` guarda as skills e os scripts; o estado da entrevista fica no projeto
-consumidor.
+O MVPFy fica instalado no projeto que receberá o planejamento. O repositório
+`mvpfy` fornece as skills e os scripts. O projeto consumidor guarda o `MVP.md`
+e o estado da sua própria entrevista.
 
-## Instalar as skills
+## Instale as skills
 
-No projeto consumidor, execute:
+Na raiz do projeto consumidor, execute:
 
 ```bash
 npx skills add promovaweb/mvpfy
 ```
 
-Depois, inicie a estrutura local:
+Depois, prepare os arquivos locais:
 
 ```bash
 node skills/mvpfy/scripts/setup-project.mjs --project .
 ```
 
-O comando prepara `.mvpfy/` e cria `MVP.md` a partir do template. Ele não
-altera código da aplicação, não cria `spec.md` e não escreve no repositório
-Specsfy.
+Esse comando cria `.mvpfy/` e inicia `MVP.md` a partir do template atual. Ele
+não altera o código da aplicação, não cria `spec.md` e não escreve no
+repositório Specsfy.
 
-## Arquivos criados
+## O que será criado
 
 ```text
 projeto/
@@ -34,26 +34,25 @@ projeto/
     └── research.json
 ```
 
-`MVP.md` é o arquivo que você compartilha com as equipes. `.mvpfy/` guarda
-o estado operacional para retomar a entrevista, registrar respostas e manter
-pesquisas. O diretório `.mvpfy/` mantém o estado para a retomada da entrevista.
-para os campos e as regras de gravação.
+O `MVP.md` é o arquivo que você compartilha com as equipes. O diretório
+`.mvpfy/` guarda o estado necessário para retomar a entrevista, registrar as
+respostas e conservar as pesquisas feitas para o projeto.
 
-## Conferir a instalação
+## Confira a instalação
 
-No repositório do MVPFy, a suíte pode ser executada com:
+Para testar o próprio repositório do MVPFy, use:
 
 ```bash
 npm test
 ```
 
-Em um projeto consumidor, carregue `$mvpfy` e peça para começar. A primeira
-resposta deve ser salva antes da pergunta seguinte. Se a estrutura não for
-criada, confira [Solução de problemas](solucao-de-problemas.md).
+No projeto consumidor, carregue `$mvpfy` e peça para começar. A primeira
+mensagem livre deve ser salva antes da primeira pergunta fechada. Se os
+arquivos não aparecerem, consulte [Solução de problemas](solucao-de-problemas.md).
 
-## Atualização
+## Atualize sem perder o plano
 
-Atualize as skills pelo mesmo mecanismo usado na instalação. Ao encontrar um
-`MVP.md` de uma versão anterior, a orquestradora compara o template e usa
-`mvpfy-migrate` antes de fazer novas perguntas. A atualização preserva as
-respostas existentes.
+Atualize as skills pelo mesmo comando usado na instalação. Ao encontrar um
+`MVP.md` de uma versão anterior, a orquestradora compara o template atual e
+chama `mvpfy-migrate` antes de perguntar algo novo. As respostas já registradas
+continuam no arquivo e o próximo turno trata apenas da primeira lacuna relevante.

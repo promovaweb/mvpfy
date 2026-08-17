@@ -1,44 +1,45 @@
-# Tecnologia e operação recomendadas
+# Tecnologia e operação para começar
 
-O padrão inicial da Promovaweb para os projetos atendidos pelo MVPFy é Laravel
-em uma VPS. A recomendação favorece uma aplicação simples, custo previsível e
-um caminho curto até a primeira validação.
+O ponto de partida da Promovaweb para os projetos atendidos pelo MVPFy é
+Laravel em uma VPS. Essa combinação mantém a aplicação simples, torna o custo
+mais previsível e encurta o caminho até a primeira validação.
 
 ## Componentes de referência
 
 | Necessidade | Padrão inicial |
 | --- | --- |
 | Aplicação | Laravel. |
-| Serviço complementar | Node.js somente com justificativa concreta. |
-| Banco | PostgreSQL, com Supabase quando fizer sentido ao projeto. |
-| Servidor | VPS com ambientes e backups definidos. |
+| Serviço complementar | Node.js apenas quando uma necessidade concreta justificar seu uso. |
+| Banco | PostgreSQL, com Supabase quando fizer sentido para o projeto. |
+| Servidor | VPS com ambientes e cópias de segurança definidos. |
 | Arquivos | Object storage compatível com S3. |
-| Mensagens | Provedor transacional de e-mail. |
-| IA | Provedor externo apenas quando houver função de produto clara. |
-| Operação | Logs, backup, filas ou tarefas agendadas conforme a jornada. |
+| Mensagens | Provedor de e-mail transacional. |
+| IA | Provedor externo apenas quando houver uma função clara no produto. |
+| Operação | Logs, cópias de segurança, filas ou tarefas agendadas conforme a jornada. |
 
-O especialista pode recomendar outra opção quando o contexto exigir, mas deve
-explicar o motivo e o efeito no custo e na operação.
+Outra opção pode fazer sentido quando o contexto exigir. Nesse caso, a
+especialista explica o motivo e mostra o efeito no custo e na operação.
 
-## O que precisa ser decidido no MVP
+## O que precisa estar claro na primeira versão
 
-O plano não precisa desenhar cada classe do sistema. Ele precisa esclarecer:
+O plano não precisa desenhar cada classe do sistema. Ele precisa responder às
+perguntas que afetam a jornada e a operação:
 
-- como a conta é criada e identificada;
-- como os dados de clientes ficam separados;
-- quem pode acessar cada parte;
-- quais integrações são indispensáveis;
-- quais tarefas podem ser assíncronas;
-- onde arquivos são guardados;
-- como backup, logs e suporte funcionam;
+- como o espaço é criado e identificado.
+- como os dados de clientes ficam separados.
+- quais pessoas acessam cada parte.
+- quais integrações são indispensáveis.
+- quais tarefas podem rodar fora da tela.
+- onde os arquivos ficam guardados.
+- como funcionam cópias de segurança, logs e suporte.
 - qual custo mensal aparece em cada cenário.
 
 Para a maioria dos primeiros SaaS, o MVPFy prefere uma aplicação compartilhada
-com separação lógica segura entre contas. Instâncias dedicadas só entram com
-uma justificativa de contrato, segurança, desempenho ou posicionamento.
+com separação lógica segura entre espaços. Uma instância dedicada só entra
+quando contrato, segurança, desempenho ou posicionamento exigirem esse custo.
 
-## Operação assistida
+## Comece com operação acompanhada
 
-Durante a validação, liberar conta, acompanhar onboarding ou conferir uma
-assinatura manualmente pode ser aceitável. O `MVP.md` registra o processo,
-a pessoa responsável e o momento em que a automação passa a valer a pena.
+Durante a validação, uma pessoa pode liberar espaços, acompanhar o onboarding e
+conferir assinaturas manualmente. O `MVP.md` registra essa rotina, seu
+responsável e o sinal que indicará a hora de automatizar o trabalho.

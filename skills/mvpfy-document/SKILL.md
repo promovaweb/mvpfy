@@ -20,4 +20,21 @@ Execute o mesmo script com `--check` antes de uma gravação. Valide depois com
 `ready` quando os campos mínimos do MVP SaaS estiverem preenchidos; caso
 contrário, use `preliminary` e liste as lacunas.
 
+## Gate editorial e de publicação
+
+Antes de gerar um ebook, confirme que `docs/user/reading-order.txt` contém
+somente páginas destinadas à pessoa usuária. A referência técnica e a
+especificação continuam disponíveis online, mas não entram no guia do usuário.
+Compare a estrutura com um projeto de referência do Hub e mantenha a identidade
+visual sem copiar sua prosa.
+
+Leia o conjunto de páginas como uma publicação inteira. Reescreva trechos que
+pareçam catálogo, lista de recursos ou anotação de agente. Cada seção pública
+precisa explicar a situação, a ação, o efeito e o limite da orientação. Listas e
+tabelas devem organizar informação paralela, nunca substituir a explicação.
+
+Depois da leitura editorial, gere PDF e EPUB, leia o resultado e rode os
+validadores do submódulo e do Hub. Um build correto comprova o arquivo gerado,
+mas não comprova a qualidade do texto.
+
 Leia [document-rules.md](references/document-rules.md) para a ordem canônica.

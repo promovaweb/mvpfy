@@ -47,6 +47,10 @@ deve permanecer focado na versão 1.0.
    histórico quando o usuário corrigir algo.
 12. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
    quando os campos mínimos já estiverem preenchidos.
+13. Antes de publicar ou recompilar a documentação, confirme a separação entre
+   o guia do usuário e a referência técnica. O ebook deve usar apenas a ordem
+   de páginas do público escolhido. Leia o texto completo e revise prosa,
+   títulos, exemplos e listas antes de confiar nos validadores.
 
 ## Regras de conversa
 
@@ -90,6 +94,10 @@ deve permanecer focado na versão 1.0.
   retorno.
 - Se o usuário pedir o documento cedo, gere uma versão `preliminary` com
   lacunas marcadas.
+- Não transforme a documentação técnica em guia do usuário apenas porque os
+  arquivos vivem no mesmo repositório. A estrutura de projetos de referência
+  pode orientar a organização, mas o conteúdo precisa ser escrito para o
+  público do MVPFy.
 
 ## Limite sobre o Specsfy
 

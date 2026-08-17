@@ -24,7 +24,7 @@ texto mínimo do PDF e integridade do EPUB.
 ## Quando incrementar a versão
 
 Altere `ebooks/VERSION` quando o conjunto de páginas mudar. Uma nova seção ou
-capítulo usa incremento minor; correção textual sem nova área pode usar patch.
+capítulo usa incremento minor. correção textual sem nova área pode usar patch.
 O manifesto registra o hash das fontes, portanto o build precisa ser executado
 depois de toda mudança documental.
 
@@ -38,3 +38,16 @@ arquivos do Specsfy e sem criar uma fonte paralela no Hub.
 
 Links relativos entre páginas do MVPFy continuam úteis no Markdown e no ebook.
 Antes do build, confira que toda página referenciada existe.
+
+## Aprendizado de revisão
+
+O guia do usuário e a referência técnica têm públicos diferentes. A lista de
+compilação do ebook deve apontar apenas para o primeiro percurso. As páginas de
+desenvolvimento e a especificação permanecem no repositório para agentes e
+contribuidores, mas não devem aparecer no PDF ou EPUB do leitor.
+
+Essa separação não encerra a revisão. Depois de confirmar a estrutura, leia o
+guia inteiro como uma publicação. Procure prosa telegráfica, títulos genéricos,
+listas sem explicação e exemplos sem situação concreta. Compare a estrutura
+visual com outros projetos do Hub, mas escreva o conteúdo a partir das regras e
+do produto do MVPFy.

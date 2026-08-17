@@ -4,6 +4,18 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.2.2] - 2026-08-16
+
+- Reescreve o guia do usuário com prosa direta, exemplos situados e orientação
+  compatível com as diretrizes editoriais do Hub.
+- Revisa as páginas das especialistas para explicar responsabilidade, exemplo e
+  limite de cada skill sem transformar o ebook em um catálogo mecânico.
+- Ajusta a documentação técnica para manter a separação entre implementação e
+  percurso do leitor.
+- Registra nos contextos e nas skills o aprendizado sobre separar públicos,
+  consultar projetos de referência e revisar a prosa antes da validação técnica.
+- Gera o ebook do usuário na edição v0.5.0.
+
 ## [0.2.1] - 2026-08-17
 
 - Corrige o ebook para publicar somente o Guia do usuário, seguindo a

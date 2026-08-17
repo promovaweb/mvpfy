@@ -14,14 +14,14 @@ método do Specsfy e não altera arquivos do repositório Specsfy.
 O usuário pode começar com uma frase, uma ideia detalhada, URLs de concorrentes
 ou arquivos existentes no projeto. A orquestradora lê, em modo somente leitura,
 `MVP.md`, `.mvpfy/`, specs, backlogs, briefs, docs, tickets e planos. Uma
-informação clara encontrada nessas fontes conta como contexto preenchido e não
+informação clara encontrada nessas fontes vale como contexto preenchido e não
 deve voltar como pergunta.
 
 Uma mensagem pode conter o plano inteiro conhecido até aquele momento. Antes
 de cada pergunta, a orquestradora analisa a mensagem completa, os eventos
 anteriores, o `MVP.md` e as referências disponíveis. Ela registra todos os
 campos identificados e pergunta somente sobre a lacuna prioritária restante.
-Mensagens adicionais durante a entrada inicial são acumuladas; a opção 4
+Mensagens adicionais durante a entrada inicial são acumuladas. a opção 4
 continua disponível para iniciar as perguntas fechadas.
 
 ## Contrato rígido da entrevista
@@ -29,10 +29,10 @@ continua disponível para iniciar as perguntas fechadas.
 Cada turno tem exatamente uma pergunta principal. A mensagem pode conter uma
 confirmação curta e contexto, mas termina com exatamente cinco opções:
 
-1. resposta pronta;
-2. resposta pronta;
-3. resposta pronta;
-4. `Avançar`;
+1. resposta pronta.
+2. resposta pronta.
+3. resposta pronta.
+4. `Avançar`.
 5. `Conversar mais sobre este tema`.
 
 As opções 1, 2 e 3 respondem à mesma pergunta. `Avançar` aceita o entendimento
@@ -65,7 +65,7 @@ estado incerto.
 | `mvpfy-problem` | Problema, situação, alternativa e hipótese. |
 | `mvpfy-audience` | Segmentos, papéis e personas. |
 | `mvpfy-product` | Proposta, jornada e escopo 1.0. |
-| `mvpfy-saas` | Conta, acesso, onboarding, cobrança e retenção. |
+| `mvpfy-saas` | Espaço do cliente, acesso, onboarding, cobrança e retenção. |
 | `mvpfy-brand` | Posicionamento, nome e slogan. |
 | `mvpfy-market` | Concorrentes, alternativas, fontes e preços observados. |
 | `mvpfy-pricing` | Modelo de cobrança, faixas e cenários econômicos. |
@@ -77,10 +77,10 @@ estado incerto.
 ## Escopo do primeiro SaaS
 
 O plano precisa definir um público, um problema, uma promessa e uma jornada
-principal. Também precisa explicar titular da conta, usuários, primeiro valor,
+principal. Também precisa explicar titular do espaço, pessoas usuárias, primeiro valor,
 assinatura, suporte, cancelamento, custo, preço e métricas.
 
-Itens interessantes que não sustentam a validação entram fora da versão 1.0.
+Itens interessantes que não apoiam a validação entram fora da versão 1.0.
 Processos manuais podem aparecer como operação provisória quando reduzem o
 tempo de construção.
 
@@ -94,8 +94,8 @@ revisão.
 ## `MVP.md`
 
 O template possui 35 seções com IDs estáveis. O documento distingue confirmado,
-recomendado, hipótese e pendência. `preliminary` significa que há lacunas;
-`ready` significa que os campos mínimos do MVP SaaS estão descritos;
+recomendado, hipótese e pendência. `preliminary` significa que há lacunas.
+`ready` significa que os campos mínimos do MVP SaaS estão descritos.
 `validated` significa que as hipóteses principais foram conferidas fora da
 entrevista.
 
@@ -107,12 +107,12 @@ specs, backlogs, `spec.md` ou qualquer arquivo externo ao MVPFy.
 
 ## Aceite
 
-- uma pergunta principal por turno;
-- três opções prontas, `Avançar` e conversa livre;
-- gravação antes da pergunta seguinte;
-- leitura de contexto existente sem escrita nesses arquivos;
-- retomada depois de pausa;
-- correção com histórico;
-- `MVP.md` idempotente e validável;
-- 12 skills com responsabilidades separadas;
+- uma pergunta principal por turno.
+- três opções prontas, `Avançar` e conversa livre.
+- gravação antes da pergunta seguinte.
+- leitura de contexto existente sem escrita nesses arquivos.
+- retomada depois de pausa.
+- correção com histórico.
+- `MVP.md` idempotente e validável.
+- 12 skills com responsabilidades separadas.
 - PDF e EPUB reconstruíveis a partir da documentação.

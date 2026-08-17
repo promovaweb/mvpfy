@@ -1,24 +1,26 @@
-# Skill `mvpfy-audience`
+# O público: `mvpfy-audience`
 
-Esta especialista separa mercado amplo, segmento prioritário, usuário,
-comprador, pagador, influenciador e beneficiário. Ela evita personas genéricas
-como “qualquer empresa”.
+Esta especialista separa o mercado amplo do primeiro grupo que vale atender.
+Também diferencia a pessoa que usa o produto, a pessoa que compra, a pessoa responsável pelo pagamento,
+o contato que influencia a compra e o grupo que recebe o benefício. Essa distinção evita que
+“qualquer empresa” vire o público inteiro do MVP.
 
-## Analisa
+## O que ela procura
 
-- frequência e intensidade do problema por segmento;
-- acesso ao público;
-- capacidade de pagar;
-- comportamento atual;
-- objeções e gatilhos;
-- canais de comunicação;
+- frequência e intensidade do problema por segmento.
+- acesso ao público.
+- capacidade de pagar.
+- comportamento atual.
+- objeções e gatilhos.
+- canais de comunicação.
 - diferenças entre uso e compra.
 
-## Saída
+## O que entra no `MVP.md`
 
-O `MVP.md` recebe um segmento prioritário e, no máximo, três personas
-úteis: produto, compra e marketing quando forem diferentes. Cada persona tem
-contexto, objetivo, dor, alternativa, objeção, gatilho e canal.
+O `MVP.md` recebe um segmento prioritário e, no máximo, três personas úteis:
+produto, compra e marketing quando forem diferentes. Cada uma descreve
+contexto, objetivo, dor, alternativa, objeção, gatilho e canal. A intenção não é
+criar biografias, e sim dar à equipe elementos para construir e vender.
 
 ## Exemplo
 
@@ -27,8 +29,8 @@ de atendimento pode ser usuária diária e o cliente da agência pode ser um
 usuário com permissão limitada. Essa distinção afeta produto, SaaS, preço e
 marketing.
 
-## Não faz
+## Onde termina este trabalho
 
-Não inventa biografias para preencher espaço e não cria três públicos
-prioritários sem uma escolha. Faz handoff para `mvpfy-product` quando houver um
-segmento e um resultado central.
+Esta especialista não inventa biografias para preencher espaço nem mantém três
+públicos prioritários ao mesmo tempo. Quando houver um segmento e um resultado
+central, ela entrega o contexto para `mvpfy-product`.

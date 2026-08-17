@@ -1,6 +1,6 @@
-# Mapa de arquivos do MVPFy
+# Estrutura de arquivos do MVPFy
 
-Este mapa mostra onde cada responsabilidade vive. Os caminhos são relativos à
+Esta estrutura mostra onde cada responsabilidade vive. Os caminhos são relativos à
 raiz do submódulo `mvpfy`.
 
 ## Raiz

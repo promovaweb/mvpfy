@@ -1,35 +1,36 @@
-# Skill `mvpfy-saas`
+# O serviço recorrente: `mvpfy-saas`
 
-Esta especialista define como o software se comporta como serviço recorrente.
-Ela completa a jornada funcional com a jornada comercial e operacional.
+Esta especialista explica o que acontece ao redor do software. Um SaaS não
+termina quando a pessoa entra na tela principal. Uma pessoa precisa criar o espaço,
+usar o serviço, pagar, receber suporte e encerrar o acesso quando necessário.
 
-## Analisa
+## O que ela procura
 
-- B2B, B2C ou profissionais independentes;
-- titular da conta e usuários;
-- separação dos dados entre contas;
-- convite, demonstração ou teste;
-- onboarding e primeiro valor;
-- ativação;
-- unidade de valor;
-- assinatura, limites e excedentes;
-- cancelamento, inadimplência e suporte;
+- B2B, B2C ou profissionais independentes.
+- titular do espaço e pessoas usuárias.
+- separação dos dados entre espaços.
+- convite, demonstração ou teste.
+- onboarding e primeiro valor.
+- ativação.
+- unidade de valor.
+- assinatura, limites e excedentes.
+- cancelamento, inadimplência e suporte.
 - processos manuais aceitáveis durante a validação.
 
-## Exemplo
+## Um exemplo
 
-Uma agência pode criar a conta, adicionar seus clientes e manter a cobrança em
-seu próprio contrato. Os clientes acompanham os leads, mas não enxergam dados
-de outras contas.
+Uma agência pode criar o espaço, adicionar seus clientes e manter a cobrança no
+próprio contrato. Cada cliente acompanha seus leads, sem acesso aos dados de
+outras espaços. Esse arranjo muda permissões, preço e onboarding.
 
-## Recomendação padrão
+## Ponto de partida técnico
 
 Para muitos primeiros produtos, uma aplicação compartilhada com separação
-lógica segura é suficiente. Instância dedicada exige justificativa de
-segurança, contrato, desempenho ou posicionamento.
+lógica segura atende bem. Uma instância dedicada só deve aparecer quando
+segurança, contrato, desempenho ou posicionamento justificarem esse desenho.
 
-## Não faz
+## Onde termina este trabalho
 
-Não presume que todo SaaS precisa de billing totalmente automático no primeiro
-dia. Se a operação assistida validar a oferta, ela pode ser registrada como
-provisória.
+Esta especialista não presume que a cobrança precisa ser totalmente automática
+no primeiro dia. Se uma operação acompanhada ajudar a validar a oferta, o plano
+pode registrá-la como parte provisória do serviço.

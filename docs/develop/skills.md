@@ -1,8 +1,8 @@
 # Arquitetura das skills
 
 Cada skill vive em seu próprio diretório e mantém uma responsabilidade
-delimitada. O corpo de `SKILL.md` contém o fluxo essencial; referências guardam
-regras específicas; scripts cuidam das operações que precisam de repetição
+delimitada. O corpo de `SKILL.md` contém o fluxo essencial. referências guardam
+regras específicas. scripts cuidam das operações que precisam de repetição
 exata.
 
 ## Catálogo completo
@@ -13,7 +13,7 @@ exata.
 | `mvpfy-problem` | Situação, problema e hipótese | `mvpfy-audience` |
 | `mvpfy-audience` | Segmento e papéis | `mvpfy-product` |
 | `mvpfy-product` | Jornada e escopo | `mvpfy-saas` |
-| `mvpfy-saas` | Conta e ciclo recorrente | `mvpfy-market` ou preço |
+| `mvpfy-saas` | Espaço do cliente e ciclo recorrente | `mvpfy-market` ou preço |
 | `mvpfy-brand` | Marca e posicionamento | Marketing ou documento |
 | `mvpfy-market` | Concorrência e fonte | `mvpfy-pricing` |
 | `mvpfy-pricing` | Cobrança e cenários | `mvpfy-technology` |

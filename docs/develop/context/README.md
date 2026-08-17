@@ -1,7 +1,7 @@
 # Contexto técnico do MVPFy
 
 Estas páginas registram decisões transversais pequenas para que um agente
-consiga contribuir sem carregar toda a documentação. Elas explicam o pacote;
+consiga contribuir sem carregar toda a documentação. Elas explicam o pacote.
 não são arquivos que o MVPFy instala em consumidores.
 
 | Tema | Documento |
