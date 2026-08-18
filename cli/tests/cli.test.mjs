@@ -2,10 +2,14 @@
 
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import path from "node:path";
+import { tmpdir } from "node:os";
 
 const root = path.resolve(import.meta.dirname, "../..");
+const execFileAsync = promisify(execFile);
 
 test("a CLI e o ebook usam a versão do framework", async () => {
   const version = (await readFile(path.join(root, "VERSION"), "utf8")).trim();
@@ -48,4 +52,22 @@ test("a entrada padrão abre a TUI e aceita --project", async () => {
   assert.match(cli, /\.action\(async \(options: RootOptions\) => openTui\(options\.project\)\)/);
   assert.match(launcher, /dist\/cli\.js/);
   assert.doesNotMatch(launcher, /dist\/main\.js/);
+});
+
+test("os subcomandos usam o diretório informado após o nome do comando", async () => {
+  const project = await mkdtemp(path.join(tmpdir(), "mvpfy-cli-project-"));
+  try {
+    await writeFile(path.join(project, "MVP.md"), "# MVP de teste\n", "utf8");
+    await execFileAsync("npx", ["tsc", "-p", "cli/tsconfig.json"], { cwd: root });
+    const { stdout } = await execFileAsync(
+      process.execPath,
+      ["cli/dist/main.js", "progress", "--project", project, "--json"],
+      { cwd: root },
+    );
+    const progress = JSON.parse(stdout);
+    assert.equal(progress.project, project);
+    assert.equal(progress.document, true);
+  } finally {
+    await rm(project, { recursive: true, force: true });
+  }
 });

@@ -16,46 +16,46 @@ export function buildProgram(): Command {
     .action(async (options: RootOptions) => openTui(options.project));
 
   program.command("progress").description("exibe o progresso das áreas do MVP")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const snapshot = await scanProgress(options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const snapshot = await scanProgress(projectFromParent(command, options.project));
       console.log(options.json ? JSON.stringify(snapshot, null, 2) : formatProgress(snapshot));
     });
 
   program.command("tui").description("abre a interface terminal do MVPFy")
-    .addOption(projectOption()).action(async (options: ProjectOptions) => openTui(options.project));
+    .addOption(projectOption()).action(async (options: ProjectOptions, command: Command) => openTui(projectFromParent(command, options.project)));
 
   program.command("install").alias("setup").description("instala as skills do MVPFy no projeto")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const output = await runSkills(installArguments(), options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const output = await runSkills(installArguments(), projectFromParent(command, options.project));
       printAction("install", output, Boolean(options.json));
     });
 
   program.command("update").description("atualiza as skills do MVPFy no projeto")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const output = await runSkills(updateArguments(), options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const output = await runSkills(updateArguments(), projectFromParent(command, options.project));
       printAction("update", output, Boolean(options.json));
     });
 
   const skills = program.command("skills").description("gerencia as skills por meio do CLI oficial");
   skills.command("add").description("executa skills add promovaweb/mvpfy")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const output = await runSkills(installArguments(), options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const output = await runSkills(installArguments(), projectFromParent(command, options.project));
       printAction("add", output, Boolean(options.json));
     });
   skills.command("update").description("executa skills update --project")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const output = await runSkills(updateArguments(), options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const output = await runSkills(updateArguments(), projectFromParent(command, options.project));
       printAction("update", output, Boolean(options.json));
     });
   skills.command("list").description("lista as skills instaladas")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const output = await runSkills(["list", ...(options.json ? ["--json"] : [])], options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const output = await runSkills(["list", ...(options.json ? ["--json"] : [])], projectFromParent(command, options.project));
       console.log(output);
     });
 
   program.command("doctor").description("verifica o projeto e o CLI skills")
-    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }) => {
-      const snapshot = await scanProgress(options.project);
+    .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
+      const snapshot = await scanProgress(projectFromParent(command, options.project));
       const result = { project: snapshot.project, document: snapshot.document, skills_cli: true };
       console.log(options.json ? JSON.stringify(result, null, 2) : `Projeto\t${result.project}\nMVP.md\t${result.document ? "OK" : "pendente"}\nskills CLI\tOK`);
     });
@@ -81,6 +81,20 @@ interface RootOptions { project: string; }
 
 function projectOption(): Option {
   return new Option("--project <caminho>", "raiz do projeto consumidor").default(process.cwd());
+}
+
+/**
+ * Resolve a raiz escolhida na opção global sem deixar o valor-padrão de um
+ * subcomando sobrepor a opção informada depois do nome desse subcomando.
+ */
+function projectFromParent(command: Command, fallback: string): string {
+  let ancestor = command.parent;
+  while (ancestor) {
+    const project = ancestor.opts<{ project?: unknown }>().project;
+    if (typeof project === "string") return project;
+    ancestor = ancestor.parent;
+  }
+  return fallback;
 }
 
 function printAction(action: string, output: string, json: boolean): void {
