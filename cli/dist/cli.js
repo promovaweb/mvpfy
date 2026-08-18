@@ -1,7 +1,7 @@
 /** Interface de comandos do MVPFy. */
 import { Command, CommanderError, Option } from "commander";
 import { scanProgress, formatProgress } from "./progress.js";
-import { installArguments, runSkills, updateArguments } from "./skills-runner.js";
+import { installArguments, runSkills, setupProject, updateArguments } from "./skills-runner.js";
 import { VERSION } from "./version.js";
 import { openTui } from "./tui.js";
 export function buildProgram() {
@@ -19,10 +19,12 @@ export function buildProgram() {
     });
     program.command("tui").description("abre a interface terminal do MVPFy")
         .addOption(projectOption()).action(async (options, command) => openTui(projectFromParent(command, options.project)));
-    program.command("install").alias("setup").description("instala as skills do MVPFy no projeto")
+    program.command("install").alias("setup").description("instala as skills e prepara o projeto")
         .addOption(projectOption()).option("--json", "emite JSON").action(async (options, command) => {
-        const output = await runSkills(installArguments(), projectFromParent(command, options.project));
-        printAction("install", output, Boolean(options.json));
+        const project = projectFromParent(command, options.project);
+        const skills = await runSkills(installArguments(), project);
+        const setup = await setupProject(project);
+        printAction("install", [skills, setup].filter(Boolean).join("\n"), Boolean(options.json));
     });
     program.command("update").description("atualiza as skills do MVPFy no projeto")
         .addOption(projectOption()).option("--json", "emite JSON").action(async (options, command) => {

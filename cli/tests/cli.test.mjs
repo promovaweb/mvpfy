@@ -22,10 +22,13 @@ test("a CLI e o ebook usam a versão do framework", async () => {
 
 test("o runner chama skills add e skills update", async () => {
   const source = await readFile(path.join(root, "cli/src/skills-runner.ts"), "utf8");
+  const cli = await readFile(path.join(root, "cli/src/cli.ts"), "utf8");
   assert.match(source, /"add",\s+SKILLS_REPOSITORY/);
   assert.match(source, /"--skill",\s+"\*",\s+"--agent",\s+"claude-code",\s+"codex"/);
   assert.doesNotMatch(source, /"--all"/);
   assert.match(source, /\["update", "--project", "--yes"\]/);
+  assert.match(source, /export async function setupProject/);
+  assert.match(cli, /const setup = await setupProject\(project\)/);
 });
 
 test("a TUI possui abas de áreas e do MVP renderizado", async () => {

@@ -42,30 +42,16 @@ patch, minor e major e para entender as recusas do workflow.
 
 ## Instalação
 
-```bash
-npx skills add promovaweb/mvpfy
-```
-
-Para acompanhar o plano no terminal, instale a CLI publicada no npm:
+Na raiz do projeto consumidor, execute:
 
 ```bash
-export MVPath="$HOME/.npm-global"
-npm install --global --prefix "$MVPath" @promovaweb/mvpfy
-export PATH="$MVPath/bin:$PATH"
-rehash 2>/dev/null || true
-mvpfy --project .
+npx --yes @promovaweb/mvpfy install --project .
 ```
 
-A TUI mostra o progresso por área, renderiza o `MVP.md` com cores e oferece as
-ações de instalação e atualização das skills. A instalação executa `skills add`
-somente para Claude Code e Codex; a atualização usa `skills update`.
+O comando instala as skills para Claude Code e Codex e prepara `MVP.md` e
+`.mvpfy/`. Um segundo uso preserva respostas e arquivos existentes.
 
-No projeto que receberá as skills, use `$mvpfy` como porta de entrada. Para
-preparar um projeto local manualmente:
-
-```bash
-node skills/mvpfy/scripts/setup-project.mjs --project .
-```
+No projeto que receberá as skills, use `$mvpfy` como porta de entrada.
 
 ## Skills
 
@@ -84,6 +70,7 @@ node skills/mvpfy/scripts/setup-project.mjs --project .
 | `mvpfy-document` | Geração e validação do `MVP.md`. |
 | `mvpfy-migrate` | Atualização do template sem perda de conteúdo. |
 | `mvpfy-progress` | Leitura do andamento sem iniciar outra pergunta. |
+| `mvpfy-setup` | Instalação, verificação e atualização do projeto consumidor. |
 
 ## Princípios
 

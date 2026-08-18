@@ -1,26 +1,19 @@
 # Instalação do MVPFy
 
-Para usar o MVPFy, tenha Node.js 22 ou superior instalado. Depois, instale a
-CLI globalmente e execute-a na raiz do projeto que receberá o planejamento:
-
-```bash
-npm install --global @promovaweb/mvpfy
-mvpfy --version
-```
+Para usar o MVPFy, tenha Node.js 22 ou superior instalado.
 
 ## Prepare o projeto
 
-Na raiz do projeto consumidor, execute os dois comandos abaixo. Eles instalam as
-skills e preparam os arquivos locais:
+Na raiz do projeto consumidor, execute um único comando. Ele instala as skills
+e prepara os arquivos locais:
 
 ```bash
-mvpfy install --project .
-node skills/mvpfy/scripts/setup-project.mjs --project .
+npx --yes @promovaweb/mvpfy install --project .
 ```
 
-O primeiro comando instala as skills do MVPFy. O segundo cria `MVP.md` e
-`.mvpfy/` para guardar o plano e o estado necessário para retomar a entrevista,
-sem alterar o código da aplicação ou os arquivos do Specsfy.
+O comando cria `MVP.md` e `.mvpfy/` para guardar o plano e o estado necessário
+para retomar a entrevista, sem alterar o código da aplicação ou os arquivos do
+Specsfy.
 
 Confira o resultado com os dois comandos abaixo. Eles mostram se o projeto e o
 planejamento já estão prontos:

@@ -5,7 +5,7 @@
 Confirme que o comando foi executado na raiz do projeto que receberá o plano:
 
 ```bash
-node skills/mvpfy/scripts/setup-project.mjs --project .
+npx --yes @promovaweb/mvpfy install --project .
 ```
 
 Depois, confira se existem `MVP.md` e `.mvpfy/state.json`. O comando deve rodar

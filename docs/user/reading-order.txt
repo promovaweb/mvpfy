@@ -11,6 +11,7 @@ docs/user/tecnologia-e-operacao.md
 docs/user/solucao-de-problemas.md
 docs/user/skills/README.md
 docs/user/skills/mvpfy.md
+docs/user/skills/mvpfy-setup.md
 docs/user/skills/mvpfy-problem.md
 docs/user/skills/mvpfy-audience.md
 docs/user/skills/mvpfy-product.md

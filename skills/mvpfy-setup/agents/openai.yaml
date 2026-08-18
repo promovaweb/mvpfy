@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup MVPFy"
+  short_description: "Prepara e verifica o projeto MVPFy"
+  default_prompt: "Use $mvpfy-setup para instalar e preparar este projeto para o MVPFy."
