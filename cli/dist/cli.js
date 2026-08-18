@@ -77,6 +77,8 @@ function projectOption() {
  * subcomando sobrepor a opção informada depois do nome desse subcomando.
  */
 function projectFromParent(command, fallback) {
+    if (fallback !== process.cwd())
+        return fallback;
     let ancestor = command.parent;
     while (ancestor) {
         const project = ancestor.opts().project;

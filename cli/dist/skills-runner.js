@@ -1,7 +1,6 @@
-/** Executa o CLI oficial `skills` para instalar e atualizar skills. */
+/** Executa `npx skills`, o caminho oficial para instalar e atualizar skills. */
 import { access } from "node:fs/promises";
 import { constants } from "node:fs";
-import { createRequire } from "node:module";
 import { delimiter, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
@@ -51,21 +50,10 @@ export function updateArguments() {
 }
 export async function resolveSkillsCommand() {
     const path = process.env.PATH ?? "";
-    const direct = await findExecutable("skills", path);
-    if (direct)
-        return [direct];
     const npmExec = await findExecutable("npx", path);
     if (npmExec)
         return [npmExec, "--yes", "skills"];
-    try {
-        const require = createRequire(import.meta.url);
-        const packaged = require.resolve("skills/bin/cli.mjs");
-        await access(packaged, constants.R_OK);
-        return [process.execPath, packaged];
-    }
-    catch {
-        return undefined;
-    }
+    return undefined;
 }
 async function findExecutable(name, path) {
     for (const directory of path.split(delimiter)) {

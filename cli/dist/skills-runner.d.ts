@@ -1,4 +1,4 @@
-/** Executa o CLI oficial `skills` para instalar e atualizar skills. */
+/** Executa `npx skills`, o caminho oficial para instalar e atualizar skills. */
 export declare const SKILLS_REPOSITORY = "promovaweb/mvpfy";
 export declare function runSkills(args: string[], project?: string): Promise<string>;
 /**

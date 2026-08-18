@@ -4,6 +4,12 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.4.9] - 2026-08-18
+
+- Corrige `mvpfy install --project <caminho>` para preparar `MVP.md` no
+  diretório informado também quando a CLI é executada por `npx`, com skills
+  para Claude Code e Codex gerenciadas pelo comando `npx skills add`.
+
 ## [0.4.8] - 2026-08-18
 
 - Faz `mvpfy install --project .` instalar as skills para Claude Code e Codex
