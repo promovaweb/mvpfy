@@ -10,7 +10,24 @@ node skills/mvpfy/scripts/setup-project.mjs --project .
 ```
 
 Cria `.mvpfy/` e `MVP.md` se ainda não existirem. O script é idempotente:
-arquivos existentes não são substituídos.
+arquivos existentes não são substituídos. Ao terminar, chama
+`mvpfy-context` e atualiza `.mvpfy/existing-project.json`.
+
+## Analisar um projeto existente
+
+```bash
+node skills/mvpfy-context/scripts/analyze-existing-project.mjs --project .
+```
+
+O comando lê specs, briefs, backlogs, planos, documentos de produto, decisões,
+manifestos e arquivos de programação. A saída JSON mostra fontes, linguagens,
+stack reconhecida, sugestões de campos e lacunas. Os diretórios gerados, como
+`node_modules`, `vendor`, `dist`, `build`, `coverage` e `.git`, ficam fora da
+leitura.
+
+O script grava somente `.mvpfy/existing-project.json` e o resumo
+`existing_project_context` em `.mvpfy/state.json`. Ele não altera o projeto
+analisado, o Specsfy ou o `MVP.md`.
 
 ## Registrar a ideia inicial
 

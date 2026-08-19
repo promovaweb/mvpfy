@@ -36,6 +36,15 @@
   "conflicts": [],
   "section_status": {},
   "research_status": {},
+  "existing_project_context": {
+    "status": "empty",
+    "analyzed_at": null,
+    "report_path": ".mvpfy/existing-project.json",
+    "spec_files": 0,
+    "code_files": 0,
+    "manifests": 0,
+    "suggested_answer_fields": []
+  },
   "document_version": 1
 }
 ```
@@ -46,6 +55,10 @@ estado mutável.
 
 Projetos antigos podem não possuir `tenancy`. Nesse caso, trate o bloco como
 pendente e faça a pergunta `saas.tenancy-model` antes da fila comum.
+
+Projetos antigos também podem não possuir `existing_project_context`. Rode
+`mvpfy-context` no setup ou no início da conversa para criar o relatório e o
+resumo.
 
 `closed_question_count` controla o teto global de oito perguntas fechadas.
 `stage_question_counts` controla o limite de cada etapa: uma pergunta para

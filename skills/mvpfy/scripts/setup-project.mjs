@@ -8,6 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomUUID } from "node:crypto";
 import { mesclar, normalizarCabecalho } from "../../mvpfy-document/scripts/render-company.mjs";
+import { analisarProjeto, salvarRelatorio } from "../../mvpfy-context/scripts/analyze-existing-project.mjs";
 
 const argumentos = lerArgumentos(process.argv.slice(2));
 const projeto = path.resolve(argumentos.project || process.cwd());
@@ -99,6 +100,9 @@ if (!existsSync(mvpPath)) {
     "utf8",
   );
 }
+
+const contextoExistente = await analisarProjeto(projeto);
+await salvarRelatorio(contextoExistente, projeto);
 
 console.log(`Projeto MVPFy preparado em ${projeto}`);
 

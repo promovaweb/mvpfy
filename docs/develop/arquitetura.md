@@ -9,8 +9,8 @@ scripts cuidam de operações determinísticas.
 ```mermaid
 flowchart TD
     A[Pedido do usuário] --> B[mvpfy]
-    B --> C[Leitura somente de contexto existente]
-    C --> D[Fila de lacunas]
+    B --> C[mvpfy-context]
+    C --> D[Leitura somente de contexto existente]
     D --> E[Uma pergunta]
     E --> F[record-answer.mjs]
     F --> G[state.json e answers.jsonl]
@@ -23,7 +23,8 @@ flowchart TD
 
 | Parte | Responsabilidade |
 | --- | --- |
-| `mvpfy` | Intenção, leitura de contexto, fila, pergunta única e handoff. |
+| `mvpfy` | Intenção, retomada, fila, pergunta única e handoff. |
+| `mvpfy-context` | Leitura de specs, manifestos e código para o contexto inicial. |
 | Especialistas | Conhecimento e saída estruturada de cada domínio. |
 | `mvpfy-document` | Renderização e validação do documento. |
 | `mvpfy-migrate` | Evolução do template sem perda. |
@@ -40,6 +41,11 @@ numeradas respondem a essa mesma pergunta.
 Antes de enviar, a skill confere se não está solicitando duas informações, se
 não repetiu algo presente em uma spec ou backlog e se a gravação do turno
 anterior ocorreu.
+
+`mvpfy-context` roda durante o setup e no começo de cada conversa. O resultado
+fica em `.mvpfy/existing-project.json`. A orquestradora usa esse relatório para
+reaproveitar a stack e outras informações já documentadas, sem assumir que o
+código confirma público, problema ou escopo.
 
 ## Fontes somente para leitura
 

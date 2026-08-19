@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVPFy Contexto"
+  short_description: "Lê specs e código para preparar o contexto do MVP"
+  default_prompt: "Use $mvpfy-context para analisar o projeto existente antes da entrevista."

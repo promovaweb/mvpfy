@@ -13,6 +13,7 @@ plano.
 | `answers.jsonl` | Eventos append-only com resposta original e interpretação. |
 | `research.json` | Pesquisas de mercado e fontes consultadas. |
 | `template-version` | Versão do template usada na última migração. |
+| `existing-project.json` | Relatório de leitura do projeto consumidor, renovado no setup e na retomada. |
 
 ## `state.json`
 
@@ -69,3 +70,15 @@ Specs, backlogs, docs, briefs e planos existentes podem ser lidos para
 preencher fatos e evitar repetição. A rotina de leitura deve ser somente de
 consulta. Ela não deve criar, editar ou migrar arquivos fora de `MVP.md` e
 `.mvpfy/`.
+
+## Contexto do projeto existente
+
+Ao preparar o projeto, `mvpfy-context` percorre os caminhos consumidores fora
+de diretórios gerados e salva `.mvpfy/existing-project.json`. O relatório lista
+documentos que podem orientar o produto, manifestos, linguagens, arquivos de
+programação, stack reconhecida, sugestões de campos e lacunas.
+
+O estado mantém apenas um resumo em `existing_project_context`, com o caminho
+do relatório, as contagens, a data da leitura e os campos sugeridos. No começo
+de cada conversa, a orquestradora executa a análise outra vez para captar
+arquivos novos. A leitura não modifica specs, código, `specsfy/` ou `MVP.md`.

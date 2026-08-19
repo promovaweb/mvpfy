@@ -1,6 +1,8 @@
 # A orquestradora: `mvpfy`
 
-`mvpfy` é a orquestradora e o único ponto de conversa. Ela não tenta saber tudo
+`mvpfy` é a orquestradora e o único ponto de conversa. Antes de escolher a
+primeira pergunta, ela chama `mvpfy-context` para verificar se o projeto já
+tem material aproveitável. Depois ela não tenta saber tudo
 sobre produto, preço ou tecnologia. Em vez disso, lê o contexto existente,
 chama a especialista certa, controla a entrevista e reúne o resultado no
 `MVP.md`.
@@ -12,17 +14,24 @@ uma área ou gerar o `MVP.md`.
 
 ## De onde ela parte
 
+- `.mvpfy/existing-project.json`, renovado no setup e no início da conversa.
 - `.mvpfy/config.yaml`.
 - `.mvpfy/state.json`.
 - `.mvpfy/answers.jsonl`.
 - `MVP.md`.
 - template atual.
 - specs, backlogs, briefs, docs, tickets e planos já existentes no projeto
-  consumidor, sempre em modo somente leitura.
+  consumidor, sempre em modo somente leitura, resumidos pela
+  `mvpfy-context` e consultados quando necessário.
 
 Esses arquivos servem como referência. A orquestradora pode usar uma
 informação já registrada para evitar uma pergunta, mas não escreve nem corrige
 esses documentos.
+
+Quando o relatório encontra manifestos e código, ele pode sugerir a stack e
+confirmar que existe uma base técnica. Quando encontra uma spec, ele aponta o
+arquivo e um trecho curto para orientar a leitura. O código sozinho não define
+o problema, o público, o pagador ou o recorte do MVP.
 
 ## Como ela conduz a conversa
 

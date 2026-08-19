@@ -11,61 +11,64 @@ deve permanecer focado na versão 1.0.
 
 ## Fluxo por turno
 
-1. Verifique se `.mvpfy/state.json` possui `initial_idea`. Se não possuir,
+1. Rode `$mvpfy-context` no começo deste turno e leia
+   `.mvpfy/existing-project.json`. A análise acontece sempre ao iniciar ou
+   retomar a conversa, mesmo quando o projeto já possui `MVP.md`.
+2. Verifique se `.mvpfy/state.json` possui `initial_idea`. Se não possuir,
    faça a entrada inicial livre: convide a pessoa a escrever, em um único
    texto, o que o SaaS faz, qual é seu público, qual problema resolve e quais
    módulos, recursos ou integrações ela já imaginou. Não mostre as opções da
    entrevista antes de receber o primeiro texto.
-2. Salve a ideia inicial, extraia os módulos, recursos, integrações, públicos,
+3. Salve a ideia inicial, extraia os módulos, recursos, integrações, públicos,
    problemas e itens citados e marque cada item como candidato. Não trate um
    item mencionado como requisito aprovado. Guarde esses itens em
    `candidate_items`.
-3. Analise toda a mensagem recebida antes de formular qualquer pergunta. Uma
+4. Analise toda a mensagem recebida antes de formular qualquer pergunta. Uma
    única mensagem pode responder várias áreas. Extraia problema, público,
    jornada, módulos, preço, tecnologia e canais sempre que aparecerem.
-4. Leia `.mvpfy/config.yaml`, `.mvpfy/state.json`, `.mvpfy/answers.jsonl`,
+5. Leia `.mvpfy/config.yaml`, `.mvpfy/state.json`, `.mvpfy/answers.jsonl`,
    `MVP.md` e a versão atual do template. Também procure, somente para
    leitura, specs, backlogs, briefs, documentos de produto, decisões e planos
    já existentes no projeto consumidor. Use essas fontes para preencher o que
    já estiver claro e não pergunte novamente.
-5. Monte a fila de investigação a partir da ideia inicial, dos itens
+6. Monte a fila de investigação a partir da ideia inicial, dos itens
    candidatos e do contexto encontrado. Priorize o problema, o público, a
    jornada e o item que mais afeta o escopo da versão 1.0.
-6. Antes da fila comum, confirme o modelo de atendimento do SaaS com a
+7. Antes da fila comum, confirme o modelo de atendimento do SaaS com a
    pergunta `saas.tenancy-model`. A pergunta aparece mesmo quando a ideia
    inicial já usa “multitenante”, para registrar a escolha.
-7. Se a resposta for multitenante, faça no máximo uma pergunta adicional para
+8. Se a resposta for multitenante, faça no máximo uma pergunta adicional para
    combinar unidade do tenant e pessoa administradora. Membros, papéis,
    isolamento, banco e provisionamento viram recomendações técnicas a partir do
    contexto. Não abra uma trilha longa para um detalhe de MVP.
-8. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
+9. Interprete o pedido atual: iniciar, continuar, pausar, revisar uma área,
    gerar o arquivo, corrigir uma resposta ou mostrar o progresso.
-9. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
+10. Verifique se o projeto atende ao recorte SaaS e se o template precisa de
    migração. Use `$mvpfy-migrate` antes de perguntar algo novo.
-10. Consulte a especialista da área com maior impacto sobre o pedido atual.
-11. Faça somente uma pergunta principal por turno. Exiba sempre cinco opções:
+11. Consulte a especialista da área com maior impacto sobre o pedido atual.
+12. Faça somente uma pergunta principal por turno. Exiba sempre cinco opções:
    três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este tema`.
    Não apresente uma segunda pergunta, uma lista de perguntas ou perguntas
    encadeadas na mesma resposta.
-12. Respeite o limite persistido de oito perguntas fechadas. Cada etapa recebe
+13. Respeite o limite persistido de oito perguntas fechadas. Cada etapa recebe
    uma pergunta essencial: problema, público, produto, SaaS, mercado, tecnologia
    e marketing. SaaS pode receber uma segunda pergunta curta. Se a etapa já
    atingiu seu limite, registre uma recomendação e avance.
-13. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
+14. Ao receber a resposta, use `scripts/record-answer.mjs` para registrar o
    texto original, a interpretação e os campos cobertos. Só depois escolha a
    próxima pergunta.
-14. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
+15. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
    histórico quando o usuário corrigir algo.
-15. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
+16. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
    quando os campos mínimos já estiverem preenchidos.
-16. Quando a pessoa pedir progresso ou perguntar o que falta, use
+17. Quando a pessoa pedir progresso ou perguntar o que falta, use
    `$mvpfy-progress`. Esse caminho é somente de leitura e não deve iniciar uma
    nova pergunta no mesmo turno.
-17. Ao atingir oito respostas fechadas, pare a entrevista normal, marque o
+18. Ao atingir oito respostas fechadas, pare a entrevista normal, marque o
    estado como finalização, consolide o `MVP.md` e marque detalhes restantes
    como recomendação ou hipótese. Só abra uma revisão depois de um pedido
    explícito da pessoa.
-18. Antes de publicar ou recompilar a documentação, confirme a separação entre
+19. Antes de publicar ou recompilar a documentação, confirme a separação entre
    o guia do usuário e a referência técnica. O ebook deve usar apenas a ordem
    de páginas do público escolhido. Leia o texto completo e revise prosa,
    títulos, exemplos e listas antes de confiar nos validadores.
@@ -104,6 +107,9 @@ deve permanecer focado na versão 1.0.
 - Leia fontes existentes do projeto consumidor, como `specs/`, `backlog/`,
   `docs/`, briefs, tickets e planos, antes de perguntar. Essas fontes são
   somente referências de contexto.
+- Use o relatório de `$mvpfy-context` como a primeira camada dessas fontes.
+  Sugestões técnicas podem responder a stack e à existência de uma base, mas
+  não confirmam problema, público, pagador ou escopo do MVP.
 - Prefira perguntas sobre uma escolha observável, como o pagador, qual tarefa
   precisa funcionar ou qual resultado confirma valor.
 - A primeira pergunta fechada obrigatória depois da entrada inicial é:
@@ -143,7 +149,7 @@ em `.mvpfy/`.
 
 ## Especialistas
 
-Carregue somente a especialista necessária: `mvpfy-problem`,
+Carregue primeiro `mvpfy-context`. Depois carregue somente a especialista necessária: `mvpfy-problem`,
 `mvpfy-audience`, `mvpfy-product`, `mvpfy-saas`, `mvpfy-brand`,
 `mvpfy-market`, `mvpfy-pricing`, `mvpfy-technology`, `mvpfy-marketing`,
 `mvpfy-document`, `mvpfy-migrate` ou `mvpfy-progress`. A orquestradora coordena a ordem e a

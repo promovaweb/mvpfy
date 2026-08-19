@@ -10,6 +10,7 @@ exata.
 | Skill | Owner | Handoff |
 | --- | --- | --- |
 | `mvpfy` | Conversa, estado e fila | Qualquer especialista ou documento |
+| `mvpfy-context` | Specs, manifestos e código existente | `mvpfy` |
 | `mvpfy-problem` | Situação, problema e hipótese | `mvpfy-audience` |
 | `mvpfy-audience` | Segmento e papéis | `mvpfy-product` |
 | `mvpfy-product` | Jornada e escopo | `mvpfy-saas` |

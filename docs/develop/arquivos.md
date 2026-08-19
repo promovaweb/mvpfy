@@ -27,6 +27,7 @@ seu domínio exige:
 | Diretório | Arquivos relevantes |
 | --- | --- |
 | `skills/mvpfy/` | `SKILL.md`, `references/interview-policy.md`, `references/contracts.md`, `references/state-schema.md`, `scripts/setup-project.mjs`, `scripts/record-initial-idea.mjs` e `scripts/record-answer.mjs`. |
+| `skills/mvpfy-context/` | `SKILL.md`, `agents/openai.yaml` e `scripts/analyze-existing-project.mjs`. |
 | `skills/mvpfy-problem/` | `SKILL.md`, `references/problem-map.md`. |
 | `skills/mvpfy-audience/` | `SKILL.md`, `references/audience-map.md`. |
 | `skills/mvpfy-product/` | `SKILL.md`, `references/product-scope.md`. |
@@ -55,6 +56,7 @@ seu domínio exige:
 | Skill | Referência |
 | --- | --- |
 | `mvpfy` | `interview-policy.md`, `contracts.md`, `state-schema.md`. |
+| `mvpfy-context` | `analyze-existing-project.mjs`. |
 | `mvpfy-problem` | `problem-map.md`. |
 | `mvpfy-audience` | `audience-map.md`. |
 | `mvpfy-product` | `product-scope.md`. |
@@ -73,6 +75,7 @@ seu domínio exige:
 | Script | Entrada | Saída |
 | --- | --- | --- |
 | `setup-project.mjs` | Diretório consumidor. | `MVP.md` e `.mvpfy/`. |
+| `analyze-existing-project.mjs` | Projeto consumidor. | `.mvpfy/existing-project.json` e resumo no `state.json`. |
 | `record-initial-idea.mjs` | Projeto preparado e descrição livre da ideia. | Evento de entrada, ideia inicial e itens candidatos persistidos. |
 | `record-answer.mjs` | Projeto, pergunta, resposta e campos extraídos. | Evento em `answers.jsonl` e estado atualizado. |
 | `render-company.mjs` | Projeto com estado e template. | `MVP.md` atualizado ou relatório `--check`. |
@@ -128,7 +131,7 @@ versionados e os aliases em `ebooks/` são entregas publicadas.
 | `AGENTS.md` | Regras locais, idioma, fontes e validações. |
 | `package.json` | Scripts de teste, CLI, ebook, pacote e release. |
 | `tests/skills.test.mjs` | Catálogo, metadados e contrato de pergunta única. |
-| `tests/scripts.test.mjs` | Setup, persistência, migração e validação do documento. |
+| `tests/scripts.test.mjs` | Setup, contexto existente, persistência, migração e validação do documento. |
 | `tests/release.test.mjs` | Sincronização de SemVer e extração das notas. |
 | `scripts/validate-release.mjs` | Valida `VERSION`, `package.json`, changelog e avanço entre commits. |
 | `scripts/extract-release-notes.mjs` | Extrai a seção da versão para a release do GitHub. |
@@ -139,6 +142,7 @@ versionados e os aliases em `ebooks/` são entregas publicadas.
 
 ## Arquivos que o consumidor recebe
 
-Ao executar `setup-project.mjs`, o consumidor recebe `MVP.md` e `.mvpfy/`.
+Ao executar `setup-project.mjs`, o consumidor recebe `MVP.md`, `.mvpfy/` e o
+relatório `.mvpfy/existing-project.json`.
 Ele não recebe `spec.md`, não altera `specsfy/` e não transforma arquivos
 existentes em artefatos do MVPFy.

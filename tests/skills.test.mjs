@@ -8,8 +8,8 @@ const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const skillsDir = path.join(raiz, "skills");
 const nomes = (await readdir(skillsDir)).filter((nome) => nome.startsWith("mvpfy-") || nome === "mvpfy").sort();
 
-test("o catálogo possui as quatorze skills previstas", () => {
-  assert.equal(nomes.length, 14);
+test("o catálogo possui as quinze skills previstas", () => {
+  assert.equal(nomes.length, 15);
   assert.ok(nomes.includes("mvpfy"));
   assert.ok(nomes.includes("mvpfy-document"));
   assert.ok(nomes.includes("mvpfy-migrate"));

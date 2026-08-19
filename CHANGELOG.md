@@ -4,6 +4,17 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.5.0] - 2026-08-19
+
+- Adiciona `mvpfy-context`, que analisa specs, manifestos e arquivos de
+  programação existentes antes da entrevista.
+- Executa a análise automaticamente durante a configuração e no início de
+  cada conversa com `$mvpfy`.
+- Mantém a instalação para Claude Code e Codex ao preparar `MVP.md` e o
+  relatório de contexto no projeto consumidor.
+- Salva `.mvpfy/existing-project.json` com fontes, stack sugerida, pontos já
+  explicados e perguntas que continuam abertas.
+
 ## [0.4.9] - 2026-08-18
 
 - Corrige `mvpfy install --project <caminho>` para preparar `MVP.md` no

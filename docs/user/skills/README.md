@@ -27,6 +27,7 @@ lista fixa de perguntas.
 | Skill | Quando entra | O que acrescenta ao plano |
 | --- | --- | --- |
 | [`mvpfy`](mvpfy.md) | Sempre que você inicia ou retoma | Próxima pergunta e estado integrado |
+| [`mvpfy-context`](mvpfy-context.md) | Setup e início de cada conversa | Specs, código, stack e lacunas disponíveis |
 | [`mvpfy-problem`](mvpfy-problem.md) | O problema ainda está genérico | Declaração do problema e hipótese |
 | [`mvpfy-audience`](mvpfy-audience.md) | Público ou papéis estão misturados | Segmento, ICP e personas |
 | [`mvpfy-product`](mvpfy-product.md) | A solução precisa virar escopo | Jornada, módulos e versão 1.0 |

@@ -14,10 +14,11 @@ A entrevista fechada é curta: uma pergunta essencial por etapa e no máximo oit
 perguntas no total. A etapa SaaS pode usar duas. O restante vira recomendação no
 `MVP.md` para manter o foco na versão 1.0.
 
-O MVPFy pode ler specs, backlogs, briefs e documentos já existentes no projeto
-consumidor para evitar perguntas repetidas. Essa leitura é somente de
-referência. O MVPFy não cria, altera ou migra `spec.md`, `specs/` ou qualquer
-arquivo do Specsfy.
+O MVPFy chama `mvpfy-context` durante a configuração e no início de cada
+conversa. Essa skill lê specs, backlogs, briefs, manifestos e arquivos de
+programação, grava `.mvpfy/existing-project.json` e prepara sugestões para a
+entrevista. A leitura é somente de referência. O MVPFy não cria, altera ou
+migra `spec.md`, `specs/` ou qualquer arquivo do Specsfy.
 
 ## Versionamento e releases
 
@@ -48,8 +49,9 @@ Na raiz do projeto consumidor, execute:
 npx --yes @promovaweb/mvpfy install --project .
 ```
 
-O comando instala as skills para Claude Code e Codex e prepara `MVP.md` e
-`.mvpfy/`. Um segundo uso preserva respostas e arquivos existentes.
+O comando instala as skills para Claude Code e Codex, prepara `MVP.md` e
+`.mvpfy/` e analisa o projeto existente. Um segundo uso preserva respostas e
+arquivos existentes, renovando apenas o relatório de contexto.
 
 No projeto que receberá as skills, use `$mvpfy` como porta de entrada.
 
@@ -58,6 +60,7 @@ No projeto que receberá as skills, use `$mvpfy` como porta de entrada.
 | Skill | Função |
 | --- | --- |
 | `mvpfy` | Entrevista, retomada, fila de perguntas e consolidação. |
+| `mvpfy-context` | Specs, código, manifestos, stack sugerida e lacunas iniciais. |
 | `mvpfy-problem` | Situação, problema, alternativa atual e hipótese. |
 | `mvpfy-audience` | Segmento, papéis de compra e personas. |
 | `mvpfy-product` | Proposta, jornada, módulos e escopo 1.0. |
@@ -87,7 +90,6 @@ No projeto que receberá as skills, use `$mvpfy` como porta de entrada.
 O [guia do usuário](docs/user/README.md) apresenta o percurso completo. O
 [guia de desenvolvimento](docs/develop/README.md) explica contratos, scripts e
 testes. O [ebook](ebooks/ebook-mvpfy.pdf) publica somente o Guia do usuário em
-uma edição portátil.
 
 ## CLI
 
