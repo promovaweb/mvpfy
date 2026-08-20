@@ -24,7 +24,7 @@ export function buildProgram(): Command {
   program.command("tui").description("abre a interface terminal do MVPFy")
     .addOption(projectOption()).action(async (options: ProjectOptions, command: Command) => openTui(projectFromParent(command, options.project)));
 
-  program.command("install").alias("setup").description("instala as skills e prepara o projeto")
+  program.command("install").description("instala as skills e prepara o projeto")
     .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
       const project = projectFromParent(command, options.project);
       const skills = await runSkills(installArguments(), project);
@@ -39,7 +39,7 @@ export function buildProgram(): Command {
     });
 
   const skills = program.command("skills").description("gerencia as skills por meio do CLI oficial");
-  skills.command("add").description("executa skills add promovaweb/mvpfy")
+  skills.command("install").description("instala as skills do MVPFy")
     .addOption(projectOption()).option("--json", "emite JSON").action(async (options: ProjectOptions & { json?: boolean }, command: Command) => {
       const output = await runSkills(installArguments(), projectFromParent(command, options.project));
       printAction("add", output, Boolean(options.json));

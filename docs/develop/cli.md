@@ -23,11 +23,11 @@ mvpfy progress --project . --json
 mvpfy --project .
 mvpfy install --project .
 mvpfy update --project .
-mvpfy skills add --project .
+mvpfy skills install --project .
 mvpfy skills update --project .
 ```
 
-`install` e `skills add` executam `npx skills add promovaweb/mvpfy --skill '*'
+`install` e `skills install` executam `npx skills add promovaweb/mvpfy --skill '*'
 --agent claude-code codex --copy --yes`. A instalação materializa as skills
 somente para Claude Code e Codex. `update` e `skills update` executam `npx
 skills update --project --yes`. O MVPFy não materializa skills diretamente.
