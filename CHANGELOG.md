@@ -4,6 +4,11 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.5.1] - 2026-08-21
+
+- Atualiza as referências da CLI e mantém a documentação alinhada à versão
+  publicada do framework.
+
 ## [0.5.0] - 2026-08-19
 
 - Adiciona `mvpfy-context`, que analisa specs, manifestos e arquivos de
