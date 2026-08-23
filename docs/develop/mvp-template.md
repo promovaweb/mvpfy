@@ -38,8 +38,12 @@ node skills/mvpfy-document/scripts/validate-company.mjs --project .
 
 O primeiro comando cria ou atualiza. `--check` verifica se a renderização
 precisaria mudar. O validator exige problema, público, proposta, jornada,
-espaço do cliente, onboarding, cobrança, escopo, preço, tecnologia, aquisição, métricas e
-pendências.
+espaço do cliente, onboarding, cobrança, escopo, preço, tecnologia, aquisição,
+métricas e pendências. A estrutura atual possui 37 seções. A seção
+`requirements-analysis` é preenchida pelo renderer com o conteúdo persistido
+na entrevista e no relatório do projeto existente. A seção seguinte mantém a
+estrutura de especificação detalhada usada para consolidar requisitos de
+domínio, entidades, telas, integrações, operação e pendências.
 
 ## Migração
 

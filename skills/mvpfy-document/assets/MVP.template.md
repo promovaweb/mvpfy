@@ -234,3 +234,24 @@ marco de lançamento: Pendente.
 ## 35. Fontes e referências
 
 Nenhuma fonte externa registrada.
+
+<!-- mvpfy:section:requirements-analysis -->
+<!-- mvpfy:generated:requirements-analysis -->
+## 36. Analise de Requisitos
+
+**Status do levantamento:** Pendente
+
+Esta seção será gerada a partir da descrição inicial, das respostas salvas em
+`.mvpfy/answers.jsonl`, do estado da entrevista e do relatório do projeto
+existente. Ela organizará módulos, recursos, telas, ferramentas, pessoas,
+dados, fluxos e requisitos não funcionais, mantendo o texto original para
+rastreabilidade.
+
+<!-- mvpfy:section:requirements-specification -->
+## 37. Especificação funcional detalhada
+
+**Status:** Pendente
+
+O renderer prepara uma estrutura genérica para detalhar o MVP informado pela
+pessoa. Nenhum domínio, módulo, tecnologia ou tipo de negócio é pressuposto
+por este bloco.

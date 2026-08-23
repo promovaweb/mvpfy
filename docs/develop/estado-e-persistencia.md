@@ -82,3 +82,7 @@ O estado mantém apenas um resumo em `existing_project_context`, com o caminho
 do relatório, as contagens, a data da leitura e os campos sugeridos. No começo
 de cada conversa, a orquestradora executa a análise outra vez para captar
 arquivos novos. A leitura não modifica specs, código, `specsfy/` ou `MVP.md`.
+
+Ao renderizar, o MVPFy combina essas três fontes com o histórico completo de
+`answers.jsonl` na seção `Analise de Requisitos` do `MVP.md`. A seção é uma
+visão organizada do material recebido; não substitui os eventos append-only.

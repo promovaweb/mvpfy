@@ -4,6 +4,19 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.6.0] - 2026-08-23
+
+- Adiciona a seção `Analise de Requisitos` ao `MVP.md`.
+- Mantém a descrição inicial, as respostas originais, as interpretações e os
+  campos cobertos em uma rastreabilidade integral da entrevista.
+- Organiza módulos, recursos, telas, ferramentas, pessoas, dados, fluxos e
+  requisitos operacionais citados pela pessoa ou encontrados no projeto.
+- Regenera a seção durante renderização e migração sem substituir conteúdo
+  manual fora do bloco gerado.
+- Inclui uma estrutura detalhada de requisitos para consolidar domínios,
+  entidades, jornadas, interfaces, integrações, operações, pendências e próxima
+  etapa com base somente nas entradas recebidas.
+
 ## [0.5.1] - 2026-08-21
 
 - Atualiza as referências da CLI e mantém a documentação alinhada à versão

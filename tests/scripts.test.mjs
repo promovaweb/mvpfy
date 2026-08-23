@@ -38,8 +38,44 @@ test("setup, ideia inicial, registro e migração preservam o MVP.md", async () 
     await executar("node", ["skills/mvpfy-migrate/scripts/migrate-company.mjs", "--project", projeto], { cwd: raiz });
     const depois = await readFile(path.join(projeto, "MVP.md"), "utf8");
     assert.equal(depois.includes("project_id:"), true);
-    assert.equal((depois.match(/mvpfy:section:/g) || []).length, 35);
+    assert.equal((depois.match(/mvpfy:section:/g) || []).length, 37);
+    assert.match(depois, /## 36\. Analise de Requisitos/);
+    assert.match(depois, /## 37\. Especificação funcional detalhada/);
+    assert.match(depois, /### 44\. Próxima etapa/);
+    assert.doesNotMatch(depois, /### 11\. BlogPost/);
     await executar("node", ["skills/mvpfy-document/scripts/validate-company.mjs", "--project", projeto], { cwd: raiz });
+  } finally {
+    await rm(projeto, { recursive: true, force: true });
+  }
+});
+
+test("a análise de requisitos reúne a entrada completa e classifica o sistema", async () => {
+  const projeto = await mkdtemp(path.join(os.tmpdir(), "mvpfy-requisitos-"));
+  try {
+    await executar("node", ["skills/mvpfy/scripts/setup-project.mjs", "--project", projeto], { cwd: raiz });
+    await executar("node", [
+      "skills/mvpfy/scripts/record-initial-idea.mjs", "--project", projeto,
+      "--idea", "Quero um SaaS para clínicas com módulo de agenda e módulo financeiro. Terá tela de dashboard e integração com WhatsApp. A secretária usa, o gestor paga.",
+      "--candidate-items", "agenda, financeiro, dashboard, WhatsApp",
+    ], { cwd: raiz });
+    await executar("node", [
+      "skills/mvpfy/scripts/record-answer.mjs", "--project", projeto,
+      "--stage", "product", "--question-id", "product.scope",
+      "--question-text", "Qual jornada precisa funcionar?",
+      "--raw-answer", "A secretária cadastra o paciente, confirma a consulta e envia uma notificação.",
+      "--normalized-answer", "Cadastro, confirmação e notificação de consulta.",
+      "--extracted-fields", "product.scope,product.journey,data.notification",
+    ], { cwd: raiz });
+    await executar("node", ["skills/mvpfy-document/scripts/render-company.mjs", "--project", projeto], { cwd: raiz });
+    const mvp = await readFile(path.join(projeto, "MVP.md"), "utf8");
+    assert.match(mvp, /## 36\. Analise de Requisitos/);
+    assert.match(mvp, /Texto original completo/);
+    assert.match(mvp, /módulo de agenda/);
+    assert.match(mvp, /dashboard/);
+    assert.match(mvp, /WhatsApp/);
+    assert.match(mvp, /secretária/);
+    assert.match(mvp, /product\.journey/);
+    assert.match(mvp, /Cadastro, confirmação e notificação de consulta/);
   } finally {
     await rm(projeto, { recursive: true, force: true });
   }

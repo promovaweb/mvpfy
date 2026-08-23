@@ -60,7 +60,12 @@ deve permanecer focado na versão 1.0.
 15. Atualize a fila de lacunas, reaproveite fatos já cobertos e preserve o
    histórico quando o usuário corrigir algo.
 16. Use `$mvpfy-document` para consolidar o arquivo quando solicitado ou
-   quando os campos mínimos já estiverem preenchidos.
+quando os campos mínimos já estiverem preenchidos. Ao gerar o documento,
+preencha somente as partes aplicáveis ao MVP da pessoa com os dados que já
+aparecem na descrição inicial e nas respostas; módulos, recursos, telas,
+ferramentas, pessoas, entidades, regras, integrações, fluxos, operações e
+pendências não podem ficar apenas na análise resumida. Não transforme um tópico
+do roteiro em requisito quando ele não estiver no escopo informado.
 17. Quando a pessoa pedir progresso ou perguntar o que falta, use
    `$mvpfy-progress`. Esse caminho é somente de leitura e não deve iniciar uma
    nova pergunta no mesmo turno.

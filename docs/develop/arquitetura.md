@@ -15,8 +15,9 @@ flowchart TD
     E --> F[record-answer.mjs]
     F --> G[state.json e answers.jsonl]
     G --> H[Especialista do domínio]
-    H --> I[MVP.md]
-    I --> J[document e migrate]
+    H --> I[Análise de requisitos]
+    I --> J[MVP.md]
+    J --> K[document e migrate]
 ```
 
 ## Responsabilidades
@@ -26,7 +27,7 @@ flowchart TD
 | `mvpfy` | Intenção, retomada, fila, pergunta única e handoff. |
 | `mvpfy-context` | Leitura de specs, manifestos e código para o contexto inicial. |
 | Especialistas | Conhecimento e saída estruturada de cada domínio. |
-| `mvpfy-document` | Renderização e validação do documento. |
+| `mvpfy-document` | Análise de requisitos, renderização e validação do documento. |
 | `mvpfy-migrate` | Evolução do template sem perda. |
 | Scripts | Persistência, transformação e validação repetíveis. |
 | Testes | Garantia de catálogo, scripts e documento. |

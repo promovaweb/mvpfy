@@ -8,6 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomUUID } from "node:crypto";
 import { mesclar, normalizarCabecalho } from "../../mvpfy-document/scripts/render-company.mjs";
+import { prepararTemplateComAnalise } from "../../mvpfy-document/scripts/requirements-analysis.mjs";
 import { analisarProjeto, salvarRelatorio } from "../../mvpfy-context/scripts/analyze-existing-project.mjs";
 
 const argumentos = lerArgumentos(process.argv.slice(2));
@@ -87,7 +88,7 @@ for (const arquivo of ["answers.jsonl", "research.json", "template-version"]) {
 }
 
 if (!existsSync(mvpPath)) {
-  const conteudo = await readFile(template, "utf8");
+  const conteudo = await prepararTemplateComAnalise(await readFile(template, "utf8"), projeto);
   const estado = JSON.parse(await readFile(estadoPath, "utf8"));
   const legado = existsSync(legadoPath) ? await readFile(legadoPath, "utf8") : conteudo;
   await writeFile(

@@ -7,13 +7,29 @@ description: Gera, atualiza e valida o MVP.md do MVPFy com seções estáveis, e
 
 Use `assets/MVP.template.md` como fonte estrutural. O documento final deve
 ser um único arquivo Markdown, compreensível sem o histórico da conversa, com
-metadados, resumo do MVP, problema, público, personas, escopo, SaaS, mercado,
-preço, custos, tecnologia, marketing, métricas, plano de execução e pendências.
+metadados, resumo do MVP, análise de requisitos, problema, público, personas,
+escopo, SaaS, mercado, preço, custos, tecnologia, marketing, métricas, plano de
+execução e pendências.
 
 Execute `scripts/render-company.mjs --project <diretório>` para criar ou
 atualizar o arquivo. O script localiza seções pelos IDs HTML
 `mvpfy:section:<id>`, preserva conteúdo existente e usa “Pendente” quando
-faltarem dados.
+faltarem dados. A seção `requirements-analysis` é regenerada a partir de
+`.mvpfy/answers.jsonl`, `.mvpfy/state.json` e
+`.mvpfy/existing-project.json`. Ela mantém o texto original de cada entrada e
+organiza módulos, recursos, telas, ferramentas, pessoas, dados, fluxos e
+requisitos operacionais.
+
+A seção `requirements-specification` permanece no template como estrutura de
+consolidação. Preencha suas subseções com a análise da entrada recebida; ela
+não depende de arquivos auxiliares no projeto consumidor.
+
+Ao consolidar, percorra as subseções aplicáveis ao MVP da pessoa. Registre nelas
+os detalhes já presentes na descrição inicial, nas respostas, nos itens
+candidatos e no contexto encontrado. Não reduza uma descrição ampla a uma
+lista curta de funcionalidades. Quando um tópico não for necessário para o MVP
+atual, use `Não se aplica ao MVP atual`; quando faltar informação para um tópico
+relevante, use `Pendente` e formule a lacuna de forma específica.
 
 Execute o mesmo script com `--check` antes de uma gravação. Valide depois com
 `scripts/validate-company.mjs --project <diretório>`. O estado só pode ser

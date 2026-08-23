@@ -22,6 +22,12 @@ O renderer localiza os identificadores estáveis, mantém o conteúdo existente 
 usa “Pendente” quando ainda não há informação. O validator confere se as áreas
 necessárias para um primeiro SaaS aparecem no arquivo.
 
+Durante a renderização, a skill também monta `Analise de Requisitos`. Ela lê a
+ideia inicial, cada resposta original, a interpretação salva, os campos
+cobertos e o relatório do projeto existente. O resultado lista os elementos
+citados por tipo e mantém uma tabela de rastreabilidade para que uma descrição
+ampla do sistema não seja reduzida às oito perguntas fechadas.
+
 Quando o `MVP.md` alimentar um ebook, a ordem deve incluir somente o guia do
 usuário. A especificação e a referência de desenvolvimento ficam fora do PDF e
 do EPUB. Depois do build, leia o resultado completo para conferir voz, exemplos,

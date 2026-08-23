@@ -27,8 +27,8 @@ test("o extrator produz notas somente da versão atual", async () => {
   try {
     await executar("node", ["scripts/extract-release-notes.mjs", "--output", saida], { cwd: raiz });
     const notas = await readFile(saida, "utf8");
-    assert.match(notas, /Claude Code e Codex/);
-    assert.match(notas, /preparar `MVP\.md`/);
+    assert.match(notas, /Analise de Requisitos/);
+    assert.match(notas, /respostas originais/);
     assert.doesNotMatch(notas, /--all/);
   } finally {
     await rm(pasta, { recursive: true, force: true });

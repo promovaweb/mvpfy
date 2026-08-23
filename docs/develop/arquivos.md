@@ -37,7 +37,7 @@ seu domínio exige:
 | `skills/mvpfy-pricing/` | `SKILL.md`, `references/pricing-model.md`. |
 | `skills/mvpfy-technology/` | `SKILL.md`, `references/technology-baseline.md`. |
 | `skills/mvpfy-marketing/` | `SKILL.md`, `references/go-to-market.md`. |
-| `skills/mvpfy-document/` | `SKILL.md`, `assets/MVP.template.md`, renderer e validator. |
+| `skills/mvpfy-document/` | `SKILL.md`, `assets/MVP.template.md`, `references/document-rules.md`, `scripts/render-company.mjs`, `scripts/requirements-analysis.mjs` e `scripts/validate-company.mjs`. |
 | `skills/mvpfy-migrate/` | `SKILL.md`, política e script de migração. |
 | `skills/mvpfy-progress/` | `SKILL.md` e contrato de leitura do progresso. |
 
@@ -79,6 +79,7 @@ seu domínio exige:
 | `record-initial-idea.mjs` | Projeto preparado e descrição livre da ideia. | Evento de entrada, ideia inicial e itens candidatos persistidos. |
 | `record-answer.mjs` | Projeto, pergunta, resposta e campos extraídos. | Evento em `answers.jsonl` e estado atualizado. |
 | `render-company.mjs` | Projeto com estado e template. | `MVP.md` atualizado ou relatório `--check`. |
+| `requirements-analysis.mjs` | Estado, respostas e relatório do projeto. | Conteúdo da seção `Analise de Requisitos`. |
 | `validate-company.mjs` | `MVP.md` e frontmatter. | Resultado estrutural e estado de prontidão. |
 | `migrate-company.mjs` | `MVP.md` e template vigente. | Documento migrado sem duplicação. |
 | `progress.mjs` | Projeto consumidor com `state.json` e `MVP.md`. | JSON somente de leitura com progresso por áreas. |

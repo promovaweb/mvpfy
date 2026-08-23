@@ -7,11 +7,15 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { mesclar, normalizarCabecalho, NOME_DOCUMENTO, NOME_DOCUMENTO_LEGADO } from "../../mvpfy-document/scripts/render-company.mjs";
+import { prepararTemplateComAnalise } from "../../mvpfy-document/scripts/requirements-analysis.mjs";
 
 const argumentos = lerArgumentos(process.argv.slice(2));
 const projeto = path.resolve(argumentos.project || process.cwd());
 const raizSkill = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const template = await readFile(path.join(raizSkill, "..", "mvpfy-document", "assets", "MVP.template.md"), "utf8");
+const template = await prepararTemplateComAnalise(
+  await readFile(path.join(raizSkill, "..", "mvpfy-document", "assets", "MVP.template.md"), "utf8"),
+  projeto,
+);
 const mvpPath = path.join(projeto, NOME_DOCUMENTO);
 const legadoPath = path.join(projeto, NOME_DOCUMENTO_LEGADO);
 const origemPath = existsSync(mvpPath) ? mvpPath : legadoPath;

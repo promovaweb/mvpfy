@@ -6,6 +6,7 @@ import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { prepararTemplateComAnalise } from "./requirements-analysis.mjs";
 
 const raizSkill = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const templatePath = path.join(raizSkill, "assets", "MVP.template.md");
@@ -25,7 +26,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     validarEstrutura(atual);
     console.log(`${path.basename(documentoPath)} está alinhado aos IDs do template.`);
   } else {
-    const template = await readFile(templatePath, "utf8");
+    const template = await prepararTemplateComAnalise(await readFile(templatePath, "utf8"), projeto);
     const atual = existsSync(mvpPath)
       ? await readFile(mvpPath, "utf8")
       : existsSync(legadoPath)
@@ -37,6 +38,11 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   }
 }
 
+/**
+ * Mescla blocos por ID, regenerando somente a seção marcada como automática.
+ * Uma seção gerada sem o marcador pode conter complemento manual e, nesse
+ * caso, permanece intacta para evitar perda de conteúdo do consumidor.
+ */
 export function mesclar(template, atual) {
   const blocosTemplate = extrairBlocos(template);
   const blocosExistentes = extrairBlocos(atual);
@@ -48,7 +54,12 @@ export function mesclar(template, atual) {
     ? `\n\n## Conteúdo anterior preservado\n\n${atual.trim()}`
     : "";
   return `${preambulo}${blocosTemplate
-    .map((bloco) => blocosAtuais.get(bloco.id) || bloco.texto)
+    .map((bloco) => {
+      const existente = blocosAtuais.get(bloco.id);
+      const deveRegenerar = bloco.id === "requirements-analysis"
+        && (!existente || existente.includes("<!-- mvpfy:generated:requirements-analysis -->"));
+      return deveRegenerar ? bloco.texto : (existente || bloco.texto);
+    })
     .join("\n\n")}${conteudoAnterior}`.trimEnd() + "\n";
 }
 
@@ -65,7 +76,7 @@ export function validarEstrutura(texto) {
   const blocos = extrairBlocos(texto);
   const ids = blocos.map((bloco) => bloco.id);
   if (new Set(ids).size !== ids.length) throw new Error("MVP.md possui IDs duplicados.");
-  if (ids.length !== 35) throw new Error(`MVP.md possui ${ids.length} seções; o template exige 35.`);
+  if (ids.length !== 37) throw new Error(`MVP.md possui ${ids.length} seções; o template exige 37.`);
 }
 
 export function normalizarCabecalho(texto) {

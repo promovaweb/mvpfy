@@ -5,10 +5,10 @@ executável do primeiro produto SaaS. A conversa acontece com uma única pergunt
 por turno, três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este
 tema`. Cada resposta é salva antes do próximo turno.
 
-O resultado público do processo é um único arquivo `MVP.md`. Ele reúne o
-problema, o público, as personas, a jornada, o escopo da versão 1.0, o modelo
-SaaS, o preço, os custos, a tecnologia, o marketing, as métricas e as próximas
-validações.
+O resultado público do processo é um único arquivo `MVP.md`. Ele reúne a
+análise de requisitos baseada em todas as entradas, o problema, o público, as
+personas, a jornada, o escopo da versão 1.0, o modelo SaaS, o preço, os custos,
+a tecnologia, o marketing, as métricas e as próximas validações.
 
 A entrevista fechada é curta: uma pergunta essencial por etapa e no máximo oito
 perguntas no total. A etapa SaaS pode usar duas. O restante vira recomendação no
@@ -70,7 +70,7 @@ No projeto que receberá as skills, use `$mvpfy` como porta de entrada.
 | `mvpfy-pricing` | Modelo de preço, custos e cenários. |
 | `mvpfy-technology` | Laravel, VPS, dados, arquivos, IA e operação. |
 | `mvpfy-marketing` | Aquisição, conteúdo, leads, venda e lançamento. |
-| `mvpfy-document` | Geração e validação do `MVP.md`. |
+| `mvpfy-document` | Geração, análise de requisitos e validação do `MVP.md`. |
 | `mvpfy-migrate` | Atualização do template sem perda de conteúdo. |
 | `mvpfy-progress` | Leitura do andamento sem iniciar outra pergunta. |
 | `mvpfy-setup` | Instalação, verificação e atualização do projeto consumidor. |

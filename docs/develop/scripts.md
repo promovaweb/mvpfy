@@ -92,6 +92,11 @@ node skills/mvpfy-document/scripts/render-company.mjs --project .
 node skills/mvpfy-document/scripts/validate-company.mjs --project .
 ```
 
+O renderer atualiza a seção `Analise de Requisitos` usando todas as linhas de
+`.mvpfy/answers.jsonl`, os candidatos em `state.json` e as fontes encontradas
+em `existing-project.json`. A tabela de rastreabilidade conserva a entrada
+original junto da interpretação e dos campos cobertos.
+
 ## Migrar
 
 ```bash
