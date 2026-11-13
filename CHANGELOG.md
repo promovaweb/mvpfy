@@ -4,6 +4,14 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.6.1] - 2026-11-13
+
+- Reorganiza o `README.md` para quem usa o MVPFy, com cabeçalho da
+  Promovaweb, banner do Discord, links para a documentação, os planos e os
+  repositórios usados.
+- Cria o `CONTRIBUTING.md` para quem contribui, com ambiente, organização do
+  código, comandos de validação, commits e fluxo de release.
+
 ## [0.6.0] - 2026-08-23
 
 - Adiciona a seção `Analise de Requisitos` ao `MVP.md`.

@@ -1,117 +1,250 @@
-# MVPFy
+<p align="center">
+  <a href="https://github.com/promovaweb/mvpfy">
+    <img alt="MVPFy" src="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/icon.png" width="120">
+  </a>
+</p>
 
-O MVPFy é um conjunto de skills para transformar uma ideia em um plano
-executável do primeiro produto SaaS. A conversa acontece com uma única pergunta
-por turno, três respostas prontas, `4. Avançar` e `5. Conversar mais sobre este
-tema`. Cada resposta é salva antes do próximo turno.
+<h1 align="center">MVPFy</h1>
 
-O resultado público do processo é um único arquivo `MVP.md`. Ele reúne a
-análise de requisitos baseada em todas as entradas, o problema, o público, as
-personas, a jornada, o escopo da versão 1.0, o modelo SaaS, o preço, os custos,
-a tecnologia, o marketing, as métricas e as próximas validações.
+<p align="center">
+  Transforma uma ideia inicial no plano do primeiro produto SaaS, com entrevista guiada e um único documento MVP.md.
+</p>
 
-A entrevista fechada é curta: uma pergunta essencial por etapa e no máximo oito
-perguntas no total. A etapa SaaS pode usar duas. O restante vira recomendação no
-`MVP.md` para manter o foco na versão 1.0.
+<p align="center">Um projeto da <a href="https://promovaweb.com">Promovaweb</a></p>
 
-O MVPFy chama `mvpfy-context` durante a configuração e no início de cada
-conversa. Essa skill lê specs, backlogs, briefs, manifestos e arquivos de
-programação, grava `.mvpfy/existing-project.json` e prepara sugestões para a
-entrevista. A leitura é somente de referência. O MVPFy não cria, altera ou
-migra `spec.md`, `specs/` ou qualquer arquivo do Specsfy.
+<p align="center">
+  <a href="https://github.com/promovaweb/mvpfy/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/promovaweb/mvpfy"></a>
+  <a href="https://www.npmjs.com/package/@promovaweb/mvpfy"><img alt="npm" src="https://img.shields.io/npm/v/@promovaweb/mvpfy"></a>
+  <a href="https://github.com/promovaweb/mvpfy/blob/main/LICENSE"><img alt="Licença" src="https://img.shields.io/github/license/promovaweb/mvpfy"></a>
+</p>
 
-## Versionamento e releases
+<p align="center">
+  <a href="https://promovaweb.com/discord"><img alt="Discord: obter ajuda e conversar com a Comunidade" src="https://img.shields.io/badge/Discord-Obter%20ajuda%20e%20conversar%20com%20a%20Comunidade-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+</p>
 
-O arquivo [`VERSION`](VERSION) controla o SemVer do framework. O campo
-`version` do `package.json` e a seção mais recente do [`CHANGELOG.md`](CHANGELOG.md)
-precisam usar a mesma versão.
+<p align="center">
+  <a href="https://promovaweb.com/docs/mvpfy/">Documentação</a> ·
+  <a href="https://promovaweb.com/discord">Discord</a> ·
+  <a href="https://promovaweb.com/planos?utm_source=github&utm_medium=readme&utm_campaign=mvpfy">Planos da Promovaweb</a> ·
+  <a href="https://github.com/promovaweb/mvpfy/blob/main/CHANGELOG.md">Changelog</a>
+</p>
 
-Cada push na `main` precisa incluir uma nova versão quando trouxer uma melhoria
-publicável. O workflow
-[`release.yml`](.github/workflows/release.yml) valida os testes, compara a
-versão com o commit anterior, cria a tag `vX.Y.Z` e publica a release no
-GitHub usando as notas da seção correspondente do changelog.
+## O que é
 
-Para conferir antes do push:
+O MVPFy é um framework de skills e uma CLI para planejar o primeiro software
+oferecido como serviço de uma empresa em formação. A conversa acontece com uma
+pergunta por turno, três respostas prontas, `4. Avançar` e `5. Conversar mais
+sobre este tema`. Cada resposta é gravada antes do turno seguinte. A entrevista
+fechada tem no máximo oito perguntas.
 
-```bash
-npm run release:check
-```
+No fim, o projeto consumidor recebe um `MVP.md` com a análise de requisitos, o
+problema, o público, as personas, a jornada, o escopo da versão 1.0, o modelo
+SaaS, o modelo comercial, os custos, a tecnologia, o marketing, as métricas e
+as próximas validações.
 
-Consulte o [fluxo de release](docs/develop/release.md) para escolher entre
-patch, minor e major e para entender as recusas do workflow.
+| Modo | Para quê |
+| --- | --- |
+| Skills no agente | conduzir a entrevista e consolidar o `MVP.md` |
+| CLI `mvpfy` | instalar, atualizar, verificar e acompanhar o progresso |
+| TUI | abrir o painel das áreas do plano no terminal |
 
 ## Instalação
 
-Na raiz do projeto consumidor, execute:
+Tenha o Node.js 22 ou superior instalado. Na raiz do projeto consumidor,
+execute:
 
 ```bash
 npx --yes @promovaweb/mvpfy install --project .
 ```
 
-O comando instala as skills para Claude Code e Codex, prepara `MVP.md` e
-`.mvpfy/` e analisa o projeto existente. Um segundo uso preserva respostas e
-arquivos existentes, renovando apenas o relatório de contexto.
+O comando instala as skills para Claude Code e Codex, cria `MVP.md` e `.mvpfy/`
+e analisa o que já existe no projeto. Um segundo uso preserva as respostas e os
+arquivos existentes.
 
-No projeto que receberá as skills, use `$mvpfy` como porta de entrada.
+Para usar o executável em qualquer pasta, instale o pacote de forma global:
 
-## Skills
+```bash
+npm install -g @promovaweb/mvpfy
+```
 
-| Skill | Função |
-| --- | --- |
-| `mvpfy` | Entrevista, retomada, fila de perguntas e consolidação. |
-| `mvpfy-context` | Specs, código, manifestos, stack sugerida e lacunas iniciais. |
-| `mvpfy-problem` | Situação, problema, alternativa atual e hipótese. |
-| `mvpfy-audience` | Segmento, papéis de compra e personas. |
-| `mvpfy-product` | Proposta, jornada, módulos e escopo 1.0. |
-| `mvpfy-saas` | Conta, acesso, onboarding, cobrança e ciclo do cliente. |
-| `mvpfy-brand` | Categoria, posicionamento, nome e slogan. |
-| `mvpfy-market` | Concorrentes, alternativas e preços consultados. |
-| `mvpfy-pricing` | Modelo de preço, custos e cenários. |
-| `mvpfy-technology` | Laravel, VPS, dados, arquivos, IA e operação. |
-| `mvpfy-marketing` | Aquisição, conteúdo, leads, venda e lançamento. |
-| `mvpfy-document` | Geração, análise de requisitos e validação do `MVP.md`. |
-| `mvpfy-migrate` | Atualização do template sem perda de conteúdo. |
-| `mvpfy-progress` | Leitura do andamento sem iniciar outra pergunta. |
-| `mvpfy-setup` | Instalação, verificação e atualização do projeto consumidor. |
+Atualize as skills já instaladas com:
 
-## Princípios
+```bash
+mvpfy update --project .
+```
 
-- O produto atendido é o primeiro software oferecido como serviço.
-- O plano cobre somente a versão 1.0 e separa o que fica para depois.
-- A orquestradora exibe uma pergunta por turno com cinco opções fixas.
-- A opção 5 abre conversa livre sobre a pergunta atual sem criar outra pergunta.
-- O estado vive no projeto consumidor, em `.mvpfy/`.
-- O conteúdo final vive em `MVP.md`.
-- Laravel em VPS é a base técnica preferencial da Promovaweb.
+## Primeiros passos
 
-## Documentação e ebook
+1. Instale no projeto consumidor com o comando da seção anterior.
+2. Confira se o documento e o CLI estão prontos.
+3. Abra o agente, envie `$mvpfy` e descreva a ideia em um único texto.
 
-O [guia do usuário](docs/user/README.md) apresenta o percurso completo. O
-[guia de desenvolvimento](docs/develop/README.md) explica contratos, scripts e
-testes. O [ebook](ebooks/ebook-mvpfy.pdf) publica somente o Guia do usuário em
+A verificação mostra o estado do projeto. Os comandos abaixo supõem a
+instalação global do pacote:
 
-## CLI
+```bash
+mvpfy doctor --project .
+```
+
+O resultado esperado tem o caminho do projeto, o estado do `MVP.md` e a
+disponibilidade do CLI `skills`:
+
+```text
+Projeto  /home/pessoa/meu-saas
+MVP.md   pendente
+skills CLI  OK
+```
+
+Sem instalação global, use o pacote pelo `npx` em cada comando:
+
+```bash
+npx --yes @promovaweb/mvpfy doctor --project .
+npx --yes @promovaweb/mvpfy progress --project .
+```
+
+## Uso
+
+Acompanhe o preenchimento das áreas do plano:
 
 ```bash
 mvpfy progress --project .
-mvpfy install --project .
-mvpfy update --project .
-mvpfy tui --project .
 ```
 
-Use `mvpfy progress --json` para integração com outros agentes e scripts. Sem
-subcomando, `mvpfy` abre a TUI automaticamente. Se o npm global não estiver no
-`PATH`, use `npx --yes @promovaweb/mvpfy --project .` ou instale no prefixo
-explícito do exemplo e adicione `"$HOME/.npm-global/bin"` ao `PATH`.
+O resultado agrupa as áreas do plano, como Problema, Público, Produto, SaaS,
+Tecnologia, Marketing e Validação. O percentual indica o preenchimento das
+seções encontradas no `MVP.md`. Ele não substitui a leitura das hipóteses
+abertas.
 
-## Validação
+Abra o painel no terminal:
 
 ```bash
-npm test
-npm run ebook:verify
+mvpfy --project .
 ```
+
+A TUI tem as abas Home, Áreas, MVP.md, Skills e Sobre. A aba MVP.md é somente
+para leitura e não altera o arquivo.
+
+Atualize as skills depois de uma nova versão do framework:
+
+```bash
+mvpfy update --project .
+```
+
+Gerencie as skills pelo CLI oficial:
+
+```bash
+mvpfy skills install --project .
+mvpfy skills update --project .
+mvpfy skills list --project .
+```
+
+## Saída para scripts
+
+Os comandos `progress` e `doctor` aceitam `--json`:
+
+```bash
+mvpfy progress --project . --json
+```
+
+O retorno do progresso traz `project`, `document`, `overall`, `status`,
+`areas`, `pending_sections`, `tenancy`, `interview` e `next_gap`. Cada área
+informa `percent`, `complete`, `total` e a lista de `sections`.
+
+```json
+{
+  "project": "/home/pessoa/meu-saas",
+  "document": true,
+  "overall": 48,
+  "status": "in_progress",
+  "next_gap": {
+    "id": "marketing",
+    "label": "Marketing"
+  }
+}
+```
+
+## Uso com agentes
+
+O MVPFy distribui as skills pelo [Skills CLI](https://github.com/vercel-labs/skills).
+A instalação feita por `mvpfy install` cobre o [Claude Code](https://github.com/anthropics/claude-code)
+e o [Codex](https://github.com/openai/codex). Os arquivos ficam no projeto
+consumidor:
+
+- `.claude/skills/` para o Claude Code.
+- `.agents/skills/` para o Codex.
+
+A porta de entrada é a skill `mvpfy`. Ela chama as especialistas por área,
+grava o estado em `.mvpfy/` e atualiza o `MVP.md`.
+
+O `mvpfy-context` lê specs, briefs, backlogs e arquivos de código do projeto
+para evitar perguntas repetidas. A leitura é somente de referência. O MVPFy não
+cria, altera ou migra arquivos do [Specsfy](https://github.com/promovaweb/specsfy).
+
+## O plano que você recebe
+
+O `MVP.md` começa pela seção **Analise de Requisitos**, com a descrição inicial
+e o texto original de cada resposta. Depois seguem as áreas de planejamento. O
+estado do documento aparece em um destes valores:
+
+| Estado | Significado |
+| --- | --- |
+| `preliminary` | há conteúdo aproveitável, mas faltam escolhas importantes |
+| `ready` | os campos mínimos do primeiro SaaS estão descritos |
+| `validated` | as hipóteses principais foram conferidas fora da entrevista |
+
+O arquivo usa marcadores estáveis, como `<!-- mvpfy:section:problem-definition -->`.
+Uma atualização do template encontra o conteúdo pelo identificador e preserva o
+texto escrito à mão fora dos blocos gerados.
+
+## Documentação
+
+- [Guia do MVPFy no site](https://promovaweb.com/docs/mvpfy/): manual publicado.
+- [Guia do usuário](https://github.com/promovaweb/mvpfy/blob/main/docs/user/README.md):
+  percurso completo da instalação ao plano pronto.
+- [Ebook em PDF](https://github.com/promovaweb/mvpfy/blob/main/ebooks/ebook-mvpfy.pdf)
+  e [EPUB](https://github.com/promovaweb/mvpfy/blob/main/ebooks/ebook-mvpfy.epub):
+  edição portátil do guia do usuário.
+- `mvpfy --help` e `mvpfy <comando> --help`: referência dos comandos no
+  terminal.
+
+## Feito com
+
+| Projeto | Para quê |
+| --- | --- |
+| [Node.js](https://github.com/nodejs/node) | runtime da CLI e dos scripts das skills |
+| [Commander](https://github.com/tj/commander.js) | comandos e opções da CLI |
+| [marked](https://github.com/markedjs/marked) | renderização do `MVP.md` na TUI |
+| [marked-terminal](https://github.com/mikaelbr/marked-terminal) | saída do Markdown no terminal |
+| [neo-blessed](https://github.com/embark-framework/neo-blessed) | interface de terminal |
+| [Skills CLI](https://github.com/vercel-labs/skills) | instalação e atualização das skills |
+| [Claude Code](https://github.com/anthropics/claude-code) | agente que recebe as skills |
+| [Codex](https://github.com/openai/codex) | agente que recebe as skills |
+
+## Comunidade e suporte
+
+- **Discord:** [obter ajuda e conversar com a Comunidade](https://promovaweb.com/discord).
+- **Bugs e pedidos:** abra uma [issue](https://github.com/promovaweb/mvpfy/issues)
+  com a versão, o sistema operacional e o passo a passo para reproduzir.
+- **Novidades:** acompanhe o [CHANGELOG](https://github.com/promovaweb/mvpfy/blob/main/CHANGELOG.md)
+  e as [releases](https://github.com/promovaweb/mvpfy/releases).
+
+## Contribuir
+
+O projeto aceita contribuições de código, documentação, skills e testes. Leia o
+[CONTRIBUTING.md](https://github.com/promovaweb/mvpfy/blob/main/CONTRIBUTING.md)
+antes de abrir um pull request. Ele traz o ambiente, a organização do código,
+os comandos de validação e o fluxo de release.
+
+## Promovaweb
+
+O MVPFy é mantido pela [Promovaweb](https://promovaweb.com), comunidade de
+co-working digital onde profissionais aprendem a construir, automatizar e
+gerir negócios de tecnologia e IA com aulas ao vivo, Co-works e revisão de
+projetos reais.
+
+Quer usar o MVPFy em projetos de verdade, com acompanhamento? Conheça os
+[planos da Promovaweb](https://promovaweb.com/planos?utm_source=github&utm_medium=readme&utm_campaign=mvpfy).
 
 ## Licença
 
-[MIT](LICENSE).
+[MIT](https://github.com/promovaweb/mvpfy/blob/main/LICENSE).

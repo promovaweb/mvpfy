@@ -21,11 +21,11 @@ test("VERSION, package.json e CHANGELOG.md usam a mesma versão", async () => {
   await executar("node", ["scripts/validate-release.mjs"], { cwd: raiz });
 });
 
-test("o extrator produz notas somente da versão atual", async () => {
+test("o extrator produz notas somente da versão pedida", async () => {
   const pasta = await mkdtemp(path.join(os.tmpdir(), "mvpfy-release-"));
   const saida = path.join(pasta, "notes.md");
   try {
-    await executar("node", ["scripts/extract-release-notes.mjs", "--output", saida], { cwd: raiz });
+    await executar("node", ["scripts/extract-release-notes.mjs", "--version", "0.6.0", "--output", saida], { cwd: raiz });
     const notas = await readFile(saida, "utf8");
     assert.match(notas, /Analise de Requisitos/);
     assert.match(notas, /respostas originais/);
