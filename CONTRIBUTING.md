@@ -167,8 +167,13 @@ mudança.
 
 O workflow [`.github/workflows/release.yml`](.github/workflows/release.yml)
 roda em cada push na `main`. Ele executa os testes, confere a versão, recusa
-uma tag já existente, cria a tag `vX.Y.Z`, publica a GitHub Release com as
-notas do changelog e envia o pacote `@promovaweb/mvpfy` para o npm.
+uma tag já existente, cria a tag `vX.Y.Z` e publica a GitHub Release com as
+notas do changelog.
+
+O workflow não publica no npm. Depois da release, o pacote
+`@promovaweb/mvpfy` é gerado com `npm pack` no commit da tag e publicado da
+máquina local com `npm publish <tgz> --access public`, na conta
+`contatopromovaweb`. Confira com `npm view @promovaweb/mvpfy version license`.
 
 O passo a passo completo, com a escolha entre patch, minor e major e as
 recusas esperadas, está em

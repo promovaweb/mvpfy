@@ -4,6 +4,14 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.7.1] - 2026-11-13
+
+- A publicação no npm passa a ser feita só pela máquina local; o workflow de
+  release não publica mais no npm.
+- Documenta o novo fluxo de publicação no `CONTRIBUTING.md`, no `AGENTS.md` e
+  em `docs/develop/release.md`.
+- Regenera o ebook em PDF e EPUB na edição 0.7.1.
+
 ## [0.7.0] - 2026-11-13
 
 - Troca a licença do projeto de MIT para a GNU AGPL 3.0 (SPDX

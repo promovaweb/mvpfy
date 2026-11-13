@@ -1,5 +1,8 @@
 name: Release do MVPFy
 
+# Valida, cria a tag e a GitHub Release. A publicação no npm é feita só pela
+# máquina local, depois da release (ver docs/develop/release.md).
+
 on:
   push:
     branches:
@@ -27,7 +30,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://registry.npmjs.org
 
       - name: Instalar dependências
         run: npm ci
@@ -78,7 +80,3 @@ jobs:
             --title "MVPFy $TAG" \
             --notes-file "$RUNNER_TEMP/mvpfy-release-notes.md"
 
-      - name: Publicar pacote npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public

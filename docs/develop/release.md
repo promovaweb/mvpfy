@@ -17,7 +17,7 @@ framework em seus arquivos, no nome do PDF, no EPUB e no manifesto.
 | `ebooks/VERSION` | Cópia de conferência da versão usada pelo ebook. Deve ser igual a `VERSION`. |
 | `scripts/validate-release.mjs` | Confere versão, changelog e avanço desde o commit anterior. |
 | `scripts/extract-release-notes.mjs` | Prepara as notas usadas no GitHub Release. |
-| `.github/workflows/release.yml` | Executa testes, cria tag e publica a release. |
+| `.github/workflows/release.yml` | Executa testes, cria a tag e a GitHub Release. Não publica no npm. |
 
 ## Escolha da versão
 
@@ -67,9 +67,35 @@ versão atual é maior que a versão do commit anterior. Depois, ele:
 4. cria e envia a tag anotada.
 5. extrai as notas da seção correspondente.
 6. cria a GitHub Release com a tag e essas notas.
-7. publica o pacote raiz `@promovaweb/mvpfy` no npm usando `NPM_TOKEN`.
 
-Isso mantém uma relação direta entre commit, tag, versão e changelog.
+O workflow não publica no npm nem usa `NPM_TOKEN`. Isso mantém uma relação
+direta entre commit, tag, versão e changelog.
+
+## Publicação no npm
+
+O pacote `@promovaweb/mvpfy` é publicado no npm somente pela máquina local,
+depois que o workflow terminar e a GitHub Release existir. Gere o tarball no
+commit da tag, num worktree temporário:
+
+```bash
+git fetch --tags origin
+git worktree add /tmp/mvpfy-vX.Y.Z vX.Y.Z
+cd /tmp/mvpfy-vX.Y.Z
+npm ci
+npm pack
+sha256sum promovaweb-mvpfy-X.Y.Z.tgz
+```
+
+Publique o tarball logado como `contatopromovaweb` (`npm whoami`) e confirme a
+versão no registry, que pode levar alguns minutos para refletir:
+
+```bash
+npm publish promovaweb-mvpfy-X.Y.Z.tgz --access public
+npm view @promovaweb/mvpfy version license
+```
+
+Remova o worktree temporário com `git worktree remove /tmp/mvpfy-vX.Y.Z`. A
+release só está completa quando o npm mostra a mesma versão da tag.
 
 ## Recusas esperadas
 

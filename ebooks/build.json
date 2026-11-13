@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "version": "0.7.0",
-  "edition": "v0.7.0",
-  "generated_at": "2026-11-13T21:29:58.957416Z",
-  "source_sha256": "8ef85efa88e3e6808faa61d8e3fec801fbb54bf5ca973ea0fc1b1bb76660ef4b",
+  "version": "0.7.1",
+  "edition": "v0.7.1",
+  "generated_at": "2026-11-13T21:55:56.028554Z",
+  "source_sha256": "6504940fc5cc0c102556dc33e9599c4024243c984e499df9db2079c2e4bc13ec",
   "artifacts": {
     "pdf": {
-      "file": "MVPFy-Guia-do-Usuario-v0.7.0.pdf",
-      "sha256": "b14ead1684604435fd544ddd022053c97c19edba2b9559abb506ee7d525ddeb1"
+      "file": "MVPFy-Guia-do-Usuario-v0.7.1.pdf",
+      "sha256": "91ae903878ee12cd873d7ab7a4ca566fda35e2469d3441def23f8e8eeb0be7f1"
     },
     "epub": {
-      "file": "MVPFy-Guia-do-Usuario-v0.7.0.epub",
-      "sha256": "9f0ce2af1d7871809db57ec9c68f071224fa4a22f525580af765e658890ac455"
+      "file": "MVPFy-Guia-do-Usuario-v0.7.1.epub",
+      "sha256": "f0c2deaec1cf7b1f9235647d19c9f956af936a3844b44f45963565eb557b2430"
     }
   }
 }

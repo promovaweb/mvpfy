@@ -17,4 +17,6 @@ O SemVer do framework fica em `VERSION` e deve coincidir com
 `package.json.version` e com a seção mais recente de `CHANGELOG.md`. Uma
 melhoria publicada na `main` precisa avançar essa versão. O workflow em
 `.github/workflows/release.yml` cria a tag `vX.Y.Z` e a release correspondente
-no GitHub. Não reutilize uma tag já publicada.
+no GitHub, sem publicar no npm. O pacote vai ao npm só pela máquina local,
+com `npm pack` no commit da tag e `npm publish <tgz> --access public`. Não
+reutilize uma tag já publicada.
