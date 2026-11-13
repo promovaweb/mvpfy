@@ -247,4 +247,7 @@ Quer usar o MVPFy em projetos de verdade, com acompanhamento? Conheça os
 
 ## Licença
 
-[MIT](https://github.com/promovaweb/mvpfy/blob/main/LICENSE).
+Distribuído sob a
+[GNU AGPL 3.0](https://github.com/promovaweb/mvpfy/blob/main/LICENSE). A
+licença não concede o uso do nome e do logo do MVPFy nem da marca Promovaweb
+(AGPL 3.0, seção 7, item e).

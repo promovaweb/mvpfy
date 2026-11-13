@@ -176,5 +176,6 @@ recusas esperadas, está em
 
 ## Licença
 
-O MVPFy usa a licença [MIT](LICENSE). Ao enviar uma contribuição, você concorda
-em publicá-la sob a mesma licença.
+O MVPFy é distribuído sob a [GNU AGPL 3.0](LICENSE). Ao enviar uma
+contribuição, você concorda em publicá-la sob a mesma licença do projeto
+(SPDX `AGPL-3.0-only`).

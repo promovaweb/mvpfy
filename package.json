@@ -1,8 +1,8 @@
 {
   "name": "@promovaweb/mvpfy",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Framework de skills e CLI para planejar o primeiro MVP SaaS.",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "homepage": "https://promovaweb.com/docs/mvpfy/",
   "repository": {
     "type": "git",

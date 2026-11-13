@@ -4,6 +4,15 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.7.0] - 2026-11-13
+
+- Troca a licença do projeto de MIT para a GNU AGPL 3.0 (SPDX
+  `AGPL-3.0-only`) no `LICENSE`, no `package.json`, no `README.md` e no
+  `CONTRIBUTING.md`. A partir desta versão, o projeto é distribuído sob a GNU
+  AGPL 3.0; versões anteriores continuam sob a licença com que foram
+  publicadas.
+- Regenera o ebook em PDF e EPUB na edição 0.7.0.
+
 ## [0.6.2] - 2026-11-13
 
 - Regenera o ebook em PDF e EPUB na edição vigente do guia do usuário, que a
