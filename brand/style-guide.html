@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guia visual do MVPFy</title>
+    <link rel="icon" href="./logo/icon-32w.png" sizes="32x32">
+    <link rel="stylesheet" href="./global.css">
+    <style>
+      body { margin: 0; background: var(--color-background); color: var(--color-text); font-family: var(--font-body); }
+      main { margin: auto; max-width: 72rem; padding: 4rem 1.5rem; }
+      h1, h2 { font-family: var(--font-heading); }
+      .hero { align-items: center; display: grid; gap: 3rem; grid-template-columns: 1fr 1fr; min-height: 60vh; }
+      .hero img { max-width: 100%; }
+      .eyebrow { color: var(--color-accent); font-weight: 600; }
+      .swatches { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+      .swatch { border: 1px solid var(--color-border); border-radius: 1rem; overflow: hidden; }
+      .swatch div:first-child { height: 8rem; }
+      .swatch p { margin: 0; padding: 1rem; }
+      @media (max-width: 48rem) { .hero { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Degraus até o MVP</p>
+          <h1>MVPFy</h1>
+          <p>Três degraus do plano e a bandeira do primeiro produto no ar, dentro da família visual Promovaweb.</p>
+        </div>
+        <picture>
+          <source srcset="./logo/logo-dark.svg" media="(prefers-color-scheme: dark)">
+          <img src="./logo/logo-light.svg" alt="Logo do MVPFy">
+        </picture>
+      </section>
+      <h2>Paleta essencial</h2>
+      <section class="swatches">
+        <article class="swatch"><div style="background:#00161E"></div><p>Petróleo · #00161E</p></article>
+        <article class="swatch"><div style="background:#2AD5BE"></div><p>Turquesa · #2AD5BE</p></article>
+        <article class="swatch"><div style="background:#F59E0B"></div><p>Âmbar · #F59E0B</p></article>
+        <article class="swatch"><div style="background:#B45309"></div><p>Âmbar em fundo claro · #B45309</p></article>
+        <article class="swatch"><div style="background:#F2F8F9"></div><p>Fundo claro · #F2F8F9</p></article>
+      </section>
+    </main>
+  </body>
+</html>

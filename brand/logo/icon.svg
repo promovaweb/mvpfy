@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="MVPFy">
-  <rect width="256" height="256" rx="48" fill="#12213e"/>
-  <path d="M56 64h36l36 84 36-84h36l-54 128h-36L56 64Z" fill="#e6fffb"/>
-  <circle cx="190" cy="184" r="18" fill="#f59e0b"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title"><title id="title">Ícone do MVPFy</title><rect width="512" height="512" rx="112" fill="#00161E"/><path d="M120 392h88v-80h88v-80h88v160z" fill="#2AD5BE"/><path d="M384 232V116" stroke="#F2F8F9" stroke-width="18" stroke-linecap="round"/><path d="M384 120l-72 26 72 26z" fill="#F59E0B"/></svg>

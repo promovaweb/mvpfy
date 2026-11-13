@@ -1,6 +1,9 @@
 <p align="center">
   <a href="https://github.com/promovaweb/mvpfy">
-    <img alt="MVPFy" src="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/icon.png" width="120">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/logo-dark.png">
+      <img alt="MVPFy" src="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/logo-light.png" width="360">
+    </picture>
   </a>
 </p>
 

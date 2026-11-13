@@ -116,7 +116,8 @@ seu domínio exige:
 | `.ebook/metadata.yaml` | Metadados editoriais, idioma e descrição. |
 | `.ebook/cover.svg` | Arte vetorial da capa. |
 | `.ebook/fonts/` | Inter, Manrope e licenças das fontes. |
-| `brand/logo/icon.svg` e `icon.png` | Ícone usado na capa e na documentação. |
+| `brand/logo/` | Ícone, assinaturas light e dark e favicons do sistema “Degraus até o MVP”; `icon.svg` e `icon.png` entram na capa do ebook e na documentação. |
+| `brand/` | Kit de marca: paleta, tokens, CSS, tema Tailwind, tipografia, fontes, acessibilidade, manifesto e guia visual (ver `brand/README.md`). |
 | `ebooks/VERSION` | Espelho da versão do framework, conferido antes do build. |
 | `ebooks/build.json` | Hashes das fontes e dos artefatos gerados. |
 | `ebooks/ebook-mvpfy.pdf` e `.epub` | Aliases estáveis da edição vigente. |

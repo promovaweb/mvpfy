@@ -4,6 +4,17 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.7.2] - 2026-11-13
+
+- Nova identidade visual “Degraus até o MVP”: três degraus turquesa sobem até
+  uma bandeira âmbar, as etapas do plano até o primeiro produto no ar.
+- Cria o kit de marca em `brand/`: ícone, assinaturas para fundo claro e
+  escuro, favicons, paleta com acento âmbar, tokens, CSS, tema Tailwind,
+  tipografia, fontes, relatório de contraste, manifesto e guia visual.
+- O cabeçalho do `README.md` passa a usar a assinatura do MVPFy, com variante
+  para o modo escuro.
+- Regenera o ebook em PDF e EPUB na edição 0.7.2, com o novo ícone na capa.
+
 ## [0.7.1] - 2026-11-13
 
 - A publicação no npm passa a ser feita só pela máquina local; o workflow de
