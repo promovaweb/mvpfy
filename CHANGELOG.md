@@ -4,6 +4,12 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.6.2] - 2026-11-13
+
+- Regenera o ebook em PDF e EPUB na edição vigente do guia do usuário, que a
+  0.6.1 deixou sem atualizar.
+- Publica a versão atual do pacote `@promovaweb/mvpfy` no npm.
+
 ## [0.6.1] - 2026-11-13
 
 - Reorganiza o `README.md` para quem usa o MVPFy, com cabeçalho da
