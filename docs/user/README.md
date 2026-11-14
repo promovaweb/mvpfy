@@ -10,18 +10,17 @@
 <!-- markdownlint-enable MD033 -->
 
 Você não precisa chegar com um plano pronto. Basta descrever o que imagina criar,
-mesmo que a ideia ainda misture público, funcionalidades, preço e tecnologia.
+mesmo que a ideia ainda misture público e funcionalidades com preço e tecnologia.
 O MVPFy lê esse primeiro relato, aproveita o que já está claro e conduz a
 conversa até uma versão inicial que possa ser construída e testada.
 
 Durante a entrevista, você conversa com a skill `mvpfy`. Ela faz uma pergunta
-por vez, salva a resposta antes de seguir e chama especialistas para tratar do
-problema, do público, do produto, do preço, da tecnologia e da entrada no
-mercado.
+por vez, grava a resposta antes de seguir e chama especialistas para cada
+área: problema e público, produto e preço, tecnologia e entrada no mercado.
 
-No fim, você recebe um arquivo `MVP.md`. Ele dá às equipes uma base comum para
-criar o website, orientar a marca, construir a versão 1.0, vender o serviço e
-acompanhar os primeiros clientes.
+No fim, você recebe um arquivo `MVP.md`. Ele dá aos responsáveis por site,
+marca, desenvolvimento e vendas uma base comum para construir a versão 1.0,
+vender o serviço e acompanhar os primeiros clientes.
 
 O MVPFy não cria `spec.md`, não executa o método do Specsfy e não altera o
 repositório `specsfy`. A semelhança entre os guias existe apenas na organização
@@ -36,7 +35,7 @@ Esta edição portátil é a **v0.4.7**:
 - [EPUB](../../ebooks/MVPFy-Guia-do-Usuario-v0.4.7.epub), para leitores digitais.
 - [manifesto](../../ebooks/build.json), com a versão e os hashes do build.
 
-O ebook contém somente o guia do usuário. A ordem de compilação está em
+O ebook contém somente o guia do usuário, na ordem de compilação registrada em
 [reading-order.txt](reading-order.txt). A documentação técnica continua
 disponível online para instalação, manutenção e contribuição com o framework.
 
@@ -44,7 +43,8 @@ disponível online para instalação, manutenção e contribuição com o framew
 
 No começo de uma empresa, é comum pensar no painel antes de entender o
 problema, escolher a tecnologia antes de conhecer o volume e imaginar o preço
-sem saber qual empresa ou pessoa fará o pagamento. O MVPFy organiza essas escolhas em uma conversa simples.
+sem saber qual cliente fará o pagamento. O MVPFy coloca essas escolhas em ordem numa
+conversa simples.
 
 O guia foi feito para este cenário:
 
@@ -70,18 +70,18 @@ encaixa no percurso principal.
 
 ## Você pode continuar depois
 
-Você pode parar quando quiser. O MVPFy salva as respostas no projeto que você
+Você pode parar quando quiser. O MVPFy grava as respostas no projeto que você
 preparou e retoma a conversa depois. Ao dizer “continuar”, ele lê o que já foi
 registrado, encontra o próximo ponto relevante e mostra somente uma pergunta.
 
-Uma mensagem longa também é bem-vinda. Se você explicar que agências pequenas
-perdem leads recebidos por WhatsApp, formulário e Instagram, o MVPFy pode usar
+Uma mensagem longa também é bem-vinda. Ao saber que agências pequenas perdem
+leads recebidos por WhatsApp, formulário e Instagram, o MVPFy pode usar
 essa informação para descrever o problema, o público, os canais e a alternativa
 atual. Você não precisa repetir a mesma resposta em perguntas diferentes.
 
 ## Próximo passo
 
 Para acompanhar um exemplo concreto, abra [Primeiro MVP](primeiro-mvp.md). Se
-você já instalou o framework e precisa consultar uma regra, use o índice de
+você já instalou o framework e precisa consultar o papel de uma skill, use o índice de
 [skills](skills/README.md). O [guia de desenvolvimento](../develop/README.md)
 fica separado para instalação e manutenção da implementação.

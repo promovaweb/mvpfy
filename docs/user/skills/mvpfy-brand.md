@@ -1,8 +1,8 @@
 # A marca: `mvpfy-brand`
 
 Esta especialista prepara a direção da marca depois que problema, público e
-promessa já têm uma base. O trabalho ajuda a escolher uma linguagem para o
-produto e orientar naming e comunicação. Disponibilidade de domínio ou registro
+promessa já têm uma base. O trabalho define uma linguagem para o produto e
+orienta naming e comunicação. Disponibilidade de domínio ou registro
 de marca só entra como fato depois de uma pesquisa própria.
 
 ## O que entra no plano
@@ -13,7 +13,7 @@ de marca só entra como fato depois de uma pesquisa própria.
 - diferenciais.
 - personalidade e tom.
 - palavras a usar e evitar.
-- regras para o nome.
+- condições para o nome.
 - sugestões de nome quando solicitadas.
 - slogans curtos.
 - direção visual conceitual.

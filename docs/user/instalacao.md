@@ -39,5 +39,5 @@ Quando já existir um `MVP.md` de uma versão anterior, a atualização compara 
 template e chama `mvpfy-migrate` antes de continuar. As respostas registradas
 permanecem disponíveis para a próxima lacuna da entrevista.
 
-Se algo não aparecer no projeto, consulte [Solução de problemas](solucao-de-problemas.md).
-Essa página reúne as verificações para corrigir a instalação.
+Se algo não aparecer no projeto, consulte [Solução de problemas](solucao-de-problemas.md),
+que reúne as verificações para corrigir a instalação.

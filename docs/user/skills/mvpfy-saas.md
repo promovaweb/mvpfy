@@ -1,10 +1,11 @@
 # O serviço recorrente: `mvpfy-saas`
 
 Esta especialista explica o que acontece ao redor do software. Um SaaS não
-termina quando a pessoa entra na tela principal. Uma pessoa precisa criar o espaço,
-usar o serviço, pagar, receber suporte e encerrar o acesso quando necessário.
+termina quando o usuário entra na tela principal: o cliente precisa criar o
+espaço e usar o serviço, pagar, receber suporte e encerrar o acesso quando
+necessário.
 
-Ela começa confirmando se várias empresas ou equipes usarão a mesma aplicação.
+Ela começa confirmando se várias empresas ou áreas usarão a mesma aplicação.
 Essa pergunta vem logo depois da ideia inicial. Se a resposta for multitenante,
 a especialista faz no máximo uma pergunta curta sobre a unidade do espaço e sua
 administração antes de tratar preço ou arquitetura.
@@ -12,7 +13,7 @@ administração antes de tratar preço ou arquitetura.
 ## O que ela procura
 
 - B2B, B2C ou profissionais independentes.
-- titular do espaço e pessoas usuárias.
+- titular do espaço e usuários.
 - separação dos dados entre espaços.
 - convite, demonstração ou teste.
 - onboarding e primeiro valor.
@@ -27,7 +28,7 @@ Com essa resposta, ela recomenda:
 - unidade do tenant.
 - titularidade e administração.
 - convites, membros e papéis.
-- participação de uma pessoa em vários tenants.
+- participação de um usuário em vários tenants.
 - limite dos dados e banco.
 - criação e configuração de novos tenants.
 
@@ -40,9 +41,9 @@ Uma agência pode criar o espaço, adicionar seus clientes e manter a cobrança 
 próprio contrato. Cada cliente acompanha seus leads, sem acesso aos dados de
 outros espaços. Esse arranjo muda permissões, preço e onboarding.
 
-Quando Laravel for escolhido, o plano avalia o suporte de Teams da solução
-adotada para equipes, membros, convites e papéis. Teams ajuda na associação de
-pessoas ao tenant, mas não substitui as regras de isolamento e autorização.
+Quando Laravel for escolhido, o plano avalia o suporte a Teams da solução
+adotada para grupos, membros, convites e papéis. Teams associa usuários ao
+tenant, mas não substitui o isolamento e a autorização.
 
 ## Ponto de partida técnico
 
@@ -53,5 +54,5 @@ segurança, contrato, desempenho ou posicionamento justificarem esse desenho.
 ## Onde termina este trabalho
 
 Esta especialista não presume que a cobrança precisa ser totalmente automática
-no primeiro dia. Se uma operação acompanhada ajudar a validar a oferta, o plano
+no lançamento. Se uma operação acompanhada ajudar a validar a oferta, o plano
 pode registrá-la como parte provisória do serviço.

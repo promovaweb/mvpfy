@@ -2,7 +2,7 @@
 
 `MVP.md` é a entrega central do MVPFy. Ele transforma a conversa em um plano
 que pode circular entre produto, desenvolvimento, marketing, vendas e
-operação sem depender do histórico do chat.
+operação a partir dos registros reunidos no documento.
 
 ## Como ler o estado do plano
 
@@ -18,14 +18,14 @@ suficiente para orientar o próximo trabalho.
 ## O que o plano reúne
 
 O template atual reúne 37 áreas. Antes das áreas de planejamento, a seção
-**Analise de Requisitos** reúne toda a entrada recebida e organiza módulos,
-recursos, telas, ferramentas, pessoas, dados, fluxos e requisitos
-operacionais. O texto original de cada resposta permanece disponível para
-consulta.
+**Analise de Requisitos** reúne toda a entrada recebida. Ela classifica o que
+foi citado em módulos, recursos e telas, ferramentas e perfis de usuário,
+informações, fluxos e requisitos operacionais. O texto original de cada
+resposta permanece disponível para consulta.
 
 Em seguida, **Especificação funcional detalhada** oferece uma estrutura para
-consolidar princípios, papéis, entidades, jornadas, páginas, integrações,
-operações, restrições, questões abertas e próxima etapa.
+consolidar princípios, papéis e entidades, jornadas, páginas e integrações,
+além das operações, das restrições, das questões abertas e da próxima etapa.
 
 As demais áreas acompanham o caminho natural de uma empresa que sai da ideia e
 chega à primeira operação SaaS.
@@ -84,7 +84,7 @@ O documento usa quatro rótulos para que uma sugestão não pareça uma certeza:
 
 - **Confirmado:** informação declarada por você ou respaldada por uma fonte.
 - **Recomendado:** sugestão de uma especialista, baseada no contexto disponível.
-- **Hipótese:** afirmação ainda não conferida com pessoas, mercado ou uso.
+- **Hipótese:** afirmação ainda não conferida com clientes, mercado ou uso.
 - **Pendente:** informação necessária que ainda não foi fornecida.
 
 Essa separação impede que uma estimativa de preço pareça uma pesquisa concluída
@@ -94,5 +94,5 @@ ou que uma sugestão de Laravel pareça uma exigência do produto.
 
 Quando o template evolui, `mvpfy-migrate` insere as seções novas, conserva o
 texto existente e marca os campos que precisam de resposta. Depois da
-atualização, a orquestradora continua pela primeira pergunta relevante, sempre
-uma por vez.
+atualização, a orquestradora continua pela primeira pergunta relevante, uma
+por vez.

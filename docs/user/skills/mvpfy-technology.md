@@ -17,9 +17,10 @@ aprendizado sem criar uma operação maior do que o produto precisa.
 
 ## O que entra no `MVP.md`
 
-O `MVP.md` recebe arquitetura, dados conceituais, autenticação, papéis,
-espaços, isolamento, integrações, filas, arquivos, segurança básica,
-observabilidade e custo mensal por cenário.
+O `MVP.md` recebe a arquitetura e o modelo conceitual de dados, a
+autenticação, os papéis, os espaços e o isolamento. Recebe também as
+integrações, as filas, os arquivos, a segurança básica, a observabilidade e o
+custo mensal por cenário.
 
 ## Um exemplo
 
@@ -29,5 +30,5 @@ podem esperar até existir uma necessidade real para esse custo.
 
 ## Onde termina este trabalho
 
-Esta especialista não implementa o software, não compra a VPS e não transforma
-a stack padrão em requisito mais importante do que o problema do produto.
+Esta especialista não implementa o software, não compra a VPS e não coloca a
+stack padrão acima do problema do produto.

@@ -1,20 +1,20 @@
 # A entrevista, uma pergunta por vez
 
-A entrevista é o lugar onde a ideia ganha forma. Você escreve como falaria com
-uma pessoa da equipe, e a orquestradora escolhe o próximo ponto que mais ajuda
-a montar o plano.
+Na entrevista, a ideia vira plano. Você escreve como falaria com um sócio ou
+colega de projeto. A orquestradora escolhe o próximo ponto que falta para
+montar o plano.
 
 ## Primeiro, conte a ideia inteira
 
 Antes da primeira pergunta com opções, descreva livremente a ideia do SaaS e do
 MVP. Conte o que o produto pode fazer, qual público ele atenderia e quais módulos,
-recursos ou integrações já apareceram na sua cabeça. O MVPFy salva esse relato
+recursos ou integrações já apareceram na sua cabeça. O MVPFy grava esse relato
 e separa os itens citados para examiná-los depois.
 
-Depois, começa a entrevista fechada. Cada turno tem uma única pergunta e cinco
-opções. Um item citado não entra automaticamente na versão 1.0. A conversa vai
-mostrar se ele apoia a jornada principal, se deve esperar ou se não serve ao
-recorte escolhido.
+Depois começa a entrevista fechada, com uma única pergunta e cinco opções por
+turno. Um item citado não entra automaticamente na versão 1.0: a conversa
+mostra se ele apoia a jornada principal, se deve esperar ou se fica fora do
+escopo escolhido.
 
 Você também pode enviar tudo em uma mensagem. Por exemplo:
 
@@ -25,13 +25,13 @@ seus próprios leads e o MVP precisa cadastrar o lead, atribuí-lo a alguém e
 mostrar um resumo. Quero começar com Laravel em uma VPS e cobrar mensalidade.
 ```
 
-Nesse caso, o MVPFy já pode registrar problema, público, cliente pagador,
-permissões, jornada, tecnologia e cobrança. Ele não precisa perguntar de novo
-qual empresa ou pessoa fará o pagamento ou repetir etapas que você descreveu. A próxima pergunta trata apenas
-do ponto importante que ainda falta.
+Nesse caso, o MVPFy já pode registrar o problema, o público e o cliente
+pagador, além das permissões, da jornada, da tecnologia e da cobrança. Ele não
+pergunta de novo qual cliente fará o pagamento nem repete etapas que você descreveu. A
+próxima pergunta trata apenas do ponto importante que ainda falta.
 
-Se quiser acrescentar informações, envie outra mensagem. Todas são acolhidas e
-salvas. Quando terminar, escolha `4. Avançar`.
+Para acrescentar informações, envie outra mensagem, que também fica gravada.
+Quando terminar, escolha `4. Avançar`.
 
 O encerramento da entrada inicial pode aparecer assim:
 
@@ -45,12 +45,12 @@ itens candidatos. Você quer acrescentar algo antes de começar?
 5. Conversar mais sobre este tema.
 ```
 
-As opções 1, 2, 3 e 5 permitem continuar enviando conteúdo. A opção 4 salva o
+As opções 1, 2, 3 e 5 permitem continuar enviando conteúdo. A opção 4 grava o
 estado da entrada e libera a próxima pergunta fechada.
 
 ## A primeira pergunta fechada
 
-Depois de salvar a ideia inicial, o MVPFy confirma o modelo de atendimento antes
+Depois de gravar a ideia inicial, o MVPFy confirma o modelo de atendimento antes
 de investigar problema, preço ou tecnologia:
 
 ```text
@@ -62,25 +62,25 @@ O sistema atenderá várias empresas ou equipes separadas dentro da mesma aplica
 5. Conversar mais sobre este tema
 ```
 
-Se você escolher a primeira opção, a conversa pode fazer uma única pergunta
-curta sobre a unidade do tenant e a pessoa administradora. Os detalhes de
-membros, papéis, acesso entre espaços, separação de dados, banco e criação de
-novos tenants viram recomendações técnicas. Assim, o MVP não vira um cadastro
-interminável de regras de acesso.
+Na primeira opção, a conversa pode fazer uma única pergunta curta sobre a
+unidade do tenant e o administrador. Os detalhes de membros e papéis, acesso
+entre espaços, separação de dados, banco e criação de novos tenants viram
+recomendações técnicas. Assim, o MVP não vira um cadastro interminável de
+permissões.
 
 Se ainda não souber, a opção 5 permite conversar sobre a diferença antes de
 registrar a escolha. A pergunta continua sendo uma por vez.
 
 ## Quantas perguntas serão feitas
 
-A entrevista fechada tem no máximo oito perguntas. Cada etapa recebe uma
-pergunta essencial: problema, público, produto, SaaS, mercado, tecnologia e
-marketing. A etapa SaaS pode receber uma segunda pergunta curta. Se a ideia
+A entrevista fechada tem no máximo oito perguntas, uma essencial por etapa. As
+etapas são problema, público e produto, SaaS, mercado, tecnologia e marketing,
+e só a etapa SaaS pode receber uma segunda pergunta curta. Se a ideia
 inicial já respondeu uma etapa, ela é pulada. O que permanecer será registrado
 como recomendação ou hipótese no `MVP.md`.
 
 Depois da oitava resposta, o MVPFy encerra a entrevista normal e monta o
-documento. Você pode pedir uma revisão específica depois, mas o fluxo inicial
+documento. Você pode solicitar uma revisão específica depois, mas o fluxo inicial
 não continua perguntando sem fim.
 
 ## O que acontece depois da sua resposta
@@ -93,8 +93,8 @@ não continua perguntando sem fim.
 6. A orquestradora revê o que ainda falta.
 7. Uma única pergunta seguinte aparece.
 
-Se a gravação falhar, o fluxo não avança. A mesma pergunta volta para que você
-possa tentar novamente.
+Se a gravação falhar, o fluxo não avança: a mesma pergunta volta para você
+tentar novamente.
 
 ## O formato de cada turno
 
@@ -112,10 +112,10 @@ Qual situação descreve melhor o problema?
 As três primeiras opções respondem à mesma pergunta. A opção 4 aceita o
 entendimento atual e leva à próxima etapa. A opção 5 abre uma conversa sobre o
 mesmo tema. Você pode explicar um caso, tirar uma dúvida ou enviar uma resposta
-complexa. O MVPFy pode continuar essa conversa por mais de um turno, sempre
-salvando cada mensagem e mostrando no máximo uma pergunta principal.
+complexa. O MVPFy pode continuar essa conversa por mais de um turno. Em cada
+turno, grava a mensagem e mostra no máximo uma pergunta principal.
 
-Nunca aparecem duas perguntas principais no mesmo turno.
+A skill não mostra duas perguntas principais no mesmo turno.
 
 ## Você pode responder do seu jeito
 
@@ -130,16 +130,17 @@ Você pode responder:
 - uma correção de resposta anterior.
 - “pausar”, “continuar”, “revisar preço” ou “gerar documento”.
 
-“Ainda não sei” também ajuda. O MVPFy registra a lacuna e pode sugerir uma
-hipótese provisória, deixando claro que ela ainda precisa de comprovação.
+“Ainda não sei” também é uma resposta válida. O MVPFy registra a lacuna e pode
+sugerir uma hipótese provisória, deixando claro que ela ainda precisa de
+comprovação.
 
-## Peça uma ação quando precisar
+## Ações que você pode solicitar
 
-| Pedido | Resultado |
+| Instrução | Resultado |
 | --- | --- |
 | “Começar” | Cria ou abre um projeto e faz a primeira pergunta útil. |
 | “Continuar” | Lê o estado e retoma pela pendência prioritária. |
-| “Pausar” | Salva o ponto atual sem apagar respostas. |
+| “Pausar” | Grava o ponto atual sem apagar respostas. |
 | “Revisar preço” | Trabalha somente em modelo, faixa e premissas de preço. |
 | “Mudar o público” | Registra a correção e revisa áreas dependentes. |
 | “O que falta?” | Mostra um resumo das pendências sem abrir formulário. |
@@ -159,7 +160,7 @@ anterior voltam para revisão.
 ## Quando a ideia ficou grande demais
 
 Quando aparecem várias jornadas, muitos públicos ou módulos que parecem
-produtos separados, o MVPFy pede um recorte. A pergunta passa a ser:
+produtos separados, o MVPFy pergunta qual parte entra primeiro:
 
 ```text
 Qual resultado precisa funcionar do começo ao fim na primeira versão?

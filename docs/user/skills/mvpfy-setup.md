@@ -24,5 +24,5 @@ mvpfy progress --project .
 mvpfy update --project .
 ```
 
-O setup não cria nem modifica arquivos do Specsfy. O resultado do MVPFy fica
-somente em `MVP.md` e `.mvpfy/`.
+O setup não cria nem modifica arquivos do Specsfy, porque o resultado do MVPFy
+fica somente em `MVP.md` e `.mvpfy/`.

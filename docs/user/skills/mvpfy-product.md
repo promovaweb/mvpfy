@@ -1,8 +1,8 @@
 # O produto: `mvpfy-product`
 
 Esta especialista transforma o problema e o público em uma primeira versão que
-alguém consegue usar e comprar. Ela começa pela jornada principal. A lista de
-recursos só entra depois, quando fica claro o trabalho que cada item apoia.
+o cliente consegue usar e comprar, começando pela jornada principal. A lista
+de recursos só entra depois, quando fica claro o trabalho que cada item apoia.
 
 ## O que ela procura
 

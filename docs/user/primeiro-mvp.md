@@ -1,8 +1,8 @@
 # Primeiro MVP: do relato ao plano
 
-Este exemplo acompanha uma ideia fictícia. Ele não descreve um produto real do
-MVPFy. A proposta é uma ferramenta para pequenas agências acompanharem leads
-recebidos por WhatsApp, formulário e Instagram.
+Este exemplo acompanha uma ideia fictícia, sem relação com um produto do MVPFy:
+uma ferramenta para pequenas agências acompanharem leads recebidos por
+WhatsApp, formulário e Instagram.
 
 ## Conte a ideia do jeito que ela vier
 
@@ -23,15 +23,15 @@ mensalidade.
 ```
 
 O agente lê a mensagem inteira antes de perguntar. CRM, WhatsApp e painel
-entram como ideias para examinar. Problema, público, jornada, tecnologia e
-cobrança podem receber informações desde o primeiro relato.
+entram como ideias para examinar, enquanto problema, público e jornada,
+tecnologia e cobrança já recebem informações desde o primeiro relato.
 
 Você também pode mandar outra mensagem antes de escolher `4. Avançar`. O
 MVPFy acolhe esse complemento e só começa a entrevista fechada depois que você
 indicar que terminou de apresentar a ideia.
 
 O ponto de partida não é transformar cada recurso citado em módulo. Primeiro,
-o MVPFy tenta entender a situação que faz alguém procurar o produto.
+o MVPFy tenta entender a situação que leva a agência a procurar o produto.
 
 ## Veja como uma pergunta aparece
 
@@ -55,15 +55,15 @@ MVPFy: resposta salva. Qual pessoa usaria o produto no trabalho diário?
 5. Conversar mais sobre este tema
 ```
 
-O texto “resposta salva” representa uma etapa interna obrigatória. A próxima
+O texto “resposta salva” representa uma etapa interna obrigatória: a próxima
 pergunta só aparece depois do registro no `answers.jsonl` e da atualização do
 estado do projeto.
 
-Se você escolher 5, pode explicar um caso, perguntar o significado de uma
-opção ou enviar uma resposta complexa. O MVPFy continua conversando sobre o
-mesmo assunto, salva cada turno e mostra no máximo uma pergunta principal.
+Na opção 5, você pode explicar um caso, perguntar o significado de uma opção
+ou enviar uma resposta complexa. O MVPFy continua conversando sobre o mesmo
+assunto, grava cada turno e mostra no máximo uma pergunta principal.
 
-## Envie mais contexto quando precisar
+## Envie mais detalhes a qualquer momento
 
 Você não precisa escolher apenas um número. Esta resposta também é válida:
 
@@ -72,9 +72,10 @@ A agência paga. Cada cliente deve acompanhar somente os próprios leads, e a
 equipe da agência precisa administrar tudo em um espaço.
 ```
 
-Essa frase já informa a empresa cliente, a pessoa responsável pelo pagamento, o titular do espaço e as pessoas usuárias,
-permissões e separação entre clientes. O MVPFy aproveita essas informações e
-não pergunta novamente qual empresa fará o pagamento.
+Essa frase já informa a empresa cliente, o pagador, o titular do espaço e os
+usuários. Também define as permissões e a separação entre
+clientes. O MVPFy aproveita essas informações e não pergunta novamente qual
+empresa fará o pagamento.
 
 ## Transforme a ideia em uma jornada
 
@@ -101,26 +102,26 @@ da implantação assistida e do sinal que confirma a ativação.
 
 ## Compare alternativas e monte uma faixa de preço
 
-Se você fornecer URLs de concorrentes, a especialista de mercado consulta os
+Com URLs de concorrentes, a especialista de mercado consulta os
 planos, limites e preços publicados e registra a fonte e a data. Sem uma
 referência direta, a conversa olha para o que a agência gasta hoje com
 planilhas, horas de acompanhamento e leads perdidos.
 
-A especialista de preço transforma esses dados em uma faixa inicial. Isso é uma
-hipótese comercial, não uma promessa. O documento pode comparar um cenário
+A especialista de preço transforma essas informações em uma faixa inicial, que
+é uma hipótese comercial e não uma promessa. O documento pode comparar um cenário
 mínimo, um cenário base e um cenário de crescimento.
 
 ## Gere o `MVP.md`
 
-Quando você pedir “gerar o documento”, o MVPFy reúne as áreas já trabalhadas.
+Quando você disser “gerar o documento”, o MVPFy reúne as áreas já trabalhadas.
 Uma primeira versão pode ter estado `preliminary` e indicar `Pendente` onde
-faltarem informações. Depois, com problema, público, jornada, escopo, modelo
-SaaS, preço, tecnologia, aquisição, métricas e comprovações suficientes, o
-documento pode receber o estado `ready`.
+faltarem informações. O documento recebe o estado `ready` quando todas as
+áreas (do problema e do público até a aquisição e as métricas) têm
+comprovações suficientes.
 
-## Use o plano com as equipes
+## Use o plano com os responsáveis por cada área
 
-O `MVP.md` permite que as equipes partam do mesmo entendimento:
+Com o `MVP.md`, os responsáveis por cada área partem do mesmo entendimento:
 
 - produto encontra o escopo e as condições de aceite.
 - desenvolvimento encontra arquitetura, espaços e integrações.

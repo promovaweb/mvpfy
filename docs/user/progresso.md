@@ -13,8 +13,8 @@ Na raiz do projeto consumidor:
 mvpfy progress --project .
 ```
 
-O resultado agrupa o plano em Problema, Público, Produto, SaaS, Mercado e
-preço, Tecnologia, Marketing e Validação. O percentual é uma indicação de
+O resultado agrupa o plano nas áreas do template, de Problema e Público até
+Marketing e Validação. O percentual é uma indicação de
 preenchimento das seções encontradas no `MVP.md`; ele não substitui a leitura
 das hipóteses e dos pontos ainda abertos.
 
@@ -51,9 +51,9 @@ Progresso do MVP: 48%
 Próximo ponto: Preencher a seção marketing
 ```
 
-Uma área concluída tem todas as seções encontradas preenchidas. Uma área em
-andamento possui parte do conteúdo definido. Uma área pendente ainda não tem
-informação suficiente no documento. O modelo de atendimento SaaS aparece à
+Uma área concluída tem todas as seções encontradas preenchidas, enquanto uma
+área em andamento possui só parte do conteúdo definido. Uma área pendente
+ainda não tem informação suficiente no documento. O modelo de atendimento SaaS aparece à
 parte porque a escolha entre multitenante compartilhado e instalação separada
 afeta várias áreas.
 
@@ -65,5 +65,5 @@ Para agentes e automações, use JSON:
 mvpfy progress --project . --json
 ```
 
-Esse formato inclui as áreas, seções pendentes, estado da entrevista, modelo
-SaaS e próximo ponto. O comando é somente de leitura.
+Esse formato inclui as áreas e as seções pendentes, com o estado da
+entrevista, o modelo SaaS e o próximo ponto. O comando é somente de leitura.

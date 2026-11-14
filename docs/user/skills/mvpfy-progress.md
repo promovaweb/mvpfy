@@ -1,7 +1,7 @@
 # `mvpfy-progress`
 
 Esta skill lê o estado e o `MVP.md` para mostrar o andamento do planejamento.
-Ela não conduz a entrevista, não salva resposta e não altera arquivos do
+Ela não conduz a entrevista, não grava resposta e não altera arquivos do
 Specsfy.
 
 ## O que ela apresenta

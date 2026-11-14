@@ -1,9 +1,9 @@
 # O público: `mvpfy-audience`
 
 Esta especialista separa o mercado amplo do primeiro grupo que vale atender.
-Também diferencia a pessoa que usa o produto, a pessoa que compra, a pessoa responsável pelo pagamento,
-o contato que influencia a compra e o grupo que recebe o benefício. Essa distinção evita que
-“qualquer empresa” vire o público inteiro do MVP.
+Também diferencia o usuário do comprador e do pagador, assim como o contato
+que influencia a compra e o grupo que recebe o benefício. Essa distinção evita
+que “qualquer empresa” vire o público inteiro do MVP.
 
 ## O que ela procura
 
@@ -18,14 +18,15 @@ o contato que influencia a compra e o grupo que recebe o benefício. Essa distin
 ## O que entra no `MVP.md`
 
 O `MVP.md` recebe um segmento prioritário e, no máximo, três personas úteis:
-produto, compra e marketing quando forem diferentes. Cada uma descreve
-contexto, objetivo, dor, alternativa, objeção, gatilho e canal. A intenção não é
-criar biografias, e sim dar à equipe elementos para construir e vender.
+produto, compra e marketing quando forem diferentes. Cada uma descreve a
+situação, o objetivo e a dor, a alternativa atual, a objeção, o gatilho e o
+canal. Em vez de biografias, as personas trazem os elementos usados para
+construir e vender o produto.
 
 ## Exemplo
 
-Na ferramenta para agências, a agência pode ser compradora e pagadora, a pessoa
-de atendimento pode ser usuária diária e o cliente da agência pode ser um
+Na ferramenta para agências, a agência pode ser compradora e pagadora, o
+atendente pode ser o usuário diário e o cliente da agência pode ser um
 usuário com permissão limitada. Essa distinção afeta produto, SaaS, preço e
 marketing.
 

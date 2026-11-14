@@ -1,8 +1,8 @@
 # A entrada no mercado: `mvpfy-marketing`
 
-Esta especialista prepara a chegada do primeiro SaaS ao mercado. Ela conecta
-promessa, público, oferta, conteúdo, captação e venda em poucos canais que a
-empresa consiga manter na rotina.
+Esta especialista prepara a chegada do primeiro SaaS ao mercado. Ela liga a
+promessa, o público e a oferta ao conteúdo, à captação e à venda, em poucos
+canais que a empresa consiga manter na rotina.
 
 ## O que entra no plano
 
@@ -22,7 +22,7 @@ empresa consiga manter na rotina.
 
 Para agências, o primeiro conteúdo pode mostrar o caminho de um lead desde o
 contato até o retorno ao cliente. O canal só entra no plano se as agências
-estiverem presentes nele e a equipe conseguir manter essa rotina.
+estiverem presentes nele e a empresa conseguir manter essa rotina.
 
 ## Onde termina este trabalho
 

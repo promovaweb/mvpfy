@@ -1,7 +1,7 @@
 # O mercado: `mvpfy-market`
 
 Esta especialista pesquisa concorrentes e alternativas quando você fornece
-referências ou pede dados atuais. Ela registra o que encontrou com fonte e data,
+referências ou solicita informações atuais. Ela registra o que encontrou com fonte e data,
 separando informação publicada de interpretação.
 
 ## O que ela compara
@@ -22,8 +22,7 @@ preço, lacuna, link e data da consulta.
 
 Se uma página mostra “US$ 49 por mês para cinco usuários”, o plano registra o
 preço, a moeda e o limite. Se a página só diz “fale com vendas”, o documento
-registra preço não publicado. A falta do preço também é um dado sobre a forma
-de venda.
+registra preço não publicado. A falta do preço também revela a forma de venda.
 
 ## Onde termina este trabalho
 

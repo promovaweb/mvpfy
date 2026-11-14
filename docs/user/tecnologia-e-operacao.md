@@ -17,18 +17,18 @@ mais previsível e encurta o caminho até a primeira validação.
 | IA | Provedor externo apenas quando houver uma função clara no produto. |
 | Operação | Logs, cópias de segurança, filas ou tarefas agendadas conforme a jornada. |
 
-Outra opção pode fazer sentido quando o contexto exigir. Nesse caso, a
+Outra opção pode fazer sentido quando o projeto exigir. Nesse caso, a
 especialista explica o motivo e mostra o efeito no custo e na operação.
 
 ## O que precisa estar claro na primeira versão
 
 O plano não precisa desenhar cada classe do sistema. Ele precisa responder às
-perguntas que afetam a jornada e a operação:
+perguntas que afetam a jornada e o funcionamento do serviço:
 
 - como o espaço é criado e identificado.
 - se o produto é multitenante ou usa instalação separada por cliente.
 - como os dados de clientes ficam separados.
-- quais pessoas acessam cada parte.
+- quais perfis de usuário acessam cada parte.
 - quais integrações são indispensáveis.
 - quais tarefas podem rodar fora da tela.
 - onde os arquivos ficam guardados.
@@ -40,12 +40,12 @@ com separação lógica segura entre espaços. Uma instância dedicada só entra
 quando contrato, segurança, desempenho ou posicionamento exigirem esse custo.
 
 Quando Laravel for escolhido para um SaaS multitenante, o plano avalia o suporte
-de Teams da solução adotada para representar equipes, membros, convites e
-papéis. Essa base organiza a associação das pessoas, mas cada consulta ainda
+a Teams da solução adotada para representar grupos, membros, convites e
+papéis. Essa base associa os usuários ao tenant, mas cada consulta ainda
 precisa respeitar o tenant ativo e sua separação de dados.
 
 ## Comece com operação acompanhada
 
-Durante a validação, uma pessoa pode liberar espaços, acompanhar o onboarding e
+Durante a validação, o responsável pela operação pode liberar espaços, acompanhar o onboarding e
 conferir assinaturas manualmente. O `MVP.md` registra essa rotina, seu
 responsável e o sinal que indicará a hora de automatizar o trabalho.

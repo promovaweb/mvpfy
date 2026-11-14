@@ -23,15 +23,15 @@ relatório sem aumentar o histórico da conversa.
 
 ## O que ela procura
 
-O scanner percorre documentos com nomes e pastas usados com frequência em
-projetos, como `spec.md`, `specs/`, `backlog/`, `briefs/`, `plans/`, `docs/`,
-`product/` e `decisions/`. Também lê manifestos como `package.json`,
+O scanner percorre documentos com nomes e pastas comuns em projetos de
+software, como `spec.md`, `specs/`, `backlog/` e `docs/` (a lista completa
+inclui `briefs/`, `plans/`, `product/` e `decisions/`). Também lê manifestos como `package.json`,
 `composer.json`, `pyproject.toml`, `go.mod` e `Cargo.toml`.
 
 Os arquivos de programação entram no relatório com caminho, linguagem e número
-de linhas. Dependências e scripts dos manifestos ajudam a reconhecer a stack.
-Pastas geradas, dependências instaladas, caches, cobertura, builds e o
-repositório Git ficam fora da leitura.
+de linhas. Dependências e scripts dos manifestos indicam a stack. Ficam fora
+da leitura as pastas geradas e as dependências instaladas, assim como caches,
+relatórios de cobertura, builds e o repositório Git.
 
 ## Como a conversa aproveita o resultado
 
@@ -39,13 +39,13 @@ Imagine um projeto que já tem `specs/checkout.md`, `composer.json` com Laravel 
 uma pasta `app/`. A análise pode sugerir que existe uma base Laravel e apontar a
 spec do checkout. A orquestradora usa esse material para evitar uma pergunta
 repetida sobre a stack e começa a conversa perguntando pelo problema, pelo
-público ou pelo recorte que ainda não aparece nos arquivos.
+público ou pelo escopo que ainda não aparece nos arquivos.
 
 O relatório separa sugestão técnica de escolha confirmada. Uma rota chamada
 `/customers` mostra que existe uma implementação relacionada a clientes, mas
-não confirma quem paga, qual dor levou ao projeto nem quais recursos entram na
+não confirma qual cliente paga, qual dor levou ao projeto nem quais recursos entram na
 versão 1.0. Esses pontos continuam na conversa e aparecem como pendências até
-que a pessoa os confirme.
+que você os confirme.
 
 ## Proteção do projeto analisado
 

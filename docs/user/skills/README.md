@@ -1,9 +1,9 @@
 # As especialistas que trabalham no MVPFy
 
 Você conversa apenas com `$mvpfy`. A orquestradora lê o que já foi registrado,
-escolhe a especialista adequada e incorpora o retorno ao plano. Você não
-precisa chamar cada skill manualmente. Conhecer o papel de cada uma ajuda a
-entender por que determinada pergunta apareceu.
+escolhe a especialista adequada e incorpora o retorno ao plano, sem que você
+precise chamar cada skill manualmente. O papel de cada uma explica por que
+determinada pergunta apareceu.
 
 ## Ordem típica
 
@@ -18,7 +18,7 @@ marca → MVP.md → migração quando o template mudar
 ```
 
 Essa ordem é apenas um caminho comum. Um documento já existente pode preencher
-uma área inteira, e uma resposta nova pode levar a conversa de volta para um
+uma área inteira. Uma resposta nova também pode levar a conversa de volta para um
 assunto anterior. A orquestradora acompanha o conteúdo disponível, não uma
 lista fixa de perguntas.
 
@@ -37,7 +37,7 @@ lista fixa de perguntas.
 | [`mvpfy-pricing`](mvpfy-pricing.md) | Valor e cobrança precisam de hipótese | Faixas, planos e cenários |
 | [`mvpfy-technology`](mvpfy-technology.md) | A jornada permite desenhar a base técnica | Arquitetura Laravel e custos |
 | [`mvpfy-marketing`](mvpfy-marketing.md) | Oferta e público precisam chegar ao mercado | Aquisição, conteúdo e venda |
-| [`mvpfy-document`](mvpfy-document.md) | Você pede o plano ou há dados suficientes | `MVP.md` renderizado e validado |
+| [`mvpfy-document`](mvpfy-document.md) | Você solicita o plano ou há informação suficiente | `MVP.md` renderizado e validado |
 | [`mvpfy-migrate`](mvpfy-migrate.md) | O template mudou | Documento atualizado sem perda |
 | [`mvpfy-progress`](mvpfy-progress.md) | Você quer ver o andamento sem abrir uma pergunta | Resumo por áreas e próxima lacuna |
 
@@ -45,4 +45,4 @@ Cada página explica o que a especialista recebe, como trabalha, o que entrega
 e onde termina sua responsabilidade. Os exemplos usam uma ideia de SaaS para
 mostrar a passagem de uma etapa para outra.
 
-O catálogo descreve o MVPFy. Ele não altera a biblioteca Specsfy.
+O catálogo descreve o MVPFy e não altera a biblioteca Specsfy.

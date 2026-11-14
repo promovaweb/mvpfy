@@ -19,15 +19,15 @@ produto ainda não precisa fazer.
 
 ## O que entra no plano
 
-O plano apresenta faixa de preço, premissas, modelo de cobrança e cenários
-mínimo, base e crescimento. Quando os dados são insuficientes, a especialista
-marca a faixa como hipótese.
+O plano apresenta a faixa de preço com as premissas, o modelo de cobrança e os
+cenários mínimo, base e crescimento. Quando a informação é insuficiente, a
+especialista marca a faixa como hipótese.
 
 ## Um exemplo
 
-Se o valor surge da gestão de vários clientes, cobrar por espaço da agência pode
-ser mais simples do que cobrar por cada lead. Essa é uma sugestão para testar
-com potenciais clientes, não uma regra universal.
+Se o valor surge da gestão de vários clientes, cobrar por espaço da agência
+costuma ser mais simples que cobrar por lead. Essa é uma sugestão para testar
+com potenciais clientes, não uma recomendação universal.
 
 ## Onde termina este trabalho
 

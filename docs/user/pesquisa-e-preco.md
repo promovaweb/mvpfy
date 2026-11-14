@@ -1,13 +1,13 @@
 # Mercado, preço e custo
 
 O MVPFy pesquisa o mercado quando você informa concorrentes, envia URLs ou
-solicita uma referência atual. A pesquisa ajuda a montar uma hipótese de preço,
-mas não substitui a conversa com potenciais clientes.
+solicita uma referência atual. A pesquisa serve de base para uma hipótese de
+preço, mas não substitui a conversa com potenciais clientes.
 
 ## Quando você tem concorrentes para comparar
 
-Informe uma URL ou um nome. A skill `mvpfy-market` procura, quando os dados
-estão publicados:
+Informe uma URL ou um nome. A skill `mvpfy-market` procura, quando essas
+informações estão publicadas:
 
 - o público e a promessa.
 - os recursos úteis para a comparação.
@@ -35,12 +35,12 @@ cobrança que seja fácil de explicar.
 
 ## Como surge a faixa de preço
 
-`mvpfy-pricing` considera cliente pagador, unidade de valor, frequência de uso,
-benefício, esforço comercial, custo variável, suporte e estágio da validação.
-Com esses dados, pode recomendar cobrança por espaço, por pessoa, por volume,
-por uso ou um modelo combinado.
+`mvpfy-pricing` considera o cliente pagador, a unidade de valor e a frequência
+de uso. Também pesa o benefício, o esforço comercial, o custo variável, o
+suporte e o estágio da validação. A partir disso, pode recomendar cobrança por
+espaço, por usuário, por volume, por uso ou um modelo combinado.
 
-Quando houver dados suficientes, o plano compara três cenários:
+Quando houver informação suficiente, o plano compara três cenários:
 
 | Cenário | Uso |
 | --- | --- |
@@ -58,5 +58,5 @@ MRR = soma da receita recorrente mensal dos clientes ativos
 ARPA = MRR / espaços pagantes
 ```
 
-O resultado é uma faixa acompanhada das suas premissas. Não é previsão
-contábil e não garante receita.
+O resultado é uma faixa acompanhada das suas premissas, sem valor de previsão
+contábil nem garantia de receita.

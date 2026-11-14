@@ -1,6 +1,6 @@
 # O problema: `mvpfy-problem`
 
-Esta especialista ajuda a tirar a conversa do nome da solução. “Preciso de um
+Esta especialista desloca a conversa do nome da solução para o problema. “Preciso de um
 aplicativo” pode ser o começo do relato, mas o plano precisa explicar o que
 acontece hoje, qual grupo enfrenta a situação e qual consequência torna a mudança valiosa.
 
@@ -27,7 +27,7 @@ testar [hipótese].
 
 “Agências perdem leads” ainda não explica a frequência, a consequência nem a
 alternativa atual. Se o contexto já disser que os contatos chegam por três
-canais e terminam em planilhas, a especialista aproveita esses dados. Ela
+canais e terminam em planilhas, a especialista aproveita essas informações. Ela
 pergunta somente o ponto que ainda muda a leitura do problema.
 
 ## Onde termina este trabalho

@@ -9,20 +9,20 @@ npx --yes @promovaweb/mvpfy install --project .
 ```
 
 Depois, confira se existem `MVP.md` e `.mvpfy/state.json`. O comando deve rodar
-no projeto consumidor. Executá-lo na raiz do repositório `mvpfy` tenta preparar
+no projeto consumidor, porque na raiz do repositório `mvpfy` ele tenta preparar
 o próprio pacote, não o projeto da entrevista.
 
 ## A pergunta repetiu algo que você já informou
 
-Confira se a mensagem anterior foi salva no `answers.jsonl` e se as áreas
+Confira se a mensagem anterior foi gravada no `answers.jsonl` e se as áreas
 extraídas chegaram ao `state.json`. Uma resposta livre pode precisar de uma
-leitura adicional. A ausência de um número não torna a mensagem inválida.
+leitura adicional, mas a ausência de um número não torna a mensagem inválida.
 
 ## O documento continua como `preliminary`
 
 Abra a seção “Hipóteses e pendências”. Esse estado informa que ainda falta um
-item necessário para descrever o primeiro SaaS. Peça “continuar” ou “o que
-falta?” para voltar ao próximo ponto relevante.
+item necessário para descrever o primeiro SaaS. Diga “continuar” ou “o que
+falta” para voltar ao próximo ponto relevante.
 
 ## Você mudou uma escolha anterior
 

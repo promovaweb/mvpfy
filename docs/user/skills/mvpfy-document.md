@@ -1,8 +1,8 @@
 # O documento final: `mvpfy-document`
 
-Esta skill monta e confere o arquivo final. Ela não cria o conteúdo dos
-domínios. Recebe fatos, escolhas, recomendações, hipóteses e pendências da
-orquestradora e os organiza no template do `MVP.md`.
+Esta skill monta e confere o arquivo final, sem criar o conteúdo dos domínios.
+Ela recebe da orquestradora os fatos e as escolhas, as recomendações, as
+hipóteses e as pendências. Depois encaixa cada item no template do `MVP.md`.
 
 ## Arquivos que ela usa
 
@@ -23,7 +23,7 @@ usa “Pendente” quando ainda não há informação. O validator confere se as
 necessárias para um primeiro SaaS aparecem no arquivo.
 
 Durante a renderização, a skill também monta `Analise de Requisitos`. Ela lê a
-ideia inicial, cada resposta original, a interpretação salva, os campos
+ideia inicial e cada resposta original, com a interpretação gravada, os campos
 cobertos e o relatório do projeto existente. O resultado lista os elementos
 citados por tipo e mantém uma tabela de rastreabilidade para que uma descrição
 ampla do sistema não seja reduzida às oito perguntas fechadas.
