@@ -1,12 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2560" viewBox="0 0 1600 2560">
-  <rect width="1600" height="2560" fill="#ffffff"/>
-  <circle cx="1320" cy="300" r="170" fill="#e6fffb"/>
-  <circle cx="1450" cy="420" r="90" fill="#fef3c7"/>
-  <text x="150" y="430" fill="#0f766e" font-family="Arial" font-size="52" font-weight="700">MVPFy</text>
-  <text x="150" y="760" fill="#12213e" font-family="Arial" font-size="124" font-weight="700">Primeiro</text>
-  <text x="150" y="900" fill="#12213e" font-family="Arial" font-size="124" font-weight="700">MVP SaaS</text>
-  <text x="150" y="1080" fill="#334155" font-family="Arial" font-size="46">Entrevista, produto, preço, tecnologia</text>
-  <text x="150" y="1145" fill="#334155" font-family="Arial" font-size="46">e plano de entrada no mercado.</text>
-  <path d="M150 2200H1450" stroke="#cbd5e1" stroke-width="4"/>
-  <text x="150" y="2310" fill="#64748b" font-family="Arial" font-size="38">DOCUMENTAÇÃO COMPLETA</text>
+  <rect width="1600" height="2560" fill="#FFFFFF"/>
+  <image href="../brand/logo/logo-light.png" x="150" y="170" width="560" height="224"/>
+  <text x="150" y="815" fill="#00161E" font-family="DejaVu Sans" font-size="124" font-weight="700">Primeiro</text>
+  <text x="150" y="965" fill="#00161E" font-family="DejaVu Sans" font-size="124" font-weight="700">MVP SaaS</text>
+  <text x="150" y="1085" fill="#2D4C58" font-family="DejaVu Sans" font-size="48">Entrevista, produto, preço e tecnologia</text>
+  <path d="M150 2200H1450" stroke="#C9D6DC" stroke-width="4"/>
+  <text x="150" y="2346" fill="#B45309" font-family="DejaVu Sans" font-size="38">GUIA DO USUÁRIO</text>
 </svg>

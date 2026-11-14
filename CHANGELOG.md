@@ -4,6 +4,13 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.7.3] - 2026-11-13
+
+- Corrige a capa do ebook com a assinatura nova do MVPFy, sem sobreposição,
+  e aplica as cores do kit de marca ao título, subtítulo, linha e rótulo.
+- Gera e valida o manifesto do ebook em Node.js no lugar de Python.
+- Regenera o PDF e o EPUB na edição 0.7.3.
+
 ## [0.7.2] - 2026-11-13
 
 - Nova identidade visual “Degraus até o MVP”: três degraus turquesa sobem até

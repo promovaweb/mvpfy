@@ -22,6 +22,10 @@ consumidor pelo [Skills CLI](https://github.com/vercel-labs/skills).
 
 Requisitos: Node.js 22 ou superior, `git` e `npm`.
 
+Para gerar o ebook, instale também Pandoc, WeasyPrint, ImageMagick,
+Fontconfig, Poppler (`pdfinfo` e `pdftotext`) e `unzip`. O manifesto usa
+Node.js; o script não exige mais o comando `python3`.
+
 ```bash
 git clone https://github.com/promovaweb/mvpfy.git
 cd mvpfy
