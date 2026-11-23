@@ -4,6 +4,10 @@ Este arquivo registra as mudanças publicadas do framework MVPFy. A versão
 canônica fica em [`VERSION`](VERSION), e o workflow de release cria uma
 publicação no GitHub quando essa versão avança na `main`.
 
+## [0.7.6] - 2026-11-22
+
+- Atualiza a identidade visual do projeto e sua apresentação no README.
+
 ## [0.7.5] - 2026-11-22
 
 - Documenta a atualização das tarefas do ClickUp para pronto após o commit e publicado após o push.

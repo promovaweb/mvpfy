@@ -1,4 +1,9 @@
 {
+  "projectColor": {
+    "name": "Azul de blueprint",
+    "hex": "#86CFFF",
+    "meaning": "O azul é o traço do desenho técnico na folha de projeto, onde a primeira versão do produto ainda está no papel."
+  },
   "name": "MVPFy",
   "families": {
     "primary": {

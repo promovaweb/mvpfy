@@ -1,23 +1,20 @@
 # Marca MVPFy
 
 O MVPFy transforma uma ideia inicial no plano do primeiro produto SaaS, com
-entrevista guiada e um único documento `MVP.md`. Sua identidade combina o
-petróleo e o turquesa da Promovaweb com âmbar, cor própria do projeto
-associada à meta alcançada e ao produto que chega ao ar.
+entrevista guiada e um único documento `MVP.md`. O azul identifica o
+projeto.
 
 ## Conceito visual
 
-O símbolo mostra **degraus até o MVP**: três degraus turquesa sobem até uma
-bandeira âmbar fincada no topo. Cada degrau é uma etapa do plano (ideia,
-entrevista e documento), e a bandeira marca o primeiro produto no ar.
+Folha de blueprint enrolada com um cubo azul em perspectiva. A cor de identificação é `#86CFFF`.
 
 ## Arquivos oficiais
 
 | Arquivo | Uso |
 | --- | --- |
-| `logo/icon.svg` | ícone principal com placa petróleo |
-| `logo/icon-light.svg` | ícone transparente sobre fundo claro |
-| `logo/icon-dark.svg` | ícone transparente sobre fundo escuro |
+| `logo/icon.svg` | ícone principal da folha de projeto |
+| `logo/icon-light.svg` | ícone sobre fundo claro |
+| `logo/icon-dark.svg` | ícone sobre fundo escuro |
 | `logo/logo-light.svg` | assinatura horizontal sobre fundo claro |
 | `logo/logo-dark.svg` | assinatura horizontal sobre fundo escuro |
 | `logo/icon.png` | fallback raster de 512 × 512 px |
@@ -46,8 +43,7 @@ do ativo. O tamanho mínimo é 24 px para o ícone e 140 px para a assinatura.
 
 1. Use os ativos desta pasta sem redesenhá-los.
 2. Âmbar indica meta, entrega ou destaque; turquesa identifica a família.
-3. Sobre fundo claro, o âmbar do logo e do texto é `#B45309`; `#F59E0B`
-   fica reservado a fundos escuros e áreas gráficas.
+3. Na versão principal, use fundo petróleo `#00161E`, papel claro `#DDF5F4` e cubo azul `#86CFFF`.
 4. Estado nunca depende apenas de cor: inclua texto, ícone ou posição.
 5. Use tokens semânticos e a variante correta para light ou dark mode.
 6. Não aplique filtros, gradientes, sombras, rotações ou deformações.

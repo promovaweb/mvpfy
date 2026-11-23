@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title"><title id="title">Ícone do MVPFy para fundo escuro</title><path d="M120 392h88v-80h88v-80h88v160z" fill="#2AD5BE"/><path d="M384 232V116" stroke="#F2F8F9" stroke-width="18" stroke-linecap="round"/><path d="M384 120l-72 26 72 26z" fill="#F59E0B"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-label="MVPFy">
+  <title>MVPFy</title>
+  <desc>Folha de blueprint enrolada com um cubo azul em perspectiva.</desc>
+  <g stroke-linejoin="round" stroke-linecap="round"><path fill="none" stroke="#DDF5F4" stroke-width="3.5" d="M8 49V17c0-5 3.5-8 9.5-8v33c-6 0-9.5 3-9.5 7s3.4 5 7 5h40V15h-37"/><path fill="#86CFFF" d="m35.5 22.5 11 6.4-11 6.4-11-6.4z"/><path fill="none" stroke="#86CFFF" stroke-width="2.8" d="M25 30v9.4l10.5 6.1L46 39.4V30m-10.5 4.7v10.2"/></g>
+</svg>

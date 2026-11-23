@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://github.com/promovaweb/mvpfy">
+  <a href="https://promovaweb.com/mvpfy/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/logo-dark.png">
-      <img alt="MVPFy" src="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/logo-light.png" width="360">
+      <source type="image/svg+xml" srcset="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/icon.svg">
+      <img alt="MVPFy" src="https://raw.githubusercontent.com/promovaweb/mvpfy/main/brand/logo/icon.png" width="112" height="112">
     </picture>
   </a>
 </p>
@@ -26,7 +26,10 @@
 </p>
 
 <p align="center">
+  <a href="https://promovaweb.com/mvpfy/">Site do MVPFy</a> ·
   <a href="https://promovaweb.com/docs/mvpfy/">Documentação</a> ·
+  <a href="https://promovaweb.com/harness/">Harness</a> ·
+  <a href="https://promovaweb.com/ferramentas/">Ferramentas</a> ·
   <a href="https://promovaweb.com/discord">Discord</a> ·
   <a href="https://promovaweb.com/planos?utm_source=github&utm_medium=readme&utm_campaign=mvpfy">Planos da Promovaweb</a> ·
   <a href="https://github.com/promovaweb/mvpfy/blob/main/CHANGELOG.md">Changelog</a>
